@@ -4,7 +4,7 @@
 
 @ini_set("allow_call_time_pass_reference",0);
 
-if (!defined('LIB211_MODERATOR')) define('LIB211_MODERATOR',TRUE);
+if (!defined('LIB211_OPERATOR')) define('LIB211_OPERATOR',TRUE);
 
 if (!defined('LIB211_ROOT')) define("LIB211_ROOT",dirname(__FILE__));
 
@@ -16,4 +16,4 @@ require_once(LIB211_ROOT.'/core/Base.class.php');
 
 require_once(LIB211_ROOT.'/core/Autoload.class.php');
 
-if (defined('LIB211_MODERATOR') AND LIB211_MODERATOR === TRUE) require_once(LIB211_ROOT.'/core/Core.class.php');
+if (defined('LIB211_OPERATOR') AND LIB211_OPERATOR === TRUE) require_once(LIB211_ROOT.'/core/Operator.class.php');

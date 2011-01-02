@@ -1,5 +1,7 @@
 <?php 
 
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 class LIB211Autoload extends LIB211Base {
 
 	public static $loader;
@@ -28,6 +30,26 @@ class LIB211Autoload extends LIB211Base {
 }
 
 class LIB211AutoloadException extends LIB211BaseException {
+}
+
+function lib211() {
+	$argv = func_get_args();
+	$function = $argv[0];
+	$args = array_slice($argv,1);
+	if (function_exists($function)) {
+		$return = call_user_func_array($function,$args);
+	}
+	else {
+		$path = LIB211_ROOT.'/function/'.$function.'.function.php';
+		require_once($path);
+		if (function_exists($function)) {
+			$return = call_user_func_array($function,$args);
+		}
+		else {
+			throw new LIB211BaseException('Missing function "'.$function.'".');
+		}
+	}
+	return $return;
 }
 
 LIB211Autoload::__init();

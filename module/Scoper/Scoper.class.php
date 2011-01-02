@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 /**
  * LIB211 Scoper (based on the researches of HMH211)
  * 

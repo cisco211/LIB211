@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 /**
  * LIB211 (C!$C0^211's php library)
  * 

@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 class LIB211Base {
 
 	private static $instances = 0;
