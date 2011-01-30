@@ -4,3 +4,4 @@
 /.settings
 /lib211.lock
 /test.php
+.tmp*
