@@ -13,86 +13,86 @@ class LIB211 extends LIB211Base {
 	
 	/**
 	 * LIB211 creation date
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $date_from = 1195599600;
 	
 	/**
 	 * LIB211 edit date (will be inserted automatically)
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $date_to = 0;
 	
 	/**
 	 * LIB211 build number
-	 * @var integer
+	 * @staticvar integer
 	 *
 	 */
 	private static $build = 70;
 	
 	/**
 	 * LIB211 codename
-	 * @var string
+	 * @staticvar string
 	 */
 	private static $codename = 'Multiplicity';
 	
 	/**
 	 * Instance counter
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $instances = 0;
 	
 	/**
 	 * Client ip
-	 * @var string
+	 * @staticvar string
 	 */
 	private static $ip_client = '0.0.0.0';
 		
 	/**
 	 * Enter description here ...
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $time_diff = 0;
 	
 	/**
 	 * Enter description here ...
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $time_start = 0;
 	
 	/**
 	 * Enter description here ...
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $time_stop = 0;
 	
 	/**
 	 * LIB211 version
-	 * @var string
+	 * @staticvar string
 	 */
 	private static $version = '0.700';
 	
 	/**
 	 * Counter for currently loaded objects
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $loaded = 0;
 	
 	/**
 	 * Counter for created objects
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $created = 0;
 	
 	/**
 	 * Counter for killed objects
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $killed = 0;
 	
 	/**
 	 * List of object names
-	 * @var array
+	 * @staticvar array
 	 */
 	private static $objects = array();
 	

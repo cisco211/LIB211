@@ -1,5 +1,7 @@
 <?php
 
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 /**
  * LIB211 Permutate 
  * Transform any count of lists (dimensions) to a new list where all entries are combined with each other (rainbow table)
@@ -11,25 +13,25 @@ class LIB211Permutate extends LIB211Base {
 
 	/**
 	 * Instance counter
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $instances = 0;
 	
 	/**
 	 * Runtime of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_diff = 0;
 	
 	/**
 	 * Start time of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_start = 0;
 	
 	/**
 	 * Stop time of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_stop = 0;
 	
@@ -219,8 +221,8 @@ class LIB211Permutate extends LIB211Base {
 		if ($status) {
 			switch ($format) {
 				case "csv": case "tsv";
-					$separator = @func_get_arg(1);
-					if (empty($separator)) $separator = ',';
+					$separator = (string)@func_get_arg(1);
+					##if (empty($separator)) $separator = ',';
 					$quote = @func_get_arg(2);
 					if (empty($quote)) $quote = '';
 					$output = "";

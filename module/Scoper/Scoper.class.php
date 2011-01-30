@@ -4,8 +4,8 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
 /**
  * LIB211 Scoper (based on the researches of HMH211)
- * 
  * This class is experimental. Use at your own risk, because Scoper allows unusual concepts!
+ * 
  * @author C!$C0^211
  *
  */
@@ -13,25 +13,25 @@ class LIB211Scoper extends LIB211Base {
 
 	/**
 	 * Instance counter
-	 * @var integer
+	 * @staticvar integer
 	 */
 	private static $instances = 0;
 	
 	/**
 	 * Runtime of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_diff = 0;
 	
 	/**
 	 * Start time of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_start = 0;
 	
 	/**
 	 * Stop time of object
-	 * @var float
+	 * @staticvar float
 	 */
 	private static $time_stop = 0;
 
