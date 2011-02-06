@@ -37,6 +37,10 @@
 		</a><br>
 			<a href="../LIB211/_core---Base.class.php.html">		Base.class.php
 		</a><br>
+			<a href="../LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
+		</a><br>
+			<a href="../LIB211/_module---Geohash---Geohash.test.php.html">		Geohash.test.php
+		</a><br>
 			<a href="../LIB211/_index.php.html">		index.php
 		</a><br>
 			<a href="../LIB211/_lib211.php.html">		lib211.php
@@ -76,6 +80,9 @@
 	    		<a href="../LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="../LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
 	    		<a href="../LIB211/LIB211Exception.html">LIB211Exception</a><br />
+	    		<a href="../LIB211/LIB211Geohash.html">LIB211Geohash</a><br />
+	    		<a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a><br />
+	    		<a href="../LIB211/LIB211GeohashTest.html">LIB211GeohashTest</a><br />
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
@@ -126,6 +133,25 @@ Source Location: /module/Random/Random.test.php<br /><br />
 <ul>
     <li><a href="../LIB211/LIB211RandomTest.html#methodsetPrefix">setPrefix</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodsetSuffix">setSuffix</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetArchitecture">testGetArchitecture</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetLoopMaxRuns">testGetLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomBoolean">testGetRandomBoolean</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomInteger">testGetRandomInteger</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomIntegerNegative">testGetRandomIntegerNegative</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomIntegerPositive">testGetRandomIntegerPositive</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomNull">testGetRandomNull</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomTimestamp">testGetRandomTimestamp</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRangeIntegerMax">testGetRangeIntegerMax</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRangeIntegerMin">testGetRangeIntegerMin</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRangeTimestampMax">testGetRangeTimestampMax</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetLoopMaxRuns">testSetLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeInteger8Bit">testSetRangeInteger8Bit</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeInteger16Bit">testSetRangeInteger16Bit</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeInteger32Bit">testSetRangeInteger32Bit</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeInteger64Bit">testSetRangeInteger64Bit</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeIntegerMax">testSetRangeIntegerMax</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeIntegerMin">testSetRangeIntegerMin</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetRangeTimestampMax">testSetRangeTimestampMax</a></li>
   </ul>
 </td>
 
@@ -282,12 +308,487 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
 	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a> (Execute after each test method)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
+  <hr />
+	<a name="methodtestGetArchitecture"></a>
+	<h3>method testGetArchitecture <span class="smalllinenumber">[line 13]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetArchitecture(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetLoopMaxRuns"></a>
+	<h3>method testGetLoopMaxRuns <span class="smalllinenumber">[line 17]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetLoopMaxRuns(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomBoolean"></a>
+	<h3>method testGetRandomBoolean <span class="smalllinenumber">[line 21]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomBoolean(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomInteger"></a>
+	<h3>method testGetRandomInteger <span class="smalllinenumber">[line 27]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomInteger(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomIntegerNegative"></a>
+	<h3>method testGetRandomIntegerNegative <span class="smalllinenumber">[line 31]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomIntegerNegative(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomIntegerPositive"></a>
+	<h3>method testGetRandomIntegerPositive <span class="smalllinenumber">[line 35]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomIntegerPositive(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomNull"></a>
+	<h3>method testGetRandomNull <span class="smalllinenumber">[line 39]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomNull(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomTimestamp"></a>
+	<h3>method testGetRandomTimestamp <span class="smalllinenumber">[line 47]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomTimestamp(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRangeIntegerMax"></a>
+	<h3>method testGetRangeIntegerMax <span class="smalllinenumber">[line 52]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRangeIntegerMax(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRangeIntegerMin"></a>
+	<h3>method testGetRangeIntegerMin <span class="smalllinenumber">[line 69]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRangeIntegerMin(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRangeTimestampMax"></a>
+	<h3>method testGetRangeTimestampMax <span class="smalllinenumber">[line 86]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRangeTimestampMax(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetLoopMaxRuns"></a>
+	<h3>method testSetLoopMaxRuns <span class="smalllinenumber">[line 90]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetLoopMaxRuns(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeInteger8Bit"></a>
+	<h3>method testSetRangeInteger8Bit <span class="smalllinenumber">[line 120]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeInteger8Bit(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeInteger16Bit"></a>
+	<h3>method testSetRangeInteger16Bit <span class="smalllinenumber">[line 96]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeInteger16Bit(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeInteger32Bit"></a>
+	<h3>method testSetRangeInteger32Bit <span class="smalllinenumber">[line 104]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeInteger32Bit(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeInteger64Bit"></a>
+	<h3>method testSetRangeInteger64Bit <span class="smalllinenumber">[line 112]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeInteger64Bit(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeIntegerMax"></a>
+	<h3>method testSetRangeIntegerMax <span class="smalllinenumber">[line 128]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeIntegerMax(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeIntegerMin"></a>
+	<h3>method testSetRangeIntegerMin <span class="smalllinenumber">[line 133]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeIntegerMin(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestSetRangeTimestampMax"></a>
+	<h3>method testSetRangeTimestampMax <span class="smalllinenumber">[line 138]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetRangeTimestampMax(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
 </div><br />
 
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 19:31:31 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 21:45:00 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

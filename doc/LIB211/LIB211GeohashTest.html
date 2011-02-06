@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Docs For Class LIB211BaseException</title>
+<title>Docs For Class LIB211GeohashTest</title>
 <link rel="stylesheet" type="text/css" href="../media/style.css">
 </head>
 <body>
@@ -101,18 +101,18 @@
     <td>
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: LIB211BaseException</h1>
-Source Location: /core/Base.class.php<br /><br />
+<h1>Class: LIB211GeohashTest</h1>
+Source Location: /module/Geohash/Geohash.test.php<br /><br />
 
 
 <table width="100%" border="0">
 <tr><td valign="top">
 
 <h3><a href="#class_details">Class Overview</a></h3>
-<pre>Exception
+<pre><a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a>
    |
-   --LIB211BaseException</pre><br />
-<div class="description">LIB211 Base Exception</div><br /><br />
+   --LIB211GeohashTest</pre><br />
+<div class="description">LIB211 Geohash Testclass</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
           <li>C!$C0^211</li>
@@ -123,31 +123,20 @@ Source Location: /core/Base.class.php<br /><br />
 
     
 
-                <p class="implements">
-            Implements interfaces:
-            <ul>
-                <li><a href="../LIB211/LIB211BaseExceptionInterface.html">LIB211BaseExceptionInterface</a></li>            </ul>
-        </p>
         
 </td>
 
-<td valign="top">
-<h3><a href="#class_vars">Variables</a></h3>
-<ul>
-    <li><a href="../LIB211/LIB211BaseException.html#var$code">$code</a></li>
-    <li><a href="../LIB211/LIB211BaseException.html#var$file">$file</a></li>
-    <li><a href="../LIB211/LIB211BaseException.html#var$line">$line</a></li>
-    <li><a href="../LIB211/LIB211BaseException.html#var$message">$message</a></li>
-  </ul>
-</td>
 
 
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
-    <li><a href="../LIB211/LIB211BaseException.html#method__construct">__construct</a></li>
-    <li><a href="../LIB211/LIB211BaseException.html#method__toDefault">__toDefault</a></li>
-    <li><a href="../LIB211/LIB211BaseException.html#method__toString">__toString</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodsetPrefix">setPrefix</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodsetSuffix">setSuffix</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodtestDecode">testDecode</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodtestDecodeInterval">testDecodeInterval</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodtestEncode">testEncode</a></li>
+    <li><a href="../LIB211/LIB211GeohashTest.html#methodtestNeighbour">testNeighbour</a></li>
   </ul>
 </td>
 
@@ -157,160 +146,73 @@ Source Location: /core/Base.class.php<br /><br />
 <table width="100%" border="0"><tr>
 
 
-<td valign="top">
-<h3>Child classes:</h3>
-<div class="tags">
-<dl>
-<dt><a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a></dt>
-	<dd>LIB211 Autoload Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211Exception.html">LIB211Exception</a></dt>
-	<dd>LIB211 Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211TestclassException.html">LIB211TestclassException</a></dt>
-	<dd>LIB211 Testclass Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211TesterException.html">LIB211TesterException</a></dt>
-	<dd>LIB211 Tester Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a></dt>
-	<dd>LIB211 Geohash Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a></dt>
-	<dd>LIB211 Permutate Exception</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a></dt>
-	<dd>Enter description here ...</dd>
-</dl>
-<dl>
-<dt><a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a></dt>
-	<dd>LIB211 Scoper Exception</dd>
-</dl>
-</div>
-</td>
 
 
-<td valign="top">
-<h3>Inherited Variables</h3>
-<div class="tags">
-<h4>Class: Exception (Internal Class)</h4>
-<dl>
-<dt>
-  $code
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $file
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $line
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $message
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $previous
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $string
-  </dt>
-<dd>
-   
-</dd>
-<dt>
-  $trace
-  </dt>
-<dd>
-   
-</dd>
-</dl>
-</div>
-</td>
 
 <td valign="top">
 <h3>Inherited Methods</h3>
 <div class="tags">
-<h4>Class: Exception (Internal Class)</h4>
+<h4>Class: <a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a></h4>
 <dl>
     <dt>
-    constructor __construct ( [$message = ], [$code = ], [$previous = ] )
+    <a href="../LIB211/LIB211Testclass.html#methodassertEquals">LIB211Testclass::assertEquals()</a>
   </dt>
   <dd>
-    
+    Assert that $left will be equals to $right
   </dd>
     <dt>
-    getCode (  )
+    <a href="../LIB211/LIB211Testclass.html#methodassertFalse">LIB211Testclass::assertFalse()</a>
   </dt>
   <dd>
-    
+    Assert that $test will be false
   </dd>
     <dt>
-    getFile (  )
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotEquals">LIB211Testclass::assertNotEquals()</a>
   </dt>
   <dd>
-    
+    Assert that $left will be not equals to $right
   </dd>
     <dt>
-    getLine (  )
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotNull">LIB211Testclass::assertNotNull()</a>
   </dt>
   <dd>
-    
+    Assert that $test will be not null
   </dd>
     <dt>
-    getMessage (  )
+    <a href="../LIB211/LIB211Testclass.html#methodassertNull">LIB211Testclass::assertNull()</a>
   </dt>
   <dd>
-    
+    Assert that $test will be null
   </dd>
     <dt>
-    getPrevious (  )
+    <a href="../LIB211/LIB211Testclass.html#methodassertTrue">LIB211Testclass::assertTrue()</a>
   </dt>
   <dd>
-    
+    Assert that $test will be true
   </dd>
     <dt>
-    getTrace (  )
+    <a href="../LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a>
   </dt>
   <dd>
-    
+    Execute before each test method
   </dd>
     <dt>
-    getTraceAsString (  )
+    <a href="../LIB211/LIB211Testclass.html#methodsetPrefixAll">LIB211Testclass::setPrefixAll()</a>
   </dt>
   <dd>
-    
+    Execute before all test methods
   </dd>
     <dt>
-    __clone (  )
+    <a href="../LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a>
   </dt>
   <dd>
-    
+    Execute after each test method
   </dd>
     <dt>
-    __toString (  )
+    <a href="../LIB211/LIB211Testclass.html#methodsetSuffixAll">LIB211Testclass::setSuffixAll()</a>
   </dt>
   <dd>
-    
+    Execute after all test methods
   </dd>
   </dl>
 </div>
@@ -322,8 +224,8 @@ Source Location: /core/Base.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 168]<br />
-LIB211 Base Exception<br /><br /><br /><br />
+[line 12]<br />
+LIB211 Geohash Testclass<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -335,123 +237,6 @@ LIB211 Base Exception<br /><br /><br /><br />
 </div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
-<hr />
-<a name="class_vars"></a>
-<h3>Class Variables</h3>
-<div class="tags">
-	<a name="var$code"></a>
-	<p></p>
-	<h4>$code = <span class="value">&nbsp;0</span></h4>
-	<p>[line 186]</p>
-  Exception code<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>integer</td>
-    </tr>
-        <tr>
-      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
-      <td>Array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$file"></a>
-	<p></p>
-	<h4>$file = <span class="value"></span></h4>
-	<p>[line 192]</p>
-  Exception file<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-        <tr>
-      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
-      <td>Array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$line"></a>
-	<p></p>
-	<h4>$line = <span class="value"></span></h4>
-	<p>[line 198]</p>
-  Exception line<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>integer</td>
-    </tr>
-        <tr>
-      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
-      <td>Array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$message"></a>
-	<p></p>
-	<h4>$message = <span class="value">&nbsp;'Unknown&nbsp;exception'</span></h4>
-	<p>[line 174]</p>
-  Exception message<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-        <tr>
-      <td><b>Overrides:</b>&nbsp;&nbsp;</td>
-      <td>Array</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-</div><br />
 
 <hr />
 <a name="class_methods"></a>
@@ -459,65 +244,17 @@ LIB211 Base Exception<br /><br /><br /><br />
 <div class="tags">
 
   <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 211]</span></h3>
+	<a name="methodsetPrefix"></a>
+	<h3>method setPrefix <span class="smalllinenumber">[line 17]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>LIB211BaseException __construct(
-[string
-$message = NULL], [integer
-$code = 0])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Constructor<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-			<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__construct">LIB211BaseExceptionInterface::__construct()</a></dt>
-						<dd>Constructor</dd>
-					</dl>
-		Overrides Exception::constructor __construct ( [$message = ], [$code = ], [$previous = ] ) (parent method not documented)<br /><br />
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$message</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$code</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="method__toDefault"></a>
-	<h3>method __toDefault <span class="smalllinenumber">[line 222]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string __toDefault(
+		<code>void setPrefix(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Convert exception to string<br /><br /><br /><br />
+		Execute before each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -528,27 +265,21 @@ $code = 0])</code>
 </div>
 <br /><br />
 
-			<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toDefault">LIB211BaseExceptionInterface::__toDefault()</a></dt>
-						<dd>Convert exception to string</dd>
-					</dl>
-		
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a> (Execute before each test method)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__toString"></a>
-	<h3>method __toString <span class="smalllinenumber">[line 230]</span></h3>
+	<a name="methodsetSuffix"></a>
+	<h3>method setSuffix <span class="smalllinenumber">[line 24]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string __toString(
+		<code>void setSuffix(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Convert exception to string with stacktrace<br /><br /><br /><br />
+		Execute after each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -559,13 +290,107 @@ $code = 0])</code>
 </div>
 <br /><br />
 
-			<hr class="separator" />
-		<div class="notes">Implementation of:</div>
-			<dl>
-			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toString">LIB211BaseExceptionInterface::__toString()</a></dt>
-						<dd>Convert exception to string with stacktrace</dd>
-					</dl>
-		Overrides Exception::__toString (  ) (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a> (Execute after each test method)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestDecode"></a>
+	<h3>method testDecode <span class="smalllinenumber">[line 42]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testDecode(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test decode() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestDecodeInterval"></a>
+	<h3>method testDecodeInterval <span class="smalllinenumber">[line 31]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testDecodeInterval(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test decodeInterval() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestEncode"></a>
+	<h3>method testEncode <span class="smalllinenumber">[line 60]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testEncode(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test encode() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestNeighbour"></a>
+	<h3>method testNeighbour <span class="smalllinenumber">[line 70]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testNeighbour(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test neighbour() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />
@@ -573,7 +398,7 @@ $code = 0])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 21:44:59 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 21:45:00 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
