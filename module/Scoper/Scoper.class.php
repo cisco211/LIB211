@@ -127,7 +127,7 @@ class LIB211Scoper extends LIB211Base {
 		ob_start();
 		include(func_get_arg(0));
 		$buffer = ob_get_contents();
-		ob_end_clean();
+		ob_clean();
 		return $buffer;
 	}
 
