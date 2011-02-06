@@ -47,6 +47,10 @@
 		</a><br>
 			<a href="../LIB211/_module---Permutate---Permutate.test.php.html">		Permutate.test.php
 		</a><br>
+			<a href="../LIB211/_module---Random---Random.class.php.html">		Random.class.php
+		</a><br>
+			<a href="../LIB211/_module---Random---Random.test.php.html">		Random.test.php
+		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.class.php.html">		Scoper.class.php
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
@@ -75,6 +79,9 @@
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
+	    		<a href="../LIB211/LIB211Random.html">LIB211Random</a><br />
+	    		<a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a><br />
+	    		<a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a><br />
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
@@ -96,12 +103,16 @@ Source Location: /core/Base.class.php<br /><br />
 
 <h3><a href="#class_details">Interface Overview</a></h3>
 <pre></pre><br />
-<div class="description"></div><br /><br />
+<div class="description">LIB211 Base Exception Interface</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>C!$C0^211</li>
+      </ul>
 
 
 
 
-
+    
 
         
 </td>
@@ -118,6 +129,7 @@ Source Location: /core/Base.class.php<br /><br />
     <li><a href="../LIB211/LIB211BaseExceptionInterface.html#methodgetMessage">getMessage</a></li>
     <li><a href="../LIB211/LIB211BaseExceptionInterface.html#methodgetTrace">getTrace</a></li>
     <li><a href="../LIB211/LIB211BaseExceptionInterface.html#methodgetTraceAsString">getTraceAsString</a></li>
+    <li><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toDefault">__toDefault</a></li>
     <li><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toString">__toString</a></li>
   </ul>
 </td>
@@ -138,7 +150,16 @@ Source Location: /core/Base.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 64]<br />
+[line 112]<br />
+LIB211 Base Exception Interface<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>C!$C0^211</td>
+  </tr>
+</table>
+</div>
 </div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -150,18 +171,18 @@ Source Location: /core/Base.class.php<br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 72]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 159]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>LIB211BaseExceptionInterface __construct(
-[
-$message = null], [
+[string
+$message = NULL], [integer
 $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Constructor<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -177,12 +198,12 @@ $code = 0])</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
         <td><b>$message</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">integer&nbsp;&nbsp;</td>
         <td><b>$code</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -192,7 +213,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetCode"></a>
-	<h3>method getCode <span class="smalllinenumber">[line 66]</span></h3>
+	<h3>method getCode <span class="smalllinenumber">[line 122]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -201,7 +222,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the error code<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -217,7 +238,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetFile"></a>
-	<h3>method getFile <span class="smalllinenumber">[line 67]</span></h3>
+	<h3>method getFile <span class="smalllinenumber">[line 127]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -226,7 +247,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the error file<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -242,7 +263,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetLine"></a>
-	<h3>method getLine <span class="smalllinenumber">[line 68]</span></h3>
+	<h3>method getLine <span class="smalllinenumber">[line 132]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -251,7 +272,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the error line<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -267,7 +288,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetMessage"></a>
-	<h3>method getMessage <span class="smalllinenumber">[line 65]</span></h3>
+	<h3>method getMessage <span class="smalllinenumber">[line 117]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -276,7 +297,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the error message<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -292,7 +313,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetTrace"></a>
-	<h3>method getTrace <span class="smalllinenumber">[line 69]</span></h3>
+	<h3>method getTrace <span class="smalllinenumber">[line 137]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -301,7 +322,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the stacktrace<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -317,7 +338,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="methodgetTraceAsString"></a>
-	<h3>method getTraceAsString <span class="smalllinenumber">[line 70]</span></h3>
+	<h3>method getTraceAsString <span class="smalllinenumber">[line 142]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -326,7 +347,32 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Get the stacktrace as string<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__toDefault"></a>
+	<h3>method __toDefault <span class="smalllinenumber">[line 147]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __toDefault(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Convert exception to string<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -342,7 +388,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="method__toString"></a>
-	<h3>method __toString <span class="smalllinenumber">[line 71]</span></h3>
+	<h3>method __toString <span class="smalllinenumber">[line 152]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -351,7 +397,7 @@ $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Convert exception to string with stacktrace<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -370,7 +416,7 @@ $code = 0])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 30 Jan 2011 20:41:01 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:30 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

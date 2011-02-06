@@ -1,11 +1,12 @@
 <?php
 
+// Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
 /**
  * LIB211 (C!$C0^211's php library)
- * 
  * Use at your own risk!
+ * 
  * @author C!$C0^211
  *
  */
@@ -197,6 +198,7 @@ class LIB211 extends LIB211Base {
 
 /**
  * LIB211 Exception
+ * 
  * @author C!$C0^211
  *
  */

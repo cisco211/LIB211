@@ -47,6 +47,10 @@
 		</a><br>
 			<a href="../LIB211/_module---Permutate---Permutate.test.php.html">		Permutate.test.php
 		</a><br>
+			<a href="../LIB211/_module---Random---Random.class.php.html">		Random.class.php
+		</a><br>
+			<a href="../LIB211/_module---Random---Random.test.php.html">		Random.test.php
+		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.class.php.html">		Scoper.class.php
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
@@ -75,6 +79,9 @@
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
+	    		<a href="../LIB211/LIB211Random.html">LIB211Random</a><br />
+	    		<a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a><br />
+	    		<a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a><br />
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
@@ -96,15 +103,16 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 
 <h3><a href="#class_details">Class Overview</a></h3>
 <pre></pre><br />
-<div class="description"></div><br /><br />
+<div class="description">LIB211 Testclass abstraction</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
-        </ul>
+          <li>C!$C0^211</li>
+            </ul>
 
 
 
 
-    
+        
 
         
 </td>
@@ -117,6 +125,8 @@ Source Location: /core/Testclass.abstract.php<br /><br />
     <li><a href="../LIB211/LIB211Testclass.html#methodassertEquals">assertEquals</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertFalse">assertFalse</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertNotEquals">assertNotEquals</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotNull">assertNotNull</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNull">assertNull</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertTrue">assertTrue</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetPrefix">setPrefix</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetPrefixAll">setPrefixAll</a></li>
@@ -136,11 +146,15 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 <div class="tags">
 <dl>
 <dt><a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a></dt>
-	<dd></dd>
+	<dd>LIB211 Permutate Testclass</dd>
+</dl>
+<dl>
+<dt><a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a></dt>
+	<dd>LIB211 Testclass abstraction</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a></dt>
-	<dd></dd>
+	<dd>LIB211 Testclass abstraction</dd>
 </dl>
 </div>
 </td>
@@ -154,11 +168,14 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 3]<br />
-<br /><br />
+[line 12]<br />
+LIB211 Testclass abstraction<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>C!$C0^211</td>
+  </tr>
   <tr>
     <td><b>abstract:</b>&nbsp;&nbsp;</td><td></td>
   </tr>
@@ -175,22 +192,25 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 
   <hr />
 	<a name="methodassertEquals"></a>
-	<h3>method assertEquals <span class="smalllinenumber">[line 5]</span></h3>
+	<h3>method assertEquals <span class="smalllinenumber">[line 21]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void assertEquals(
-
-$left, 
-$right, [
+mixed
+$left, mixed
+$right, [boolean
 $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Assert that $left will be equals to $right<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
   </tr>
@@ -203,17 +223,17 @@ $checkType = TRUE])</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$left</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$right</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">boolean&nbsp;&nbsp;</td>
         <td><b>$checkType</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -223,21 +243,24 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodassertFalse"></a>
-	<h3>method assertFalse <span class="smalllinenumber">[line 19]</span></h3>
+	<h3>method assertFalse <span class="smalllinenumber">[line 41]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void assertFalse(
-
-$test, [
+mixed
+$test, [boolean
 $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Assert that $test will be false<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
   </tr>
@@ -250,12 +273,12 @@ $checkType = TRUE])</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$test</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">boolean&nbsp;&nbsp;</td>
         <td><b>$checkType</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -265,22 +288,25 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodassertNotEquals"></a>
-	<h3>method assertNotEquals <span class="smalllinenumber">[line 33]</span></h3>
+	<h3>method assertNotEquals <span class="smalllinenumber">[line 62]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void assertNotEquals(
-
-$left, 
-$right, [
+mixed
+$left, mixed
+$right, [boolean
 $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Assert that $left will be not equals to $right<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
   </tr>
@@ -293,17 +319,107 @@ $checkType = TRUE])</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$left</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$right</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$checkType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNotNull"></a>
+	<h3>method assertNotNull <span class="smalllinenumber">[line 82]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotNull(
+mixed
+$test, [mixed
+$checkType = TRUE])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $test will be not null<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$test</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$checkType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNull"></a>
+	<h3>method assertNull <span class="smalllinenumber">[line 102]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNull(
+mixed
+$test, [boolean
+$checkType = TRUE])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $test will be null<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$test</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
         <td><b>$checkType</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -313,21 +429,24 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodassertTrue"></a>
-	<h3>method assertTrue <span class="smalllinenumber">[line 47]</span></h3>
+	<h3>method assertTrue <span class="smalllinenumber">[line 122]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void assertTrue(
-
-$test, [
+mixed
+$test, [boolean
 $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Assert that $test will be true<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
   </tr>
@@ -340,12 +459,12 @@ $checkType = TRUE])</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">mixed&nbsp;&nbsp;</td>
         <td><b>$test</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">boolean&nbsp;&nbsp;</td>
         <td><b>$checkType</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -355,7 +474,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetPrefix"></a>
-	<h3>method setPrefix <span class="smalllinenumber">[line 61]</span></h3>
+	<h3>method setPrefix <span class="smalllinenumber">[line 139]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -364,7 +483,7 @@ $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute before each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -378,6 +497,10 @@ $checkType = TRUE])</code>
 	<p>Overridden in child classes as:<br />
 		<dl>
 	<dt><a href="../LIB211/LIB211PermutateTest.html#methodsetPrefix">LIB211PermutateTest::setPrefix()</a></dt>
+		<dd>Execute before each test method</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetPrefix">LIB211RandomTest::setPrefix()</a></dt>
 		<dd></dd>
 	</dl>
 	</p>
@@ -386,7 +509,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetPrefixAll"></a>
-	<h3>method setPrefixAll <span class="smalllinenumber">[line 64]</span></h3>
+	<h3>method setPrefixAll <span class="smalllinenumber">[line 145]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -395,7 +518,7 @@ $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute before all test methods<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -411,7 +534,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetSuffix"></a>
-	<h3>method setSuffix <span class="smalllinenumber">[line 67]</span></h3>
+	<h3>method setSuffix <span class="smalllinenumber">[line 151]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -420,7 +543,7 @@ $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute after each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -434,6 +557,10 @@ $checkType = TRUE])</code>
 	<p>Overridden in child classes as:<br />
 		<dl>
 	<dt><a href="../LIB211/LIB211PermutateTest.html#methodsetSuffix">LIB211PermutateTest::setSuffix()</a></dt>
+		<dd>Execute after each test method</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetSuffix">LIB211RandomTest::setSuffix()</a></dt>
 		<dd></dd>
 	</dl>
 	</p>
@@ -442,7 +569,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetSuffixAll"></a>
-	<h3>method setSuffixAll <span class="smalllinenumber">[line 70]</span></h3>
+	<h3>method setSuffixAll <span class="smalllinenumber">[line 157]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -451,7 +578,7 @@ $checkType = TRUE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute after all test methods<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -470,7 +597,7 @@ $checkType = TRUE])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 30 Jan 2011 20:41:02 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:31 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

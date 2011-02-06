@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Docs For Class LIB211</title>
+<title>Docs For Class LIB211RandomTest</title>
 <link rel="stylesheet" type="text/css" href="../media/style.css">
 </head>
 <body>
@@ -94,18 +94,18 @@
     <td>
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: LIB211</h1>
-Source Location: /core/Operator.class.php<br /><br />
+<h1>Class: LIB211RandomTest</h1>
+Source Location: /module/Random/Random.test.php<br /><br />
 
 
 <table width="100%" border="0">
 <tr><td valign="top">
 
 <h3><a href="#class_details">Class Overview</a></h3>
-<pre><a href="../LIB211/LIB211Base.html">LIB211Base</a>
+<pre><a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a>
    |
-   --LIB211</pre><br />
-<div class="description">LIB211 (C!$C0^211's php library)  Use at your own risk!</div><br /><br />
+   --LIB211RandomTest</pre><br />
+<div class="description">LIB211 Testclass abstraction</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
           <li>C!$C0^211</li>
@@ -124,11 +124,8 @@ Source Location: /core/Operator.class.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
-    <li><a href="../LIB211/LIB211.html#method__construct">__construct</a></li>
-    <li><a href="../LIB211/LIB211.html#method__destruct">__destruct</a></li>
-    <li><a href="../LIB211/LIB211.html#methodinfo">info</a></li>
-    <li><a href="../LIB211/LIB211.html#methodis_created">is_created</a></li>
-    <li><a href="../LIB211/LIB211.html#method__status">__status</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodsetPrefix">setPrefix</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodsetSuffix">setSuffix</a></li>
   </ul>
 </td>
 
@@ -144,31 +141,67 @@ Source Location: /core/Operator.class.php<br /><br />
 <td valign="top">
 <h3>Inherited Methods</h3>
 <div class="tags">
-<h4>Class: <a href="../LIB211/LIB211Base.html">LIB211Base</a></h4>
+<h4>Class: <a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a></h4>
 <dl>
     <dt>
-    <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a>
+    <a href="../LIB211/LIB211Testclass.html#methodassertEquals">LIB211Testclass::assertEquals()</a>
   </dt>
   <dd>
-    Constructor
+    Assert that $left will be equals to $right
   </dd>
     <dt>
-    <a href="../LIB211/LIB211Base.html#method__check">LIB211Base::__check()</a>
+    <a href="../LIB211/LIB211Testclass.html#methodassertFalse">LIB211Testclass::assertFalse()</a>
   </dt>
   <dd>
-    Check for availability of a class/constant/extension/function/path/variable ^^
+    Assert that $test will be false
   </dd>
     <dt>
-    <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotEquals">LIB211Testclass::assertNotEquals()</a>
   </dt>
   <dd>
-    Destructor
+    Assert that $left will be not equals to $right
   </dd>
     <dt>
-    <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotNull">LIB211Testclass::assertNotNull()</a>
   </dt>
   <dd>
-    Return object status
+    Assert that $test will be not null
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNull">LIB211Testclass::assertNull()</a>
+  </dt>
+  <dd>
+    Assert that $test will be null
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertTrue">LIB211Testclass::assertTrue()</a>
+  </dt>
+  <dd>
+    Assert that $test will be true
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a>
+  </dt>
+  <dd>
+    Execute before each test method
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodsetPrefixAll">LIB211Testclass::setPrefixAll()</a>
+  </dt>
+  <dd>
+    Execute before all test methods
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a>
+  </dt>
+  <dd>
+    Execute after each test method
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodsetSuffixAll">LIB211Testclass::setSuffixAll()</a>
+  </dt>
+  <dd>
+    Execute after all test methods
   </dd>
   </dl>
 </div>
@@ -180,8 +213,8 @@ Source Location: /core/Operator.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 13]<br />
-LIB211 (C!$C0^211's php library)  Use at your own risk!<br /><br /><br /><br />
+[line 3]<br />
+LIB211 Testclass abstraction<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -200,17 +233,17 @@ LIB211 (C!$C0^211's php library)  Use at your own risk!<br /><br /><br /><br />
 <div class="tags">
 
   <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 103]</span></h3>
+	<a name="methodsetPrefix"></a>
+	<h3>method setPrefix <span class="smalllinenumber">[line 5]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>LIB211 __construct(
+		<code>void setPrefix(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Constructor<br /><br /><br /><br />
+		<br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -221,21 +254,21 @@ LIB211 (C!$C0^211's php library)  Use at your own risk!<br /><br /><br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a> (Constructor)<br /><br />
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a> (Execute before each test method)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line 124]</span></h3>
+	<a name="methodsetSuffix"></a>
+	<h3>method setSuffix <span class="smalllinenumber">[line 9]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __destruct(
+		<code>void setSuffix(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Destructor<br /><br /><br /><br />
+		<br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -246,116 +279,7 @@ LIB211 (C!$C0^211's php library)  Use at your own risk!<br /><br /><br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a> (Destructor)<br /><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodinfo"></a>
-	<h3>method info <span class="smalllinenumber">[line 159]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string info(
-mixed
-$mode, [mixed
-$dateformat = &quot;U&quot;], [mixed
-$break = EOL])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Return formatted info about LIB211<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">mixed&nbsp;&nbsp;</td>
-        <td><b>$mode</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">mixed&nbsp;&nbsp;</td>
-        <td><b>$dateformat</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">mixed&nbsp;&nbsp;</td>
-        <td><b>$break</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodis_created"></a>
-	<h3>method is_created <span class="smalllinenumber">[line 190]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean is_created(
-mixed
-$name)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Check for existance of an object<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">mixed&nbsp;&nbsp;</td>
-        <td><b>$name</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="method__status"></a>
-	<h3>method __status <span class="smalllinenumber">[line 133]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>array __status(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Return object status<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (Return object status)<br /><br />
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a> (Execute after each test method)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />
@@ -363,7 +287,7 @@ $name)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 19:31:30 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:31 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

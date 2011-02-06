@@ -47,6 +47,10 @@
 		</a><br>
 			<a href="../LIB211/_module---Permutate---Permutate.test.php.html">		Permutate.test.php
 		</a><br>
+			<a href="../LIB211/_module---Random---Random.class.php.html">		Random.class.php
+		</a><br>
+			<a href="../LIB211/_module---Random---Random.test.php.html">		Random.test.php
+		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.class.php.html">		Scoper.class.php
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
@@ -75,6 +79,9 @@
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
+	    		<a href="../LIB211/LIB211Random.html">LIB211Random</a><br />
+	    		<a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a><br />
+	    		<a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a><br />
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
@@ -98,12 +105,16 @@ Source Location: /core/Autoload.class.php<br /><br />
 <pre><a href="../LIB211/LIB211Base.html">LIB211Base</a>
    |
    --LIB211Autoload</pre><br />
-<div class="description"></div><br /><br />
+<div class="description">LIB211 Autloader</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>C!$C0^211</li>
+      </ul>
 
 
 
 
-
+    
 
         
 </td>
@@ -144,25 +155,25 @@ Source Location: /core/Autoload.class.php<br /><br />
     <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a>
   </dt>
   <dd>
-    
+    Constructor
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__check">LIB211Base::__check()</a>
   </dt>
   <dd>
-    
+    Check for availability of a class/constant/extension/function/path/variable ^^
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a>
   </dt>
   <dd>
-    
+    Destructor
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a>
   </dt>
   <dd>
-    
+    Return object status
   </dd>
   </dl>
 </div>
@@ -174,7 +185,16 @@ Source Location: /core/Autoload.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 5]<br />
+[line 12]<br />
+LIB211 Autloader<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>C!$C0^211</td>
+  </tr>
+</table>
+</div>
 </div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -185,11 +205,14 @@ Source Location: /core/Autoload.class.php<br /><br />
 	<a name="var$loader"></a>
 	<p></p>
 	<h4>static $loader = <span class="value"></span></h4>
-	<p>[line 7]</p>
-  <br /><br />
+	<p>[line 18]</p>
+  Loader object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>staticvar:</b>&nbsp;&nbsp;</td><td><a href="../LIB211/LIB211Autoload.html">LIB211Autoload</a> 0: </td>
+  </tr>
   <tr>
     <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
   </tr>
@@ -214,16 +237,16 @@ Source Location: /core/Autoload.class.php<br /><br />
 <div class="tags">
   <hr />
 	<a name="method__init"></a>
-	<h3>static method __init <span class="smalllinenumber">[line 18]</span></h3>
+	<h3>static method __init <span class="smalllinenumber">[line 39]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void __init(
+		<code>static <a href="../LIB211/LIB211Autoload.html">LIB211Autoload</a> __init(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Initializator<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -240,7 +263,7 @@ Source Location: /core/Autoload.class.php<br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 9]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 23]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -249,7 +272,7 @@ Source Location: /core/Autoload.class.php<br /><br />
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Constructor<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -260,12 +283,12 @@ Source Location: /core/Autoload.class.php<br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a> (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a> (Constructor)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line 14]</span></h3>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 31]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -274,7 +297,7 @@ Source Location: /core/Autoload.class.php<br /><br />
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Destructor<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -285,22 +308,22 @@ Source Location: /core/Autoload.class.php<br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a> (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a> (Destructor)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="methodmodule"></a>
-	<h3>method module <span class="smalllinenumber">[line 23]</span></h3>
+	<h3>method module <span class="smalllinenumber">[line 48]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>void module(
-
+string
 $name)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Add LIB211 modules to autoloader<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -316,7 +339,7 @@ $name)</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
         <td><b>$name</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -329,7 +352,7 @@ $name)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 30 Jan 2011 20:41:01 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:30 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

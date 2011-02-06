@@ -1,5 +1,8 @@
 <?php
 
+// Security lock
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
 /**
  * LIB211 Testrunner
  * 
@@ -85,6 +88,11 @@ class LIB211Tester extends LIB211Base {
 		}
 	}
 		
+	/**
+	 * Runs a test
+	 * @param string $test
+	 * @throws LIB211TesterException
+	 */
 	private function _runTest($test) {
 		if (empty($test)) throw new LIB211TesterException('Given test is empty');
 		if (empty($test['name'])) throw new LIB211TesterException('No name for test specified');
@@ -183,6 +191,10 @@ class LIB211Tester extends LIB211Base {
 		self::$instances--;
 	}
 	
+	/** 
+	 * Return object status
+	 * @return array
+	 */
 	public function __status() {
 		self::$time_stop = microtime(TRUE);
 		self::$time_diff = round(self::$time_stop - self::$time_start,11);
@@ -194,10 +206,248 @@ class LIB211Tester extends LIB211Base {
 		return $result;
 	}
 	
+	/**
+	 * Get a test result
+	 * @param string $name
+	 * @return array
+	 */
+	public function getResult($name) {
+		if (isset($this->results[$name])) return $this->results[$name];
+		else return array();
+	}
+	
+	/**
+	 * Get a test result as HTML
+	 * @param string $name
+	 */
+	public function getResultAsHTML($name) {
+	}
+	
+	/**
+	 * Get a test result as text
+	 * @param string $name
+	 * @return string
+	 */
+	public function getResultAsText($name) {
+		$status = $this->results['LIB211TesterStatus'];
+		
+		$tests = '';
+		
+		if (!empty($this->tests)) {
+			
+			foreach ($this->tests as $test) {
+				
+				if ($test['name'] == $name) {
+				
+					$result = $this->getResult($test['name']);
+				
+					// No Tests?
+					$noTests = TRUE;
+					foreach($result as $methodName => $methodResult) {
+						if (preg_match('/^test[a-zA-Z\_]+[a-zA-Z0-9\_]*$/',$methodName)) $noTests = FALSE;
+					}
+					
+					// Set class title
+					$check = 'PASSED';
+					foreach ($result as $methodName => $methodResult) {
+						if (isset($methodResult['status']) AND $methodResult['status'] == 'failed') {
+							$check = 'FAILED';
+							break;
+						}
+						foreach ($methodResult as $stepName => $stepResult) {
+							if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = 'FAILED';
+						}
+					}
+					if ($noTests)  $check = 'NOTEST';
+					$tests .= EOL.$check.' '.$test['name'];
+					
+					//Methods
+					foreach ($result as $methodName => $methodResult) {
+						
+						// Class
+						if (isset($methodResult['status'])) {
+							
+							// Add class method failure message
+							if ($methodResult['status'] == 'failed') {
+							
+								// Set method title
+								$tests .= EOL.' FAILED '.$methodName;
+								
+								// Set exception message
+								if (isset($methodResult['exception'])) {
+									$tests .= EOL.'  '.$methodResult['exception']->__toDefault();
+									$tests .= EOL.'   '.str_replace(array(EOL,chr(13),chr(10)),EOL.'   ',$methodResult['exception']->getTraceAsString());
+								}
+							}
+						}
+						// Method
+						else {
+							
+							// Set method title
+							$check = ' PASSED';
+							foreach ($methodResult as $stepName => $stepResult) {
+								if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = ' FAILED';
+							}
+							$tests .= EOL.$check.' '.$methodName;
+							
+							// Set test method failure message
+							foreach ($methodResult as $stepName => $stepResult) {
+								if (isset($stepResult['exception'])) {
+									if ($stepName == 'test') $name = 'runTestMethod';
+									else $name = $stepName;
+									$tests .= EOL.'  FAILED '.$name;
+									$tests .= EOL.'   '.$stepResult['exception']->__toDefault();
+									$tests .= EOL.'    '.str_replace(array(EOL,chr(13),chr(10)),EOL.'    ',$stepResult['exception']->getTraceAsString());
+								}
+							}
+						}
+					}
+					
+					$tests .= EOL;
+					
+				}
+			}
+
+		}
+		else {
+			$tests = EOL.'There are no tests';
+		}
+		
+		$text = <<<ENDTEXT
+{$tests}
+Passed tests: {$status['passed']}
+Failed tests: {$status['failed']}
+Tests total: {$status['tests']}
+
+
+ENDTEXT;
+		return $text;
+		
+	}
+	
+	/**
+	 * Get all test results
+	 * @return multitype:
+	 */
 	public function getResults() {
 		return $this->results;
 	}
 	
+	/**
+	 * Get all test results as HTML
+	 */
+	public function getResultsAsHTML() {
+	}
+	
+	/**
+	 * Get all test results as text
+	 * @return string
+	 */
+	public function getResultsAsText() {
+		$status = $this->results['LIB211TesterStatus'];
+		
+		if (!empty($this->tests)) {
+			
+			$tests = '';
+			
+			// Testclass
+			foreach ($this->tests as $test) {
+				
+				$result = $this->getResult($test['name']);
+				
+				// No Tests?
+				$noTests = TRUE;
+				foreach($result as $methodName => $methodResult) {
+					if (preg_match('/^test[a-zA-Z\_]+[a-zA-Z0-9\_]*$/',$methodName)) $noTests = FALSE;
+				}
+				
+				// Set class title
+				$check = 'PASSED';
+				foreach ($result as $methodName => $methodResult) {
+					if (isset($methodResult['status']) AND $methodResult['status'] == 'failed') {
+						$check = 'FAILED';
+						break;
+					}
+					foreach ($methodResult as $stepName => $stepResult) {
+						if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = 'FAILED';
+					}
+				}
+				if ($noTests)  $check = 'NOTEST';
+				$tests .= EOL.$check.' '.$test['name'];
+				
+				//Methods
+				foreach ($result as $methodName => $methodResult) {
+					
+					// Class
+					if (isset($methodResult['status'])) {
+						
+						// Add class method failure message
+						if ($methodResult['status'] == 'failed') {
+							
+							// Set method title
+							$tests .= EOL.' FAILED '.$methodName;
+							
+							// Set exception message
+							if (isset($methodResult['exception'])) {
+								$tests .= EOL.'  '.$methodResult['exception']->__toDefault();
+								$tests .= EOL.'   '.str_replace(array(EOL,chr(13),chr(10)),EOL.'   ',$methodResult['exception']->getTraceAsString());
+							}
+						}
+					}
+					// Method
+					else {
+						
+						// Set method title
+						$check = ' PASSED';
+						foreach ($methodResult as $stepName => $stepResult) {
+							if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = ' FAILED';
+						}
+						$tests .= EOL.$check.' '.$methodName;
+						
+						// Set test method failure message
+						foreach ($methodResult as $stepName => $stepResult) {
+							if (isset($stepResult['exception'])) {
+								if ($stepName == 'test') $name = 'runTestMethod';
+								else $name = $stepName;
+								$tests .= EOL.'  FAILED '.$name;
+								$tests .= EOL.'   '.$stepResult['exception']->__toDefault();
+								$tests .= EOL.'    '.str_replace(array(EOL,chr(13),chr(10)),EOL.'    ',$stepResult['exception']->getTraceAsString());
+							}
+						}
+					}
+				}
+				
+				$tests .= EOL;
+			}
+		}
+		else {
+			$tests = EOL.'There are no tests';
+		}
+		
+		$text = <<<ENDTEXT
+{$tests}
+Passed tests: {$status['passed']}
+Failed tests: {$status['failed']}
+Tests total: {$status['tests']}
+
+
+ENDTEXT;
+		return $text;
+	}
+	
+	/**
+	 * Get a list of all tests
+	 * @return array
+	 */
+	public function getTests() {
+		return $this->tests;
+	}
+	
+	/**
+	 * Run a test
+	 * @param string $test
+	 * @throws LIB211TesterException
+	 */
 	public function runTest($test) {
 		foreach ($this->tests as $case) {
 			if ($test == $case['name']) {
@@ -205,13 +455,21 @@ class LIB211Tester extends LIB211Base {
 				return;
 			}
 		}
-		throw new LIB211TesterException('Test "'.$test.' not found');
+		throw new LIB211TesterException('Test "'.$test.'" not found');
 	}
 	
+	/**
+	 * Run all tests
+	 */
 	public function runTests() {
 		foreach ($this->tests as $test) $this->_runTest($test);
 	}
 	
 }
 
+/**
+ * LIB211 Tester Exception
+ * @author C!$C0^211
+ *
+ */
 class LIB211TesterException extends LIB211BaseException {}

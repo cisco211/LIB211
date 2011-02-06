@@ -1,14 +1,46 @@
 <?php
 
+// Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+/**
+ * LIB211 Base class
+ * 
+ * @author C!$C0^211
+ *
+ */
 class LIB211Base {
 
+	/**
+	 * Instance counter
+	 * @staticvar integer
+	 */
 	private static $instances = 0;
+	
+	/**
+	 * Runtime of object
+	 * @staticvar float
+	 */
 	private static $time_diff = 0;
+	
+	/**
+	 * Start time of object
+	 * @staticvar float
+	 */
 	private static $time_start = 0;
+	
+	/**
+	 * Stop time of object
+	 * @staticvar float
+	 */
 	private static $time_stop = 0;
 
+	/**
+	 * Check for availability of a class/constant/extension/function/path/variable ^^
+	 * @param string $check
+	 * @param string $test
+	 * @throws LIB211BaseException
+	 */
 	public function __check($check,$test) {
 		
 		switch ($check) {
@@ -41,15 +73,25 @@ class LIB211Base {
 		
 	}
 	
+	/**
+	 * Constructor
+	 */
 	public function __construct() {
 		self::$instances++;
 		self::$time_start = microtime(TRUE);
 	}
 	
+	/**
+	 * Destructor
+	 */
 	public function __destruct() {
 		self::$instances--;
 	}
 	
+	/**
+	 * Return object status
+	 * @return array
+	 */
 	public function __status() {
 		self::$time_stop = microtime(TRUE);
 		self::$time_diff = round(self::$time_stop - self::$time_start,11);
@@ -61,34 +103,132 @@ class LIB211Base {
 	
 }
 
+/**
+ * LIB211 Base Exception Interface
+ * 
+ * @author C!$C0^211
+ *
+ */
 interface LIB211BaseExceptionInterface {
+	
+    /**
+     * Get the error message
+     */
     public function getMessage();
+    
+    /**
+     * Get the error code
+     */
     public function getCode();
+
+    /**
+     * Get the error file
+     */
     public function getFile();
+    
+    /**
+     * Get the error line
+     */
     public function getLine();
+    
+    /**
+     * Get the stacktrace
+     */
     public function getTrace();
+    
+    /**
+     * Get the stacktrace as string
+     */
     public function getTraceAsString();
+    
+    /**
+     * Convert exception to string
+     */
+    public function __toDefault();
+    
+    /**
+     * Convert exception to string with stacktrace
+     */
     public function __toString();
-    public function __construct($message = null, $code = 0);
+    
+    /**
+     * Constructor
+     * @param string $message
+     * @param integer $code
+     */
+    public function __construct($message = NULL, $code = 0);
 }
 
+/**
+ * LIB211 Base Exception
+ * 
+ * @author C!$C0^211
+ *
+ */
 class LIB211BaseException extends Exception implements LIB211BaseExceptionInterface {
 
+    /**
+     * Exception message
+     * @var string
+     */
     protected $message = 'Unknown exception';
+    
+    /**
+     * Exception string
+     * @var string
+     */
     private $string;
+    
+    /**
+     * Exception code
+     * @var integer
+     */
     protected $code = 0;
+    
+    /**
+     * Exception file
+     * @var string
+     */
     protected $file;
+    
+    /**
+     * Exception line
+     * @var integer
+     */
     protected $line;
+    
+    /**
+     * Exception stacktrace
+     * @var string
+     */
     private $trace;
     
-    public function __construct($message = null, $code = 0) {
+    /**
+     * Constructor
+     * @param string $message
+     * @param integer $code
+     */
+    public function __construct($message = NULL, $code = 0) {
         if (!$message) {
             throw new $this('Unknown '.get_class($this));
         }
         parent::__construct($message, $code);
     }
 	
+    /**
+     * Convert exception to string
+     * @return string
+     */
+    public function __toDefault() {
+    	return get_class($this).' \''.$this->message.'\' in '.$this->file.':'.$this->line;
+    }
+    
+    /**
+     * Convert exception to string with stacktrace
+     * @return string
+     */
     public function __toString() {
         return get_class($this).' \''.$this->message.'\' in '.$this->file.':'.$this->line.EOL.$this->getTraceAsString();
     }
+    
 }

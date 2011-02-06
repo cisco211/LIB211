@@ -47,6 +47,10 @@
 		</a><br>
 			<a href="../LIB211/_module---Permutate---Permutate.test.php.html">		Permutate.test.php
 		</a><br>
+			<a href="../LIB211/_module---Random---Random.class.php.html">		Random.class.php
+		</a><br>
+			<a href="../LIB211/_module---Random---Random.test.php.html">		Random.test.php
+		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.class.php.html">		Scoper.class.php
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
@@ -75,6 +79,9 @@
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
+	    		<a href="../LIB211/LIB211Random.html">LIB211Random</a><br />
+	    		<a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a><br />
+	    		<a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a><br />
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
@@ -98,12 +105,16 @@ Source Location: /core/Base.class.php<br /><br />
 <pre>Exception
    |
    --LIB211BaseException</pre><br />
-<div class="description"></div><br /><br />
+<div class="description">LIB211 Base Exception</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>C!$C0^211</li>
+      </ul>
 
 
 
 
-
+    
 
                 <p class="implements">
             Implements interfaces:
@@ -128,6 +139,7 @@ Source Location: /core/Base.class.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../LIB211/LIB211BaseException.html#method__construct">__construct</a></li>
+    <li><a href="../LIB211/LIB211BaseException.html#method__toDefault">__toDefault</a></li>
     <li><a href="../LIB211/LIB211BaseException.html#method__toString">__toString</a></li>
   </ul>
 </td>
@@ -143,7 +155,7 @@ Source Location: /core/Base.class.php<br /><br />
 <div class="tags">
 <dl>
 <dt><a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a></dt>
-	<dd></dd>
+	<dd>LIB211 Autoload Exception</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211Exception.html">LIB211Exception</a></dt>
@@ -151,15 +163,19 @@ Source Location: /core/Base.class.php<br /><br />
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211TestclassException.html">LIB211TestclassException</a></dt>
-	<dd></dd>
+	<dd>LIB211 Testclass Exception</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211TesterException.html">LIB211TesterException</a></dt>
-	<dd></dd>
+	<dd>LIB211 Tester Exception</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a></dt>
 	<dd>LIB211 Permutate Exception</dd>
+</dl>
+<dl>
+<dt><a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a></dt>
+	<dd>Enter description here ...</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a></dt>
@@ -295,7 +311,16 @@ Source Location: /core/Base.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 75]<br />
+[line 168]<br />
+LIB211 Base Exception<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>C!$C0^211</td>
+  </tr>
+</table>
+</div>
 </div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -306,8 +331,8 @@ Source Location: /core/Base.class.php<br /><br />
 	<a name="var$code"></a>
 	<p></p>
 	<h4>$code = <span class="value">&nbsp;0</span></h4>
-	<p>[line 79]</p>
-  <br /><br />
+	<p>[line 186]</p>
+  Exception code<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -322,7 +347,7 @@ Source Location: /core/Base.class.php<br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
+      <td>integer</td>
     </tr>
         <tr>
       <td><b>Overrides:</b>&nbsp;&nbsp;</td>
@@ -334,8 +359,8 @@ Source Location: /core/Base.class.php<br /><br />
 	<a name="var$file"></a>
 	<p></p>
 	<h4>$file = <span class="value"></span></h4>
-	<p>[line 80]</p>
-  <br /><br />
+	<p>[line 192]</p>
+  Exception file<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -350,7 +375,7 @@ Source Location: /core/Base.class.php<br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
+      <td>string</td>
     </tr>
         <tr>
       <td><b>Overrides:</b>&nbsp;&nbsp;</td>
@@ -362,8 +387,8 @@ Source Location: /core/Base.class.php<br /><br />
 	<a name="var$line"></a>
 	<p></p>
 	<h4>$line = <span class="value"></span></h4>
-	<p>[line 81]</p>
-  <br /><br />
+	<p>[line 198]</p>
+  Exception line<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -378,7 +403,7 @@ Source Location: /core/Base.class.php<br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
+      <td>integer</td>
     </tr>
         <tr>
       <td><b>Overrides:</b>&nbsp;&nbsp;</td>
@@ -390,8 +415,8 @@ Source Location: /core/Base.class.php<br /><br />
 	<a name="var$message"></a>
 	<p></p>
 	<h4>$message = <span class="value">&nbsp;'Unknown&nbsp;exception'</span></h4>
-	<p>[line 77]</p>
-  <br /><br />
+	<p>[line 174]</p>
+  Exception message<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -406,7 +431,7 @@ Source Location: /core/Base.class.php<br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
+      <td>string</td>
     </tr>
         <tr>
       <td><b>Overrides:</b>&nbsp;&nbsp;</td>
@@ -424,18 +449,18 @@ Source Location: /core/Base.class.php<br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 84]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 211]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>LIB211BaseException __construct(
-[
-$message = null], [
+[string
+$message = NULL], [integer
 $code = 0])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Constructor<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -450,18 +475,19 @@ $code = 0])</code>
 		<div class="notes">Implementation of:</div>
 			<dl>
 			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__construct">LIB211BaseExceptionInterface::__construct()</a></dt>
+						<dd>Constructor</dd>
 					</dl>
 		Overrides Exception::constructor __construct ( [$message = ], [$code = ], [$previous = ] ) (parent method not documented)<br /><br />
         <h4>Parameters:</h4>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
         <td><b>$message</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">integer&nbsp;&nbsp;</td>
         <td><b>$code</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -470,17 +496,48 @@ $code = 0])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__toString"></a>
-	<h3>method __toString <span class="smalllinenumber">[line 91]</span></h3>
+	<a name="method__toDefault"></a>
+	<h3>method __toDefault <span class="smalllinenumber">[line 222]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __toString(
+		<code>string __toDefault(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Convert exception to string<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+			<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toDefault">LIB211BaseExceptionInterface::__toDefault()</a></dt>
+						<dd>Convert exception to string</dd>
+					</dl>
+		
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__toString"></a>
+	<h3>method __toString <span class="smalllinenumber">[line 230]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string __toString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Convert exception to string with stacktrace<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -495,6 +552,7 @@ $code = 0])</code>
 		<div class="notes">Implementation of:</div>
 			<dl>
 			<dt><a href="../LIB211/LIB211BaseExceptionInterface.html#method__toString">LIB211BaseExceptionInterface::__toString()</a></dt>
+						<dd>Convert exception to string with stacktrace</dd>
 					</dl>
 		Overrides Exception::__toString (  ) (parent method not documented)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
@@ -504,7 +562,7 @@ $code = 0])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 30 Jan 2011 20:41:01 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:30 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

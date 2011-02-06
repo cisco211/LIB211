@@ -1,27 +1,58 @@
 <?php
 
+// Security lock
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
+/**
+ * LIB211 Permutate Testclass
+ * 
+ * @author C!$C0^211
+ *
+ */
 class LIB211PermutateTest extends LIB211Testclass {
 	
+	/** 
+	 * Execute before each test method
+	 */
 	public function setPrefix() {
 		$this->permutate = new LIB211Permutate();
 	}
 	
+	/** 
+	 * Execute after each test method
+	 */
 	public function setSuffix() {
 		unset($this->permutate);
 	}
 	
+	/**
+	 * Test addList() method
+	 */
 	public function testAddList() {
 	}
 	
+	/**
+	 * Test addLists() method
+	 */
 	public function testAddLists() {
+		
 	}
 	
+	/**
+	 * Test delList() method
+	 */
 	public function testDelList() {
 	}
 	
+	/**
+	 * Test delLists() method
+	 */
 	public function testDelLists() {
 	}
 	
+	/**
+	 * Test permutation with one dimension
+	 */
 	public function testDimension1() {
 		$list = array('a');
 		$test = array($list);
@@ -29,6 +60,9 @@ class LIB211PermutateTest extends LIB211Testclass {
  		$this->assertEquals($test,$this->permutate->getResult());
 	}
 
+	/**
+	 * Test permutation with two dimensions
+	 */
 	public function testDimension2() {
 		$list1 = array('a','b');
 		$list2 = array(1,2);
@@ -43,6 +77,9 @@ class LIB211PermutateTest extends LIB211Testclass {
 		$this->assertEquals($test,$this->permutate->getResult());
 	}
 	
+	/**
+	 * Test permutation with three dimensions
+	 */
 	public function testDimension3() {
 		$list1 = array('a','b','c');
 		$list2 = array(1,2,3);
@@ -82,12 +119,22 @@ class LIB211PermutateTest extends LIB211Testclass {
 		$this->assertEquals($test,$this->permutate->getResult());
 	}
 	
+	/**
+	 * Test getList() method
+	 */
 	public function testGetList() {
 	}
 	
+	/**
+	 * Test getLists() method
+	 */
 	public function testGetLists() {
 	}
 	
+	/**
+	 * Test getResult() method
+	 */
 	public function testGetResult() {
 	}
+
 }

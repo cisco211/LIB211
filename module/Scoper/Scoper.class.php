@@ -143,6 +143,7 @@ class LIB211Scoper extends LIB211Base {
 
 /**
  * LIB211 Scoper Exception
+ * 
  * @author C!$C0^211
  *
  */

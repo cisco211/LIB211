@@ -47,6 +47,10 @@
 		</a><br>
 			<a href="../LIB211/_module---Permutate---Permutate.test.php.html">		Permutate.test.php
 		</a><br>
+			<a href="../LIB211/_module---Random---Random.class.php.html">		Random.class.php
+		</a><br>
+			<a href="../LIB211/_module---Random---Random.test.php.html">		Random.test.php
+		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.class.php.html">		Scoper.class.php
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
@@ -75,6 +79,9 @@
 	    		<a href="../LIB211/LIB211Permutate.html">LIB211Permutate</a><br />
 	    		<a href="../LIB211/LIB211PermutateException.html">LIB211PermutateException</a><br />
 	    		<a href="../LIB211/LIB211PermutateTest.html">LIB211PermutateTest</a><br />
+	    		<a href="../LIB211/LIB211Random.html">LIB211Random</a><br />
+	    		<a href="../LIB211/LIB211RandomException.html">LIB211RandomException</a><br />
+	    		<a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a><br />
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
@@ -119,7 +126,13 @@ Source Location: /core/Tester.class.php<br /><br />
 <ul>
     <li><a href="../LIB211/LIB211Tester.html#method__construct">__construct</a></li>
     <li><a href="../LIB211/LIB211Tester.html#method__destruct">__destruct</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetResult">getResult</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetResultAsHTML">getResultAsHTML</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetResultAsText">getResultAsText</a></li>
     <li><a href="../LIB211/LIB211Tester.html#methodgetResults">getResults</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetResultsAsHTML">getResultsAsHTML</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetResultsAsText">getResultsAsText</a></li>
+    <li><a href="../LIB211/LIB211Tester.html#methodgetTests">getTests</a></li>
     <li><a href="../LIB211/LIB211Tester.html#methodrunTest">runTest</a></li>
     <li><a href="../LIB211/LIB211Tester.html#methodrunTests">runTests</a></li>
     <li><a href="../LIB211/LIB211Tester.html#method__status">__status</a></li>
@@ -144,25 +157,25 @@ Source Location: /core/Tester.class.php<br /><br />
     <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a>
   </dt>
   <dd>
-    
+    Constructor
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__check">LIB211Base::__check()</a>
   </dt>
   <dd>
-    
+    Check for availability of a class/constant/extension/function/path/variable ^^
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a>
   </dt>
   <dd>
-    
+    Destructor
   </dd>
     <dt>
     <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a>
   </dt>
   <dd>
-    
+    Return object status
   </dd>
   </dl>
 </div>
@@ -174,7 +187,7 @@ Source Location: /core/Tester.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 9]<br />
+[line 12]<br />
 LIB211 Testrunner<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -195,7 +208,7 @@ LIB211 Testrunner<br /><br /><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 158]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 166]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -215,12 +228,12 @@ LIB211 Testrunner<br /><br /><br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a> (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a> (Constructor)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line 181]</span></h3>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 189]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -240,47 +253,22 @@ LIB211 Testrunner<br /><br /><br /><br />
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a> (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a> (Destructor)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodgetResults"></a>
-	<h3>method getResults <span class="smalllinenumber">[line 197]</span></h3>
+	<a name="methodgetResult"></a>
+	<h3>method getResult <span class="smalllinenumber">[line 214]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void getResults(
-)</code>
+		<code>array getResult(
+string
+$name)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodrunTest"></a>
-	<h3>method runTest <span class="smalllinenumber">[line 201]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void runTest(
-
-$test)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		<br /><br />
+		Get a test result<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -296,7 +284,218 @@ $test)</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResultAsHTML"></a>
+	<h3>method getResultAsHTML <span class="smalllinenumber">[line 223]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getResultAsHTML(
+string
+$name)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a test result as HTML<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResultAsText"></a>
+	<h3>method getResultAsText <span class="smalllinenumber">[line 231]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getResultAsText(
+string
+$name)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a test result as text<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResults"></a>
+	<h3>method getResults <span class="smalllinenumber">[line 332]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>multitype: getResults(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get all test results<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResultsAsHTML"></a>
+	<h3>method getResultsAsHTML <span class="smalllinenumber">[line 339]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getResultsAsHTML(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get all test results as HTML<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetResultsAsText"></a>
+	<h3>method getResultsAsText <span class="smalllinenumber">[line 346]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getResultsAsText(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get all test results as text<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetTests"></a>
+	<h3>method getTests <span class="smalllinenumber">[line 442]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array getTests(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get a list of all tests<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrunTest"></a>
+	<h3>method runTest <span class="smalllinenumber">[line 451]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void runTest(
+string
+$test)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Run a test<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TesterException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
         <td><b>$test</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
@@ -306,7 +505,7 @@ $test)</code>
   </div>
   <hr />
 	<a name="methodrunTests"></a>
-	<h3>method runTests <span class="smalllinenumber">[line 211]</span></h3>
+	<h3>method runTests <span class="smalllinenumber">[line 464]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -315,7 +514,7 @@ $test)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Run all tests<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -331,16 +530,16 @@ $test)</code>
   </div>
   <hr />
 	<a name="method__status"></a>
-	<h3>method __status <span class="smalllinenumber">[line 186]</span></h3>
+	<h3>method __status <span class="smalllinenumber">[line 198]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void __status(
+		<code>array __status(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Return object status<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -351,7 +550,7 @@ $test)</code>
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (parent method not documented)<br /><br />
+	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (Return object status)<br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />
@@ -359,7 +558,7 @@ $test)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 30 Jan 2011 20:41:02 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 06 Feb 2011 19:31:31 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
