@@ -20,7 +20,7 @@ $testsAvailable = $tester->getTests();
 				<td class="header_top">LIB211</td>
 			</tr>
 			<tr>
-				<td class="header_line"><img src="./doc/media/empty.png" width="1" height="1" border="0" alt=""  /></td>
+				<td class="header_line"><img src="./doc/media/empty.png" width="1" border="0" alt=""  /></td>
 			</tr>
 			<tr>
 				<td class="header_menu">&nbsp;</td>
@@ -59,7 +59,7 @@ $testsAvailable = $tester->getTests();
 					<b><a href='./test.php'>Testrunner:</a></b>
 					<div class="package">
 						<a href="./test.php?test=all">Run all tests</a><br/>
-						<a href="./test.php?cli&test=all" target="_blank">Run with CLI</a><br/>
+						<a href="./test.php?cli&amp;test=all" target="_blank">Run with CLI</a><br/>
 						<?php
  							foreach ($testsAvailable as $index => $test) {
  								print '<a href="./test.php?test='.$test['name'].'">Run '.$test['name'].'</a><br/>';

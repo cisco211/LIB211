@@ -199,11 +199,14 @@ ENDHLP;
 			}
 			// Print HTML output
 			exit(<<<ENDHTML
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>LIB211 Testrunner</title>
 		<link rel="stylesheet" type="text/css" href="./doc/media/style.css"/>
 		<script type="text/javascript">
+			/*<![CDATA[*/
 			var NS4 = (navigator.appName == "Netscape" && parseInt(navigator.appVersion) < 5);
 
 			function addOption(selection,text,value) {
@@ -298,6 +301,7 @@ ENDHLP;
 			function submitForm(formular) {
 				document.location.href='test.php?test='+sel2string(formular.form.testsToRun);
 			}
+			/*]]>*/
 		</script>
 	</head>
 	<body>
@@ -337,7 +341,7 @@ ENDHLP;
 					<b><a href='./test.php'>Testrunner:</a></b>
 					<div class="package">
 						<a href="./test.php?test=all">Run all tests</a><br/>
-						<a href="./test.php?cli&test=all" target="_blank">Run with CLI</a><br/>
+						<a href="./test.php?cli&amp;test=all" target="_blank">Run with CLI</a><br/>
 						{$testLinks}
 					</div>
 					<br/>
@@ -381,7 +385,7 @@ ENDHLP;
 										<center>
 											<input type="button" title="Run all available tests once" value="Run all tests" onclick="javascript:document.location.href='test.php?test=all';"/>
 											<input type="button" title="Run the test(s) you have added to 'Tests to run'" value="Run selected tests" onclick="javascript:submitForm(this);"/>
-											<input type="button" title="Use LIB211Tester in a wrapped CLI mode" value="Run with CLI" onclick="javascript:document.location.href='test.php?cli&test='+this.form.test.value;"/>
+											<input type="button" title="Use LIB211Tester in a wrapped CLI mode" value="Run with CLI" onclick="javascript:document.location.href='test.php?cli&amp;test='+this.form.test.value;"/>
 											<input type="button" title="Clear settings and results" value="Clear" onclick="javascript:document.location.href='test.php';"/>
 											<input type="button" title="Back to root" value="Back" onclick="javascript:document.location.href='index.php';"/>
 										</center>
@@ -403,7 +407,7 @@ ENDHLP;
 				</td>
 			</tr>
 		</table>
-	<body>
+	</body>
 </html>
 ENDHTML
 			);
