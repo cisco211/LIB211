@@ -1,18 +1,50 @@
 <?php
 
+// Security lock
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+	require_once(LIB211_ROOT.'/module/Random/Random.class.php');
+}
+
+/**
+ * Enter description here ...
+ * @author ts
+ *
+ */
 class LIB211RandomTest extends LIB211Testclass {
 
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
+
 	/** 
-	 * 
+	 * Execute before each test method
 	 */
 	public function setPrefix() {
+	}
+	
+	/** 
+	 * Execute before all methods
+	 */
+	public function setPrefixAll() {
 		$this->random = new LIB211Random();
 	}
 	
-	/**
-	 * 
+	/** 
+	 * Execute after each test method
 	 */
 	public function setSuffix() {
+	}
+	
+	/**
+	 * Execute after all methods
+	 */
+	public function setSuffixAll() {
 		unset($this->random);
 	}
 	
@@ -37,6 +69,30 @@ class LIB211RandomTest extends LIB211Testclass {
 		$boolean = $this->random->getRandomBoolean();
 		if ($boolean) $this->assertTrue($boolean);
 		else $this->assertFalse($boolean);
+	}
+
+	/**
+	 * Enter description here ...
+	 */
+	public function testGetRandomFloat() {
+	}
+
+	/**
+	 * Enter description here ...
+	 */
+	public function testGetRandomFloatNegative() {
+	}
+	
+	/**
+	 * Enter description here ...
+	 */
+	public function testGetRandomFloatPositive() {
+	}
+	
+	/**
+	 * Enter description here ...
+	 */
+	public function testGetRandomGeohash() {
 	}
 	
 	/**
@@ -63,12 +119,27 @@ class LIB211RandomTest extends LIB211Testclass {
 	/**
 	 * Enter description here ...
 	 */
+	public function testGetRandomLatitude() {
+	}
+	
+	/**
+	 * Enter description here ...
+	 */
+	public function testGetRandomLongitude() {
+	}
+	
+	/**
+	 * Enter description here ...
+	 */
 	public function testGetRandomNull() {
 		$this->assertEquals(NULL,$this->random->getRandomNull());
 		$this->assertEquals('',$this->random->getRandomNull('string'));
 		$this->assertEquals(0,$this->random->getRandomNull('integer'));
 		$this->assertEquals(0.0,$this->random->getRandomNull('float'));
 		$this->assertEquals(array(),$this->random->getRandomNull('array'));
+	}
+	
+	public function testGetRandomString() {
 	}
 	
 	/**

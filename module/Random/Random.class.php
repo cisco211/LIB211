@@ -164,6 +164,18 @@ class LIB211Random extends LIB211Base {
 		}
 	}
 
+	public function getRandomFloat($min=NULL,$max=NULL) {
+	}
+
+	public function getRandomFloatNegative($min=NULL,$max=NULL) {
+	}
+	
+	public function getRandomFloatPositive($min=NULL,$max=NULL) {
+	}
+	
+	public function getRandomGeohash() {
+	}
+	
 	/**
 	 * Enter description here ...
 	 * @param unknown_type $min
@@ -238,6 +250,22 @@ class LIB211Random extends LIB211Base {
 		return $value;
 	}
 	
+	public function getRandomLatitude($min=NULL,$max=NULL) {
+		if ($min === NULL) $min = -90.0;
+		if ($max === NULL) $max = 90.0;
+		if ($min <= -90.0) $min = -90.0;
+		if ($max >= 90.0) $max = 90.0;
+		
+	}
+
+	public function getRandomLongitude($min=NULL,$max=NULL) {
+		if ($min === NULL) $min = -180.0;
+		if ($max === NULL) $max = 180.0;
+		if ($min <= -180.0) $min = -180.0;
+		if ($max >= 180.0) $max = 180.0;
+		
+	}
+	
 	/**
 	 * Enter description here ...
 	 * @param unknown_type $format
@@ -283,6 +311,8 @@ class LIB211Random extends LIB211Base {
 				break;
 		}
 	}
+	
+	public function getRandomString() {}
 	
 	/**
 	 * Enter description here ...

@@ -3,6 +3,10 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+}
+
 /**
  * LIB211 Base class
  * 
@@ -220,7 +224,7 @@ class LIB211BaseException extends Exception implements LIB211BaseExceptionInterf
      * @return string
      */
     public function __toDefault() {
-    	return get_class($this).' \''.$this->message.'\' in '.$this->file.':'.$this->line;
+    	return get_class($this).': '.$this->message.' in '.$this->file.':'.$this->line;
     }
     
     /**
@@ -228,7 +232,7 @@ class LIB211BaseException extends Exception implements LIB211BaseExceptionInterf
      * @return string
      */
     public function __toString() {
-        return get_class($this).' \''.$this->message.'\' in '.$this->file.':'.$this->line.EOL.$this->getTraceAsString();
+        return get_class($this).': '.$this->message.' in '.$this->file.':'.$this->line.EOL.$this->getTraceAsString();
     }
     
 }

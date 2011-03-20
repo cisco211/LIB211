@@ -26,6 +26,9 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
+					<p><a href="../ric_FAQ.html">FAQ</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
       <b>Packages:</b><br />
@@ -36,6 +39,10 @@
 			<a href="../LIB211/_core---Autoload.class.php.html">		Autoload.class.php
 		</a><br>
 			<a href="../LIB211/_core---Base.class.php.html">		Base.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.class.php.html">		Example.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.test.php.html">		Example.test.php
 		</a><br>
 			<a href="../LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
 		</a><br>
@@ -81,6 +88,9 @@
 	    		<a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a><br />
 	    		<a href="../LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="../LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
+	    		<a href="../LIB211/LIB211Example.html">LIB211Example</a><br />
+	    		<a href="../LIB211/LIB211ExampleException.html">LIB211ExampleException</a><br />
+	    		<a href="../LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a><br />
 	    		<a href="../LIB211/LIB211Exception.html">LIB211Exception</a><br />
 	    		<a href="../LIB211/LIB211Geohash.html">LIB211Geohash</a><br />
 	    		<a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a><br />
@@ -114,10 +124,10 @@ Source Location: /module/Random/Random.test.php<br /><br />
 <pre><a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a>
    |
    --LIB211RandomTest</pre><br />
-<div class="description">LIB211 Testclass abstraction</div><br /><br />
+<div class="description">Enter description here ...</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
-          <li>C!$C0^211</li>
+          <li>ts</li>
       </ul>
 
 
@@ -133,15 +143,25 @@ Source Location: /module/Random/Random.test.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
+    <li><a href="../LIB211/LIB211RandomTest.html#method__construct">__construct</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodsetPrefix">setPrefix</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodsetPrefixAll">setPrefixAll</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodsetSuffix">setSuffix</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodsetSuffixAll">setSuffixAll</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetArchitecture">testGetArchitecture</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetLoopMaxRuns">testGetLoopMaxRuns</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomBoolean">testGetRandomBoolean</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomFloat">testGetRandomFloat</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomFloatNegative">testGetRandomFloatNegative</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomFloatPositive">testGetRandomFloatPositive</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomGeohash">testGetRandomGeohash</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomInteger">testGetRandomInteger</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomIntegerNegative">testGetRandomIntegerNegative</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomIntegerPositive">testGetRandomIntegerPositive</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomLatitude">testGetRandomLatitude</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomLongitude">testGetRandomLongitude</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomNull">testGetRandomNull</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomString">testGetRandomString</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRandomTimestamp">testGetRandomTimestamp</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRangeIntegerMax">testGetRangeIntegerMax</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetRangeIntegerMin">testGetRangeIntegerMin</a></li>
@@ -172,6 +192,12 @@ Source Location: /module/Random/Random.test.php<br /><br />
 <h4>Class: <a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a></h4>
 <dl>
     <dt>
+    <a href="../LIB211/LIB211Testclass.html#method__construct">LIB211Testclass::__construct()</a>
+  </dt>
+  <dd>
+    
+  </dd>
+    <dt>
     <a href="../LIB211/LIB211Testclass.html#methodassertEquals">LIB211Testclass::assertEquals()</a>
   </dt>
   <dd>
@@ -184,10 +210,70 @@ Source Location: /module/Random/Random.test.php<br /><br />
     Assert that $test will be false
   </dd>
     <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertGreater">LIB211Testclass::assertGreater()</a>
+  </dt>
+  <dd>
+    Assert that $left will be greater $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertGreaterThan">LIB211Testclass::assertGreaterThan()</a>
+  </dt>
+  <dd>
+    Assert that $left will be greater than $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertionCallback">LIB211Testclass::assertionCallback()</a>
+  </dt>
+  <dd>
+    Callback function for PHP's internal assertion mechanism
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertLesser">LIB211Testclass::assertLesser()</a>
+  </dt>
+  <dd>
+    Assert that $left will be lesser $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertLesserThan">LIB211Testclass::assertLesserThan()</a>
+  </dt>
+  <dd>
+    Assert that $left will be lesser than $right
+  </dd>
+    <dt>
     <a href="../LIB211/LIB211Testclass.html#methodassertNotEquals">LIB211Testclass::assertNotEquals()</a>
   </dt>
   <dd>
     Assert that $left will be not equals to $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotFalse">LIB211Testclass::assertNotFalse()</a>
+  </dt>
+  <dd>
+    Assert that $test will be not false
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotGreater">LIB211Testclass::assertNotGreater()</a>
+  </dt>
+  <dd>
+    Assert that $left will be not greater $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotGreaterThan">LIB211Testclass::assertNotGreaterThan()</a>
+  </dt>
+  <dd>
+    Assert that $left will be not greater than $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotLesser">LIB211Testclass::assertNotLesser()</a>
+  </dt>
+  <dd>
+    Assert that $left will be not lesser $right
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotLesserThan">LIB211Testclass::assertNotLesserThan()</a>
+  </dt>
+  <dd>
+    Assert that $left will be not lesser than $right
   </dd>
     <dt>
     <a href="../LIB211/LIB211Testclass.html#methodassertNotNull">LIB211Testclass::assertNotNull()</a>
@@ -196,10 +282,22 @@ Source Location: /module/Random/Random.test.php<br /><br />
     Assert that $test will be not null
   </dd>
     <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertNotTrue">LIB211Testclass::assertNotTrue()</a>
+  </dt>
+  <dd>
+    Assert that $test will be not true
+  </dd>
+    <dt>
     <a href="../LIB211/LIB211Testclass.html#methodassertNull">LIB211Testclass::assertNull()</a>
   </dt>
   <dd>
     Assert that $test will be null
+  </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#methodassertThat">LIB211Testclass::assertThat()</a>
+  </dt>
+  <dd>
+    Assert that a comparisation is not false, null, or empty
   </dd>
     <dt>
     <a href="../LIB211/LIB211Testclass.html#methodassertTrue">LIB211Testclass::assertTrue()</a>
@@ -231,6 +329,12 @@ Source Location: /module/Random/Random.test.php<br /><br />
   <dd>
     Execute after all test methods
   </dd>
+    <dt>
+    <a href="../LIB211/LIB211Testclass.html#method_formatType">LIB211Testclass::_formatType()</a>
+  </dt>
+  <dd>
+    Format a given variable to be &quot;readable&quot; in exception messages
+  </dd>
   </dl>
 </div>
 </td>
@@ -241,13 +345,13 @@ Source Location: /module/Random/Random.test.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 3]<br />
-LIB211 Testclass abstraction<br /><br /><br /><br />
+[line 16]<br />
+Enter description here ...<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>author:</b>&nbsp;&nbsp;</td><td>C!$C0^211</td>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>ts</td>
   </tr>
 </table>
 </div>
@@ -261,8 +365,33 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
 <div class="tags">
 
   <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 21]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>LIB211RandomTest __construct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Constructor<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../LIB211/LIB211Testclass.html#method__construct">LIB211Testclass::__construct()</a> (parent method not documented)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodsetPrefix"></a>
-	<h3>method setPrefix <span class="smalllinenumber">[line 8]</span></h3>
+	<h3>method setPrefix <span class="smalllinenumber">[line 28]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -271,7 +400,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute before each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -286,8 +415,33 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodsetPrefixAll"></a>
+	<h3>method setPrefixAll <span class="smalllinenumber">[line 34]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setPrefixAll(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Execute before all methods<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetPrefixAll">LIB211Testclass::setPrefixAll()</a> (Execute before all test methods)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodsetSuffix"></a>
-	<h3>method setSuffix <span class="smalllinenumber">[line 15]</span></h3>
+	<h3>method setSuffix <span class="smalllinenumber">[line 41]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -296,7 +450,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
     </td></tr></table>
     </td></tr></table><br />
 	
-		<br /><br />
+		Execute after each test method<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -311,8 +465,33 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodsetSuffixAll"></a>
+	<h3>method setSuffixAll <span class="smalllinenumber">[line 47]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setSuffixAll(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Execute after all methods<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../LIB211/LIB211Testclass.html#methodsetSuffixAll">LIB211Testclass::setSuffixAll()</a> (Execute after all test methods)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetArchitecture"></a>
-	<h3>method testGetArchitecture <span class="smalllinenumber">[line 22]</span></h3>
+	<h3>method testGetArchitecture <span class="smalllinenumber">[line 54]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -337,7 +516,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetLoopMaxRuns"></a>
-	<h3>method testGetLoopMaxRuns <span class="smalllinenumber">[line 29]</span></h3>
+	<h3>method testGetLoopMaxRuns <span class="smalllinenumber">[line 61]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -362,7 +541,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRandomBoolean"></a>
-	<h3>method testGetRandomBoolean <span class="smalllinenumber">[line 36]</span></h3>
+	<h3>method testGetRandomBoolean <span class="smalllinenumber">[line 68]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -386,8 +565,108 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetRandomFloat"></a>
+	<h3>method testGetRandomFloat <span class="smalllinenumber">[line 77]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomFloat(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomFloatNegative"></a>
+	<h3>method testGetRandomFloatNegative <span class="smalllinenumber">[line 83]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomFloatNegative(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomFloatPositive"></a>
+	<h3>method testGetRandomFloatPositive <span class="smalllinenumber">[line 89]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomFloatPositive(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomGeohash"></a>
+	<h3>method testGetRandomGeohash <span class="smalllinenumber">[line 95]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomGeohash(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetRandomInteger"></a>
-	<h3>method testGetRandomInteger <span class="smalllinenumber">[line 45]</span></h3>
+	<h3>method testGetRandomInteger <span class="smalllinenumber">[line 101]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -412,7 +691,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRandomIntegerNegative"></a>
-	<h3>method testGetRandomIntegerNegative <span class="smalllinenumber">[line 52]</span></h3>
+	<h3>method testGetRandomIntegerNegative <span class="smalllinenumber">[line 108]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -437,7 +716,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRandomIntegerPositive"></a>
-	<h3>method testGetRandomIntegerPositive <span class="smalllinenumber">[line 59]</span></h3>
+	<h3>method testGetRandomIntegerPositive <span class="smalllinenumber">[line 115]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -461,8 +740,58 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetRandomLatitude"></a>
+	<h3>method testGetRandomLatitude <span class="smalllinenumber">[line 122]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomLatitude(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetRandomLongitude"></a>
+	<h3>method testGetRandomLongitude <span class="smalllinenumber">[line 128]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomLongitude(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Enter description here ...<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetRandomNull"></a>
-	<h3>method testGetRandomNull <span class="smalllinenumber">[line 66]</span></h3>
+	<h3>method testGetRandomNull <span class="smalllinenumber">[line 134]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -486,8 +815,33 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetRandomString"></a>
+	<h3>method testGetRandomString <span class="smalllinenumber">[line 142]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetRandomString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetRandomTimestamp"></a>
-	<h3>method testGetRandomTimestamp <span class="smalllinenumber">[line 77]</span></h3>
+	<h3>method testGetRandomTimestamp <span class="smalllinenumber">[line 148]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -512,7 +866,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRangeIntegerMax"></a>
-	<h3>method testGetRangeIntegerMax <span class="smalllinenumber">[line 85]</span></h3>
+	<h3>method testGetRangeIntegerMax <span class="smalllinenumber">[line 156]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -537,7 +891,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRangeIntegerMin"></a>
-	<h3>method testGetRangeIntegerMin <span class="smalllinenumber">[line 105]</span></h3>
+	<h3>method testGetRangeIntegerMin <span class="smalllinenumber">[line 176]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -562,7 +916,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetRangeTimestampMax"></a>
-	<h3>method testGetRangeTimestampMax <span class="smalllinenumber">[line 125]</span></h3>
+	<h3>method testGetRangeTimestampMax <span class="smalllinenumber">[line 196]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -587,7 +941,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetLoopMaxRuns"></a>
-	<h3>method testSetLoopMaxRuns <span class="smalllinenumber">[line 132]</span></h3>
+	<h3>method testSetLoopMaxRuns <span class="smalllinenumber">[line 203]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -612,7 +966,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeInteger8Bit"></a>
-	<h3>method testSetRangeInteger8Bit <span class="smalllinenumber">[line 174]</span></h3>
+	<h3>method testSetRangeInteger8Bit <span class="smalllinenumber">[line 245]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -637,7 +991,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeInteger16Bit"></a>
-	<h3>method testSetRangeInteger16Bit <span class="smalllinenumber">[line 141]</span></h3>
+	<h3>method testSetRangeInteger16Bit <span class="smalllinenumber">[line 212]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -662,7 +1016,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeInteger32Bit"></a>
-	<h3>method testSetRangeInteger32Bit <span class="smalllinenumber">[line 152]</span></h3>
+	<h3>method testSetRangeInteger32Bit <span class="smalllinenumber">[line 223]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -687,7 +1041,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeInteger64Bit"></a>
-	<h3>method testSetRangeInteger64Bit <span class="smalllinenumber">[line 163]</span></h3>
+	<h3>method testSetRangeInteger64Bit <span class="smalllinenumber">[line 234]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -712,7 +1066,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeIntegerMax"></a>
-	<h3>method testSetRangeIntegerMax <span class="smalllinenumber">[line 185]</span></h3>
+	<h3>method testSetRangeIntegerMax <span class="smalllinenumber">[line 256]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -737,7 +1091,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeIntegerMin"></a>
-	<h3>method testSetRangeIntegerMin <span class="smalllinenumber">[line 193]</span></h3>
+	<h3>method testSetRangeIntegerMin <span class="smalllinenumber">[line 264]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -762,7 +1116,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetRangeTimestampMax"></a>
-	<h3>method testSetRangeTimestampMax <span class="smalllinenumber">[line 201]</span></h3>
+	<h3>method testSetRangeTimestampMax <span class="smalllinenumber">[line 272]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -790,7 +1144,7 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 22:28:45 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 20 Mar 2011 21:26:47 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -3,6 +3,10 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+}
+
 /**
  * LIB211 Autloader
  * 
@@ -89,4 +93,4 @@ function lib211() {
 }
 
 // Initialize autoloader
-LIB211Autoload::__init();
+if (LIB211_AUTOLOAD === TRUE) LIB211Autoload::__init();

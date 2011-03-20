@@ -3,6 +3,11 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+	require_once(LIB211_ROOT.'/module/Scoper/Scoper.class.php');
+}
+
 /**
  * LIB211 Scoper Testclass
  * 
@@ -10,18 +15,37 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
  *
  */
 class LIB211ScoperTest extends LIB211Testclass {
-	
+
 	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
+
+	/** 
 	 * Execute before each test method
 	 */
 	public function setPrefix() {
-		$this->scoper = new LIB211Scoper();
 	}
 	
 	/**
+	 * Execute before all methods
+	 */
+	public function setPrefixAll() {
+		$this->scoper = new LIB211Scoper();
+	}
+	
+	/** 
 	 * Execute after each test method
 	 */
 	public function setSuffix() {
+	}
+	
+	/**
+	 * Execute after all methods
+	 */
+	public function setSuffixAll() {
 		unset($this->scoper);
 	}
 	
@@ -39,7 +63,7 @@ class LIB211ScoperTest extends LIB211Testclass {
 	 * Test run() method
 	 */
 	public function testRun() {
-		// Not testable
+		// Not yet testable
 	}
 	
 	/**

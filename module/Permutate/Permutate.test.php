@@ -3,6 +3,11 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+	require_once(LIB211_ROOT.'/module/Permutate/Permutate.class.php');
+}
+
 /**
  * LIB211 Permutate Testclass
  * 
@@ -10,6 +15,13 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
  *
  */
 class LIB211PermutateTest extends LIB211Testclass {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
 	
 	/** 
 	 * Execute before each test method
@@ -19,10 +31,22 @@ class LIB211PermutateTest extends LIB211Testclass {
 	}
 	
 	/** 
+	 * Execute before all methods
+	 */
+	public function setPrefixAll() {
+	}
+	
+	/** 
 	 * Execute after each test method
 	 */
 	public function setSuffix() {
 		unset($this->permutate);
+	}
+	
+	/** 
+	 * Execute after all methods
+	 */
+	public function setSuffixAll() {
 	}
 	
 	/**

@@ -3,6 +3,10 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+}
+
 /**
  * LIB211 Testrunner
  * 
@@ -53,6 +57,21 @@ class LIB211Tester extends LIB211Base {
 	 * @var array
 	 */
 	private $results = array();
+		
+	/**
+	 * Find a test by $name
+	 * @param string $name
+	 * @return boolean
+	 */
+	private function _findTest($name) {
+		$this->tests = array();
+		$this->_getTests();
+		$count = count($this->tests);
+		for ($i = 0; $i < $count; $i++) {
+			if ($this->tests[$i]['name'] == $name) return $this->tests[$i]['file']; 
+		}
+		return FALSE;
+	}
 	
 	/**
 	 * Return list of module tests
@@ -161,6 +180,19 @@ class LIB211Tester extends LIB211Base {
 	}
 	
 	/**
+	 * Set $tests to run
+	 * @param array $tests
+	 */
+	private function _setTests($tests) {
+		$override = array();
+		foreach ($tests as $test) {
+			$override[] = array('name'=>$test,'file'=>$this->_findTest($test));
+		}
+		$this->tests = array();
+		$this->tests = $override;
+	}
+	
+	/**
 	 * Constructor
 	 */
 	public function __construct() {
@@ -215,116 +247,7 @@ class LIB211Tester extends LIB211Base {
 		if (isset($this->results[$name])) return $this->results[$name];
 		else return array();
 	}
-	
-	/**
-	 * Get a test result as HTML
-	 * @param string $name
-	 */
-	public function getResultAsHTML($name) {
-	}
-	
-	/**
-	 * Get a test result as text
-	 * @param string $name
-	 * @return string
-	 */
-	public function getResultAsText($name) {
-		$status = $this->results['LIB211TesterStatus'];
-		
-		$tests = '';
-		
-		if (!empty($this->tests)) {
-			
-			foreach ($this->tests as $test) {
-				
-				if ($test['name'] == $name) {
-				
-					$result = $this->getResult($test['name']);
-				
-					// No Tests?
-					$noTests = TRUE;
-					foreach($result as $methodName => $methodResult) {
-						if (preg_match('/^test[a-zA-Z\_]+[a-zA-Z0-9\_]*$/',$methodName)) $noTests = FALSE;
-					}
-					
-					// Set class title
-					$check = 'PASSED';
-					foreach ($result as $methodName => $methodResult) {
-						if (isset($methodResult['status']) AND $methodResult['status'] == 'failed') {
-							$check = 'FAILED';
-							break;
-						}
-						foreach ($methodResult as $stepName => $stepResult) {
-							if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = 'FAILED';
-						}
-					}
-					if ($noTests)  $check = 'NOTEST';
-					$tests .= EOL.$check.' '.$test['name'];
-					
-					//Methods
-					foreach ($result as $methodName => $methodResult) {
-						
-						// Class
-						if (isset($methodResult['status'])) {
-							
-							// Add class method failure message
-							if ($methodResult['status'] == 'failed') {
-							
-								// Set method title
-								$tests .= EOL.' FAILED '.$methodName;
-								
-								// Set exception message
-								if (isset($methodResult['exception'])) {
-									$tests .= EOL.'  '.$methodResult['exception']->__toDefault();
-									$tests .= EOL.'   '.str_replace(array(EOL,chr(13),chr(10)),EOL.'   ',$methodResult['exception']->getTraceAsString());
-								}
-							}
-						}
-						// Method
-						else {
-							
-							// Set method title
-							$check = ' PASSED';
-							foreach ($methodResult as $stepName => $stepResult) {
-								if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') $check = ' FAILED';
-							}
-							$tests .= EOL.$check.' '.$methodName;
-							
-							// Set test method failure message
-							foreach ($methodResult as $stepName => $stepResult) {
-								if (isset($stepResult['exception'])) {
-									if ($stepName == 'test') $name = 'runTestMethod';
-									else $name = $stepName;
-									$tests .= EOL.'  FAILED '.$name;
-									$tests .= EOL.'   '.$stepResult['exception']->__toDefault();
-									$tests .= EOL.'    '.str_replace(array(EOL,chr(13),chr(10)),EOL.'    ',$stepResult['exception']->getTraceAsString());
-								}
-							}
-						}
-					}
-					
-					$tests .= EOL;
-					
-				}
-			}
 
-		}
-		else {
-			$tests = EOL.'There are no tests';
-		}
-		
-		$text = <<<ENDTEXT
-{$tests}
-Passed tests: {$status['passed']}
-Failed tests: {$status['failed']}
-Tests total: {$status['tests']}
-
-
-ENDTEXT;
-		return $text;
-		
-	}
-	
 	/**
 	 * Get all test results
 	 * @return multitype:
@@ -335,16 +258,137 @@ ENDTEXT;
 	
 	/**
 	 * Get all test results as HTML
+	 * @return string
 	 */
-	public function getResultsAsHTML() {
+	public function getResultsAsHTML($name = NULL) {
+		$status = $this->results['LIB211TesterStatus'];
+		if ($name !== NULL) {
+			$this->_setTests(array($name));
+		}
+		if (!empty($this->tests)) {
+			$tests = '';
+			
+			// Testclass
+			foreach ($this->tests as $test) {
+				
+				$result = $this->getResult($test['name']);
+				
+				// No Tests?
+				$noTests = TRUE;
+				foreach($result as $methodName => $methodResult) {
+					if (preg_match('/^test[a-zA-Z\_]+[a-zA-Z0-9\_]*$/',$methodName)) $noTests = FALSE;
+				}
+				
+				// Set class title
+				$check = 'PASSED';
+				$color = '#CCFFCC';
+				foreach ($result as $methodName => $methodResult) {
+					if (isset($methodResult['status']) AND $methodResult['status'] == 'failed') {
+						$check = 'FAILED';
+						$color = '#FFCCCC';
+						break;
+					}
+					foreach ($methodResult as $stepName => $stepResult) {
+						if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') {
+							$check = 'FAILED';
+							$color = '#FFCCCC';
+						}
+					}
+				}
+				if ($noTests) {
+					$color = '#CCCCCC';
+					$check = 'NOTEST';
+				}
+				$tests .= '<table border="1" style="background-color:#CCCCCC;margin:0px 0px 20px 0px;width:100%;"><tr><td style="background-color:'.$color.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color.';font-weight:bold;">'.$test['name'].'</td></tr>';
+				
+				//Methods
+				foreach ($result as $methodName => $methodResult) {
+					
+					// Class
+					if (isset($methodResult['status'])) {
+						
+						// Add class method failure message
+						if ($methodResult['status'] == 'failed') {
+							
+							// Set method title
+							$tests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$methodName.'</td></tr>';
+							
+							// Set exception message
+							if (isset($methodResult['exception'])) {
+								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->__toDefault().'</td></tr>';
+								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->getTraceAsString().'</td></tr>';
+							}
+							$tests .= '</table></td></tr>';
+						}
+					}
+					
+					// Method
+					else {
+						
+						// Set method title
+						$check = ' PASSED';
+						$color2 = '#CCFFCC';
+						foreach ($methodResult as $stepName => $stepResult) {
+							if (isset($stepResult['status']) AND $stepResult['status'] == 'failed') {
+								$color2 = '#FFCCCC';
+								$check = ' FAILED';
+							}
+						}
+						$tests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:'.$color2.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color2.';font-weight:bold;">'.$methodName.'</td></tr>';
+						
+						// Set test method failure message
+						foreach ($methodResult as $stepName => $stepResult) {
+							if (isset($stepResult['exception'])) {
+								if ($stepName == 'test') $name = 'runTestMethod';
+								else $name = $stepName;
+								$tests .= '<tr><td colspan="2"><table border="1" style="background-color:#888888;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$name.'</td></tr>';
+								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->__toDefault().'</td></tr>';
+								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->getTraceAsString().'</td></tr>';
+								$tests .= '</table></td></tr>';
+							}
+						}
+						$tests .= '</table></td></tr>';
+					}
+				}
+				$tests .= '</table>'; //testclass table
+			}
+		} else {
+			$tests = '<p>There are no tests</p>';
+		}
+		
+		$text = <<<ENDTEXT
+{$tests}
+<table border="1" style="background-color:#CCCCCC;margin-bottom:20px;">
+	<tr>
+		<td colspan="2" style="font-weight:bold;text-align:center;">Status</td>
+	</tr>
+	<tr>
+		<td align="right" style="background-color:#CCFFCC;">Passed tests:</td>
+		<td align="right" style="background-color:#CCFFCC;">{$status['passed']}</td>
+	</tr>
+	<tr>
+		<td align="right" style="background-color:#FFCCCC;">Failed tests:</td>
+		<td align="right" style="background-color:#FFCCCC;">{$status['failed']}</td>
+	</tr>
+	<tr>
+		<td align="right" style="background-color:#CCCCFF;">Tests total:</td>
+		<td align="right" style="background-color:#CCCCFF;">{$status['tests']}</td>
+	</tr>	
+</table>
+ENDTEXT;
+		return $text;		
 	}
 	
 	/**
 	 * Get all test results as text
 	 * @return string
 	 */
-	public function getResultsAsText() {
+	public function getResultsAsText($name = NULL) {
 		$status = $this->results['LIB211TesterStatus'];
+		
+		if ($name !== NULL) {
+			$this->_setTests(array($name));
+		}
 		
 		if (!empty($this->tests)) {
 			
@@ -465,6 +509,14 @@ ENDTEXT;
 		foreach ($this->tests as $test) $this->_runTest($test);
 	}
 	
+	/**
+	 * Set $tests to run
+	 * @param array $tests
+	 */
+	public function setTests($tests) {
+		$this->_setTests($tests);
+	}
+	
 }
 
 /**
@@ -472,4 +524,5 @@ ENDTEXT;
  * @author C!$C0^211
  *
  */
-class LIB211TesterException extends LIB211BaseException {}
+class LIB211TesterException extends LIB211BaseException {
+}

@@ -26,6 +26,9 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
+					<p><a href="../ric_FAQ.html">FAQ</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
       <b>Packages:</b><br />
@@ -36,6 +39,10 @@
 			<a href="../LIB211/_core---Autoload.class.php.html">		Autoload.class.php
 		</a><br>
 			<a href="../LIB211/_core---Base.class.php.html">		Base.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.class.php.html">		Example.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.test.php.html">		Example.test.php
 		</a><br>
 			<a href="../LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
 		</a><br>
@@ -81,6 +88,9 @@
 	    		<a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a><br />
 	    		<a href="../LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="../LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
+	    		<a href="../LIB211/LIB211Example.html">LIB211Example</a><br />
+	    		<a href="../LIB211/LIB211ExampleException.html">LIB211ExampleException</a><br />
+	    		<a href="../LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a><br />
 	    		<a href="../LIB211/LIB211Exception.html">LIB211Exception</a><br />
 	    		<a href="../LIB211/LIB211Geohash.html">LIB211Geohash</a><br />
 	    		<a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a><br />
@@ -131,16 +141,30 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
+    <li><a href="../LIB211/LIB211Testclass.html#method__construct">__construct</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertEquals">assertEquals</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertFalse">assertFalse</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertGreater">assertGreater</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertGreaterThan">assertGreaterThan</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertionCallback">assertionCallback</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertLesser">assertLesser</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertLesserThan">assertLesserThan</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertNotEquals">assertNotEquals</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotFalse">assertNotFalse</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotGreater">assertNotGreater</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotGreaterThan">assertNotGreaterThan</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotLesser">assertNotLesser</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotLesserThan">assertNotLesserThan</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertNotNull">assertNotNull</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertNotTrue">assertNotTrue</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertNull">assertNull</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#methodassertThat">assertThat</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodassertTrue">assertTrue</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetPrefix">setPrefix</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetPrefixAll">setPrefixAll</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetSuffix">setSuffix</a></li>
     <li><a href="../LIB211/LIB211Testclass.html#methodsetSuffixAll">setSuffixAll</a></li>
+    <li><a href="../LIB211/LIB211Testclass.html#method_formatType">_formatType</a></li>
   </ul>
 </td>
 
@@ -154,6 +178,10 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 <h3>Child classes:</h3>
 <div class="tags">
 <dl>
+<dt><a href="../LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a></dt>
+	<dd>LIB211 Example Testclass</dd>
+</dl>
+<dl>
 <dt><a href="../LIB211/LIB211GeohashTest.html">LIB211GeohashTest</a></dt>
 	<dd>LIB211 Geohash Testclass</dd>
 </dl>
@@ -163,7 +191,7 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211RandomTest.html">LIB211RandomTest</a></dt>
-	<dd>LIB211 Testclass abstraction</dd>
+	<dd>Enter description here ...</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a></dt>
@@ -181,7 +209,7 @@ Source Location: /core/Testclass.abstract.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 12]<br />
+[line 16]<br />
 LIB211 Testclass abstraction<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -204,8 +232,55 @@ LIB211 Testclass abstraction<br /><br /><br /><br />
 <div class="tags">
 
   <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 18]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>LIB211Testclass __construct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../LIB211/LIB211ExampleTest.html#method__construct">LIB211ExampleTest::__construct()</a></dt>
+		<dd>Constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211GeohashTest.html#method__construct">LIB211GeohashTest::__construct()</a></dt>
+		<dd>Constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211PermutateTest.html#method__construct">LIB211PermutateTest::__construct()</a></dt>
+		<dd>Constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211RandomTest.html#method__construct">LIB211RandomTest::__construct()</a></dt>
+		<dd>Constructor</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211ScoperTest.html#method__construct">LIB211ScoperTest::__construct()</a></dt>
+		<dd>Constructor</dd>
+	</dl>
+	</p>
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodassertEquals"></a>
-	<h3>method assertEquals <span class="smalllinenumber">[line 21]</span></h3>
+	<h3>method assertEquals <span class="smalllinenumber">[line 84]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -256,7 +331,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodassertFalse"></a>
-	<h3>method assertFalse <span class="smalllinenumber">[line 41]</span></h3>
+	<h3>method assertFalse <span class="smalllinenumber">[line 104]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -300,8 +375,233 @@ $checkType = TRUE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodassertGreater"></a>
+	<h3>method assertGreater <span class="smalllinenumber">[line 124]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertGreater(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be greater $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertGreaterThan"></a>
+	<h3>method assertGreaterThan <span class="smalllinenumber">[line 137]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertGreaterThan(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be greater than $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertionCallback"></a>
+	<h3>method assertionCallback <span class="smalllinenumber">[line 73]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertionCallback(
+string
+$file, integer
+$line)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Callback function for PHP's internal assertion mechanism<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$file</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$line</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertLesser"></a>
+	<h3>method assertLesser <span class="smalllinenumber">[line 150]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertLesser(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be lesser $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertLesserThan"></a>
+	<h3>method assertLesserThan <span class="smalllinenumber">[line 163]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertLesserThan(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be lesser than $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodassertNotEquals"></a>
-	<h3>method assertNotEquals <span class="smalllinenumber">[line 62]</span></h3>
+	<h3>method assertNotEquals <span class="smalllinenumber">[line 177]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -351,8 +651,233 @@ $checkType = TRUE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodassertNotFalse"></a>
+	<h3>method assertNotFalse <span class="smalllinenumber">[line 197]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotFalse(
+mixed
+$test, [boolean
+$checkType = TRUE])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $test will be not false<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$test</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$checkType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNotGreater"></a>
+	<h3>method assertNotGreater <span class="smalllinenumber">[line 217]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotGreater(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be not greater $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNotGreaterThan"></a>
+	<h3>method assertNotGreaterThan <span class="smalllinenumber">[line 230]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotGreaterThan(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be not greater than $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNotLesser"></a>
+	<h3>method assertNotLesser <span class="smalllinenumber">[line 243]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotLesser(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be not lesser $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodassertNotLesserThan"></a>
+	<h3>method assertNotLesserThan <span class="smalllinenumber">[line 256]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotLesserThan(
+mixed
+$left, mixed
+$right)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $left will be not lesser than $right<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$left</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$right</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodassertNotNull"></a>
-	<h3>method assertNotNull <span class="smalllinenumber">[line 82]</span></h3>
+	<h3>method assertNotNull <span class="smalllinenumber">[line 269]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -396,8 +921,53 @@ $checkType = TRUE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodassertNotTrue"></a>
+	<h3>method assertNotTrue <span class="smalllinenumber">[line 289]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertNotTrue(
+mixed
+$test, [boolean
+$checkType = TRUE])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that $test will be not true<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$test</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$checkType</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodassertNull"></a>
-	<h3>method assertNull <span class="smalllinenumber">[line 102]</span></h3>
+	<h3>method assertNull <span class="smalllinenumber">[line 309]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -441,8 +1011,47 @@ $checkType = TRUE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodassertThat"></a>
+	<h3>method assertThat <span class="smalllinenumber">[line 348]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void assertThat(
+mixed
+$test)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Assert that a comparisation is not false, null, or empty<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>LIB211TestclassException</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$test</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodassertTrue"></a>
-	<h3>method assertTrue <span class="smalllinenumber">[line 122]</span></h3>
+	<h3>method assertTrue <span class="smalllinenumber">[line 329]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -487,7 +1096,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetPrefix"></a>
-	<h3>method setPrefix <span class="smalllinenumber">[line 139]</span></h3>
+	<h3>method setPrefix <span class="smalllinenumber">[line 367]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -509,6 +1118,10 @@ $checkType = TRUE])</code>
 
 	<p>Overridden in child classes as:<br />
 		<dl>
+	<dt><a href="../LIB211/LIB211ExampleTest.html#methodsetPrefix">LIB211ExampleTest::setPrefix()</a></dt>
+		<dd>Execute before each test method</dd>
+	</dl>
+		<dl>
 	<dt><a href="../LIB211/LIB211GeohashTest.html#methodsetPrefix">LIB211GeohashTest::setPrefix()</a></dt>
 		<dd>Execute before each test method</dd>
 	</dl>
@@ -518,7 +1131,7 @@ $checkType = TRUE])</code>
 	</dl>
 		<dl>
 	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetPrefix">LIB211RandomTest::setPrefix()</a></dt>
-		<dd></dd>
+		<dd>Execute before each test method</dd>
 	</dl>
 		<dl>
 	<dt><a href="../LIB211/LIB211ScoperTest.html#methodsetPrefix">LIB211ScoperTest::setPrefix()</a></dt>
@@ -530,7 +1143,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetPrefixAll"></a>
-	<h3>method setPrefixAll <span class="smalllinenumber">[line 145]</span></h3>
+	<h3>method setPrefixAll <span class="smalllinenumber">[line 373]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -550,12 +1163,34 @@ $checkType = TRUE])</code>
 </div>
 <br /><br />
 
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../LIB211/LIB211ExampleTest.html#methodsetPrefixAll">LIB211ExampleTest::setPrefixAll()</a></dt>
+		<dd>Execute before all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211GeohashTest.html#methodsetPrefixAll">LIB211GeohashTest::setPrefixAll()</a></dt>
+		<dd>Execute before all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211PermutateTest.html#methodsetPrefixAll">LIB211PermutateTest::setPrefixAll()</a></dt>
+		<dd>Execute before all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetPrefixAll">LIB211RandomTest::setPrefixAll()</a></dt>
+		<dd>Execute before all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211ScoperTest.html#methodsetPrefixAll">LIB211ScoperTest::setPrefixAll()</a></dt>
+		<dd>Execute before all methods</dd>
+	</dl>
+	</p>
 	
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="methodsetSuffix"></a>
-	<h3>method setSuffix <span class="smalllinenumber">[line 151]</span></h3>
+	<h3>method setSuffix <span class="smalllinenumber">[line 379]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -577,6 +1212,10 @@ $checkType = TRUE])</code>
 
 	<p>Overridden in child classes as:<br />
 		<dl>
+	<dt><a href="../LIB211/LIB211ExampleTest.html#methodsetSuffix">LIB211ExampleTest::setSuffix()</a></dt>
+		<dd>Execute after each test method</dd>
+	</dl>
+		<dl>
 	<dt><a href="../LIB211/LIB211GeohashTest.html#methodsetSuffix">LIB211GeohashTest::setSuffix()</a></dt>
 		<dd>Execute after each test method</dd>
 	</dl>
@@ -586,7 +1225,7 @@ $checkType = TRUE])</code>
 	</dl>
 		<dl>
 	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetSuffix">LIB211RandomTest::setSuffix()</a></dt>
-		<dd></dd>
+		<dd>Execute after each test method</dd>
 	</dl>
 		<dl>
 	<dt><a href="../LIB211/LIB211ScoperTest.html#methodsetSuffix">LIB211ScoperTest::setSuffix()</a></dt>
@@ -598,7 +1237,7 @@ $checkType = TRUE])</code>
   </div>
   <hr />
 	<a name="methodsetSuffixAll"></a>
-	<h3>method setSuffixAll <span class="smalllinenumber">[line 157]</span></h3>
+	<h3>method setSuffixAll <span class="smalllinenumber">[line 385]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -618,7 +1257,65 @@ $checkType = TRUE])</code>
 </div>
 <br /><br />
 
+	<p>Overridden in child classes as:<br />
+		<dl>
+	<dt><a href="../LIB211/LIB211ExampleTest.html#methodsetSuffixAll">LIB211ExampleTest::setSuffixAll()</a></dt>
+		<dd>Execute afater all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211GeohashTest.html#methodsetSuffixAll">LIB211GeohashTest::setSuffixAll()</a></dt>
+		<dd>Execute after all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211PermutateTest.html#methodsetSuffixAll">LIB211PermutateTest::setSuffixAll()</a></dt>
+		<dd>Execute after all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211RandomTest.html#methodsetSuffixAll">LIB211RandomTest::setSuffixAll()</a></dt>
+		<dd>Execute after all methods</dd>
+	</dl>
+		<dl>
+	<dt><a href="../LIB211/LIB211ScoperTest.html#methodsetSuffixAll">LIB211ScoperTest::setSuffixAll()</a></dt>
+		<dd>Execute after all methods</dd>
+	</dl>
+	</p>
 	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_formatType"></a>
+	<h3>method _formatType <span class="smalllinenumber">[line 30]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string|number|mixed _formatType(
+mixed
+$var)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Format a given variable to be &quot;readable&quot; in exception messages<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$var</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />
@@ -626,7 +1323,7 @@ $checkType = TRUE])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 22:28:45 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 20 Mar 2011 21:26:48 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

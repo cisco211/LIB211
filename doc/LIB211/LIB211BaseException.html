@@ -26,6 +26,9 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
+					<p><a href="../ric_FAQ.html">FAQ</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
       <b>Packages:</b><br />
@@ -36,6 +39,10 @@
 			<a href="../LIB211/_core---Autoload.class.php.html">		Autoload.class.php
 		</a><br>
 			<a href="../LIB211/_core---Base.class.php.html">		Base.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.class.php.html">		Example.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.test.php.html">		Example.test.php
 		</a><br>
 			<a href="../LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
 		</a><br>
@@ -81,6 +88,9 @@
 	    		<a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a><br />
 	    		<a href="../LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="../LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
+	    		<a href="../LIB211/LIB211Example.html">LIB211Example</a><br />
+	    		<a href="../LIB211/LIB211ExampleException.html">LIB211ExampleException</a><br />
+	    		<a href="../LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a><br />
 	    		<a href="../LIB211/LIB211Exception.html">LIB211Exception</a><br />
 	    		<a href="../LIB211/LIB211Geohash.html">LIB211Geohash</a><br />
 	    		<a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a><br />
@@ -140,6 +150,8 @@ Source Location: /core/Base.class.php<br /><br />
     <li><a href="../LIB211/LIB211BaseException.html#var$file">$file</a></li>
     <li><a href="../LIB211/LIB211BaseException.html#var$line">$line</a></li>
     <li><a href="../LIB211/LIB211BaseException.html#var$message">$message</a></li>
+    <li><a href="../LIB211/LIB211BaseException.html#var$string">$string</a></li>
+    <li><a href="../LIB211/LIB211BaseException.html#var$trace">$trace</a></li>
   </ul>
 </td>
 
@@ -177,6 +189,10 @@ Source Location: /core/Base.class.php<br /><br />
 <dl>
 <dt><a href="../LIB211/LIB211TesterException.html">LIB211TesterException</a></dt>
 	<dd>LIB211 Tester Exception</dd>
+</dl>
+<dl>
+<dt><a href="../LIB211/LIB211ExampleException.html">LIB211ExampleException</a></dt>
+	<dd>LIB211 Example Exception</dd>
 </dl>
 <dl>
 <dt><a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a></dt>
@@ -324,7 +340,7 @@ Source Location: /core/Base.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 168]<br />
+[line 172]<br />
 LIB211 Base Exception<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -344,7 +360,7 @@ LIB211 Base Exception<br /><br /><br /><br />
 	<a name="var$code"></a>
 	<p></p>
 	<h4>$code = <span class="value">&nbsp;0</span></h4>
-	<p>[line 186]</p>
+	<p>[line 190]</p>
   Exception code<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -372,7 +388,7 @@ LIB211 Base Exception<br /><br /><br /><br />
 	<a name="var$file"></a>
 	<p></p>
 	<h4>$file = <span class="value"></span></h4>
-	<p>[line 192]</p>
+	<p>[line 196]</p>
   Exception file<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -400,7 +416,7 @@ LIB211 Base Exception<br /><br /><br /><br />
 	<a name="var$line"></a>
 	<p></p>
 	<h4>$line = <span class="value"></span></h4>
-	<p>[line 198]</p>
+	<p>[line 202]</p>
   Exception line<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -428,7 +444,7 @@ LIB211 Base Exception<br /><br /><br /><br />
 	<a name="var$message"></a>
 	<p></p>
 	<h4>$message = <span class="value">&nbsp;'Unknown&nbsp;exception'</span></h4>
-	<p>[line 174]</p>
+	<p>[line 178]</p>
   Exception message<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -453,6 +469,54 @@ LIB211 Base Exception<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$string"></a>
+	<p></p>
+	<h4>$string = <span class="value"></span></h4>
+	<p>[line 184]</p>
+  Exception string<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$trace"></a>
+	<p></p>
+	<h4>$trace = <span class="value"></span></h4>
+	<p>[line 208]</p>
+  Exception stacktrace<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 </div><br />
 
 <hr />
@@ -462,7 +526,7 @@ LIB211 Base Exception<br /><br /><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 211]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 215]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -510,7 +574,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="method__toDefault"></a>
-	<h3>method __toDefault <span class="smalllinenumber">[line 222]</span></h3>
+	<h3>method __toDefault <span class="smalllinenumber">[line 226]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -541,7 +605,7 @@ $code = 0])</code>
   </div>
   <hr />
 	<a name="method__toString"></a>
-	<h3>method __toString <span class="smalllinenumber">[line 230]</span></h3>
+	<h3>method __toString <span class="smalllinenumber">[line 234]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -575,7 +639,7 @@ $code = 0])</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 22:28:45 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 20 Mar 2011 21:26:46 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

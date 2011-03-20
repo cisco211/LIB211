@@ -1,6 +1,8 @@
-/.DS_Store
+.cvs
+.svn
+.DS_Store
+.tmp*
 /.buildpath
 /.project
 /.settings
 /lib211.lock
-.tmp*

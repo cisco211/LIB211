@@ -3,6 +3,10 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+}
+
 /**
  * LIB211 (C!$C0^211's php library)
  * Use at your own risk!

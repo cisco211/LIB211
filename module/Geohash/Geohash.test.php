@@ -3,6 +3,11 @@
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+	require_once(LIB211_ROOT.'/module/Geohash/Geohash.class.php');
+}
+
 /**
  * LIB211 Geohash Testclass
  * 
@@ -10,18 +15,37 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
  *
  */
 class LIB211GeohashTest extends LIB211Testclass {
+
+	/**
+	 * Constructor
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
 	
 	/** 
 	 * Execute before each test method
 	 */
 	public function setPrefix() {
-		$this->geohash = new LIB211Geohash();
 	}
 	
+	/** 
+	 * Execute before all methods
+	 */
+	public function setPrefixAll() {
+		$this->geohash = new LIB211Geohash();
+	}
+
 	/** 
 	 * Execute after each test method
 	 */
 	public function setSuffix() {
+	}
+	
+	/** 
+	 * Execute after all methods
+	 */
+	public function setSuffixAll() {
 		unset($this->geohash);
 	}
 	

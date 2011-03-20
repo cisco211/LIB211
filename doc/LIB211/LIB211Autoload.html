@@ -26,6 +26,9 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
+					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
+					<p><a href="../ric_FAQ.html">FAQ</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="../ric_README.html">README</a></p>
 			</div>
       <b>Packages:</b><br />
@@ -36,6 +39,10 @@
 			<a href="../LIB211/_core---Autoload.class.php.html">		Autoload.class.php
 		</a><br>
 			<a href="../LIB211/_core---Base.class.php.html">		Base.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.class.php.html">		Example.class.php
+		</a><br>
+			<a href="../LIB211/_module---Example---Example.test.php.html">		Example.test.php
 		</a><br>
 			<a href="../LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
 		</a><br>
@@ -81,6 +88,9 @@
 	    		<a href="../LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a><br />
 	    		<a href="../LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="../LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
+	    		<a href="../LIB211/LIB211Example.html">LIB211Example</a><br />
+	    		<a href="../LIB211/LIB211ExampleException.html">LIB211ExampleException</a><br />
+	    		<a href="../LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a><br />
 	    		<a href="../LIB211/LIB211Exception.html">LIB211Exception</a><br />
 	    		<a href="../LIB211/LIB211Geohash.html">LIB211Geohash</a><br />
 	    		<a href="../LIB211/LIB211GeohashException.html">LIB211GeohashException</a><br />
@@ -154,6 +164,38 @@ Source Location: /core/Autoload.class.php<br /><br />
 
 
 
+<td valign="top">
+<h3>Inherited Variables</h3>
+<div class="tags">
+<h4>Class: <a href="../LIB211/LIB211Base.html">LIB211Base</a></h4>
+<dl>
+<dt>
+  <a href="../LIB211/LIB211Base.html#var$instances">LIB211Base::$instances</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../LIB211/LIB211Base.html#var$time_diff">LIB211Base::$time_diff</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../LIB211/LIB211Base.html#var$time_start">LIB211Base::$time_start</a>
+  </dt>
+<dd>
+   
+</dd>
+<dt>
+  <a href="../LIB211/LIB211Base.html#var$time_stop">LIB211Base::$time_stop</a>
+  </dt>
+<dd>
+   
+</dd>
+</dl>
+</div>
+</td>
 
 <td valign="top">
 <h3>Inherited Methods</h3>
@@ -194,7 +236,7 @@ Source Location: /core/Autoload.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 12]<br />
+[line 16]<br />
 LIB211 Autloader<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -214,7 +256,7 @@ LIB211 Autloader<br /><br /><br /><br />
 	<a name="var$loader"></a>
 	<p></p>
 	<h4>static $loader = <span class="value"></span></h4>
-	<p>[line 18]</p>
+	<p>[line 22]</p>
   Loader object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -246,7 +288,7 @@ LIB211 Autloader<br /><br /><br /><br />
 <div class="tags">
   <hr />
 	<a name="method__init"></a>
-	<h3>static method __init <span class="smalllinenumber">[line 39]</span></h3>
+	<h3>static method __init <span class="smalllinenumber">[line 43]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -272,7 +314,7 @@ LIB211 Autloader<br /><br /><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 23]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 27]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -297,7 +339,7 @@ LIB211 Autloader<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line 31]</span></h3>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 35]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -322,7 +364,7 @@ LIB211 Autloader<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodmodule"></a>
-	<h3>method module <span class="smalllinenumber">[line 48]</span></h3>
+	<h3>method module <span class="smalllinenumber">[line 52]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -361,7 +403,7 @@ $name)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Sun, 06 Feb 2011 22:28:44 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Sun, 20 Mar 2011 21:26:46 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>
