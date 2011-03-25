@@ -4,6 +4,9 @@
 // Debugging
 @ini_set('display_errors','on'); @error_reporting(E_ALL);
 
+// Time limit
+set_time_limit(0);
+
 // Timezone (must be set)
 date_default_timezone_set('Europe/Berlin');
 

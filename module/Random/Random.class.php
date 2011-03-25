@@ -1,5 +1,13 @@
 <?php
 
+// Security lock
+if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
+
+// Include required files
+if (LIB211_AUTOLOAD === FALSE) {
+	require_once (LIB211_ROOT.'/function/strfill.function.php');
+}
+
 /**
  * LIB211 Random datatypes generator
  * 
@@ -33,28 +41,47 @@ class LIB211Random extends LIB211Base {
 	private static $time_stop = 0;
 
 	/**
-	 * Enter description here ...
-	 * @var unknown_type
+	 * RegEx Pattern to match IPv4 addresses
+	 * @var string
 	 */
-	private $rangeIntegerMin = NULL;
+	private $patternIPv4 = '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/'; 
 	
 	/**
-	 * Enter description here ...
-	 * @var unknown_type
+	 * RegEx Pattern to match IPv6 addresses
+	 * @var string
+	 */
+	private $patternIPv6 = '/^[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}$/';
+	
+	/**
+	 * Integer maximum range
+	 * @var integer
 	 */
 	private $rangeIntegerMax = NULL;
 	
 	/**
-	 * Enter description here ...
-	 * @var unknown_type
+	 * Integer minimum range
+	 * @var integer
 	 */
-	private $rangeTimestampMax = NULL;
-	
+	private $rangeIntegerMin = NULL;
+		
 	/**
-	 * Enter description here ...
-	 * @var unknown_type
+	 * Loop maximum runs
+	 * @var integer
 	 */
 	private $loopMaxRuns = NULL;
+	
+	/**
+	 * Fill string to a given size in any direction and any fill characters
+	 * @param string $string
+	 * @param integer $size
+	 * @param string $dir
+	 * @param string $chr
+	 * @return string
+	 */
+	private function __strfill($string,$size,$dir='l',$chr='0') {
+		if (LIB211_AUTOLOAD === TRUE) return lib211('strfill',$string,$size,$dir='l',$chr='0');
+		else return strfill($string,$size,$dir='l',$chr='0');
+	}
 	
 	/**
 	 * Constructor
@@ -80,9 +107,8 @@ class LIB211Random extends LIB211Base {
 			$IntegerMax = $max;
 		}
 		else $IntegerMax = PHP_INT_MAX;
-		$this->setRangeIntegerMax($IntegerMax);
-		$this->setRangeIntegerMin('-'.$IntegerMax);
-		$this->setRangeTimestampMax(2147483647);
+		$this->setIntegerMax($IntegerMax);
+		$this->setIntegerMin('-'.$IntegerMax);
 		$this->setLoopMaxRuns(10);
 	}
 	
@@ -108,8 +134,8 @@ class LIB211Random extends LIB211Base {
 	}
 	
 	/**
-	 * Enter description here ...
-	 * @return number
+	 * Get architecture size in bits
+	 * @return integer
 	 */
 	public function getArchitecture() {
 		if (defined('PHP_INT_SIZE')) return (PHP_INT_SIZE*8);
@@ -117,19 +143,19 @@ class LIB211Random extends LIB211Base {
 	}
 
 	/**
-	 * Enter description here ...
-	 * @return unknown_type
+	 * Get loop maximum runs
+	 * @return integer
 	 */
 	public function getLoopMaxRuns() {
 		return $this->loopMaxRuns;
 	}
 
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $format
+	 * Get random boolean
+	 * @param string $format
 	 * @return array|boolean|number|NULL|StdClass|string
 	 */
-	public function getRandomBoolean($format=NULL) {
+	public function getBoolean($format=NULL) {
 		$value = (boolean)mt_rand(0,1);
 		switch ($format) {
 			case 'a': case 'ary': case 'array':
@@ -164,29 +190,44 @@ class LIB211Random extends LIB211Base {
 		}
 	}
 
-	public function getRandomFloat($min=NULL,$max=NULL) {
-	}
+	/*
+unsigned long
+unix2dostime (time_t *time)
+{
+  struct tm *ltime = localtime (time);
+  int year = ltime->tm_year - 80;
+  if (year < 0)
+    year = 0;
 
-	public function getRandomFloatNegative($min=NULL,$max=NULL) {
-	}
+  return (year << 25
+	  | (ltime->tm_mon + 1) << 21
+	  | ltime->tm_mday << 16
+	  | ltime->tm_hour << 11
+	  | ltime->tm_min << 5
+	  | ltime->tm_sec >> 1);
+}
+*/
 	
-	public function getRandomFloatPositive($min=NULL,$max=NULL) {
-	}
+	#public function getFloat($min=NULL,$max=NULL) {}
+
+	#public function getFloatNegative($min=NULL,$max=NULL) {}
 	
-	public function getRandomGeohash() {
-	}
+	#public function getFloatPositive($min=NULL,$max=NULL) {}
+	
+	#public function getGeohash() {}
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $min
-	 * @param unknown_type $max
-	 * @return number
+	 * Get random integer
+	 * @param integer $min
+	 * @param integer $max
+	 * @return integer
 	 */
-	public function getRandomInteger($min=NULL,$max=NULL) {
-		if ($min === NULL) $min = $this->getRangeIntegerMin();
-		if ($max === NULL) $max = $this->getRangeIntegerMax();
-		if ($min <= $this->getRangeIntegerMin()) $min = $this->getRangeIntegerMin();
-		if ($max >= $this->getRangeIntegerMax()) $max = $this->getRangeIntegerMax();
+	public function getInteger($min=NULL,$max=NULL) {
+		if ($min === NULL) $min = $this->getIntegerMin();
+		if ($max === NULL) $max = $this->getIntegerMax();
+		if ($min === $max) return $max;
+		if ($min <= $this->getIntegerMin()) $min = $this->getIntegerMin();
+		if ($max >= $this->getIntegerMax()) $max = $this->getIntegerMax();
 		if (mt_rand(0,1) === 0) {
 			$i = 0;
 			while (TRUE) {
@@ -209,15 +250,16 @@ class LIB211Random extends LIB211Base {
 	}
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $min
-	 * @param unknown_type $max
-	 * @return number
+	 * Get random negative integer
+	 * @param integer $min
+	 * @param integer $max
+	 * @return integer
 	 */
-	public function getRandomIntegerNegative($min=NULL,$max=NULL) {
-		if ($min === NULL) $min = $this->getRangeIntegerMin();
+	public function getIntegerNegative($min=NULL,$max=NULL) {
+		if ($min === NULL) $min = $this->getIntegerMin();
 		if ($max === NULL) $max = 0;
-		if ($min <= $this->getRangeIntegerMin()) $min = $this->getRangeIntegerMin();
+		if ($min === $max) return $max;
+		if ($min <= $this->getIntegerMin()) $min = $this->getIntegerMin();
 		if ($max >= 0) $max = 0;
 		$i = 0;
 		while (TRUE) {
@@ -230,16 +272,17 @@ class LIB211Random extends LIB211Base {
 	}
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $min
-	 * @param unknown_type $max
-	 * @return number
+	 * Get random positive integer
+	 * @param integer $min
+	 * @param integer $max
+	 * @return integer
 	 */
-	public function getRandomIntegerPositive($min=NULL,$max=NULL) {
+	public function getIntegerPositive($min=NULL,$max=NULL) {
 		if ($min === NULL) $min = 0;
-		if ($max === NULL) $max = $this->getRangeIntegerMax();
+		if ($max === NULL) $max = $this->getIntegerMax();
+		if ($min === $max) return $max;
 		if ($min <= 0) $min = 0;
-		if ($max >= $this->getRangeIntegerMax()) $max = $this->getRangeIntegerMax();
+		if ($max >= $this->getIntegerMax()) $max = $this->getIntegerMax();
 		$i = 0;
 		while (TRUE) {
 			$i++;
@@ -250,7 +293,75 @@ class LIB211Random extends LIB211Base {
 		return $value;
 	}
 	
-	public function getRandomLatitude($min=NULL,$max=NULL) {
+	/**
+	 * Get random IPv4 address
+	 * @param string $min
+	 * @param string $max
+	 * @param boolean $upperCase
+	 * @return string
+	 */
+	public function getIPv4($min=NULL,$max=NULL) {
+		$pattern = '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/';
+		$defaultMin = '0.0.0.0';
+		$defaultMax = '255.255.255.255';
+		if ($this->getArchitecture() < 16) return $defaultMin;
+		if (!is_string($min)) $min = $defaultMin;
+		if (!(preg_match($pattern,$min) === 1)) $min = $defaultMin;
+		$min = explode('.',$min);
+		foreach ($min as $k => $v) {
+			$min[$k] = (integer)base_convert($v,10,10);
+			if ($min[$k] <= 0) $min[$k] = 0;
+			if ($min[$k] >= 0xFFFF) $min[$k] = 0xFFFF;
+		}
+		if (!is_string($max)) $max = $defaultMax;
+		if (!(preg_match($pattern,$max) === 1)) $max = $defaultMax;
+		$max = explode('.',$max);
+		foreach ($max as $k => $v) {
+			$max[$k] = (integer)base_convert($v,10,10);
+			if ($max[$k] <= 0) $max[$k] = 0; 
+			if ($max[$k] >= 0xFFFF) $max[$k] = 0xFFFF;
+		}
+		$output = array();
+		for ($i = 0; $i < 4; $i++) $output[$i] = (string)$this->getIntegerPositive($min[$i],$max[$i]);
+		return implode('.',$output);
+	}
+	
+	/**
+	 * Get random IPv6 address
+	 * @param string $min
+	 * @param string $max
+	 * @param boolean $upperCase
+	 * @return string
+	 */
+	public function getIPv6($min=NULL,$max=NULL,$upperCase=FALSE) {
+		$pattern = '/^[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}$/';
+		$defaultMin = '0000:0000:0000:0000:0000:0000:0000:0000';
+		$defaultMax = 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff';
+		if ($this->getArchitecture() < 32) return $defaultMin;
+		if (!is_string($min)) $min = $defaultMin;
+		if (!(preg_match($pattern,$min) === 1)) $min = $defaultMin;
+		$min = explode(':',$min);
+		foreach ($min as $k => $v) {
+			$min[$k] = (integer)base_convert($v,16,10);
+			if ($min[$k] <= 0) $min[$k] = 0;
+			if ($min[$k] >= 0xFFFF) $min[$k] = 0xFFFF;
+		}
+		if (!is_string($max)) $max = $defaultMax;
+		if (!(preg_match($pattern,$max) === 1)) $max = $defaultMax;
+		$max = explode(':',$max);
+		foreach ($max as $k => $v) {
+			$max[$k] = (integer)base_convert($v,16,10);
+			if ($max[$k] <= 0) $max[$k] = 0; 
+			if ($max[$k] >= 0xFFFF) $max[$k] = 0xFFFF;
+		}
+		$output = array();
+		for ($i = 0; $i < 8; $i++) $output[$i] = (string)$this->__strfill(base_convert($this->getIntegerPositive($min[$i],$max[$i]),10,16),4,'0');
+		if ($upperCase === TRUE) return strtoupper(implode(':',$output));
+		else return implode(':',$output);
+	}
+	
+	/*
+	public function getLatitude($min=NULL,$max=NULL) {
 		if ($min === NULL) $min = -90.0;
 		if ($max === NULL) $max = 90.0;
 		if ($min <= -90.0) $min = -90.0;
@@ -258,20 +369,20 @@ class LIB211Random extends LIB211Base {
 		
 	}
 
-	public function getRandomLongitude($min=NULL,$max=NULL) {
+	public function getLongitude($min=NULL,$max=NULL) {
 		if ($min === NULL) $min = -180.0;
 		if ($max === NULL) $max = 180.0;
 		if ($min <= -180.0) $min = -180.0;
 		if ($max >= 180.0) $max = 180.0;
 		
-	}
+	}*/
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $format
+	 * Get random null
+	 * @param string $format
 	 * @return array|boolean|number|NULL|StdClass|string
 	 */
-	public function getRandomNull($format=NULL) {
+	public function getNull($format=NULL) {
 		switch ($format) {
 			case 'a': case 'ary': case 'array':
 				return (array)NULL;
@@ -312,49 +423,41 @@ class LIB211Random extends LIB211Base {
 		}
 	}
 	
-	public function getRandomString() {}
+	#public function getString() {}
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $min
-	 * @param unknown_type $max
-	 * @return number
+	 * Get random timestamp
+	 * @param integer $min
+	 * @param integer $max
+	 * @return integer
 	 */
-	public function getRandomTimestamp($min=NULL,$max=NULL) {
+	public function getTimestamp($min=NULL,$max=NULL) {
 		if ($min === NULL) $min = 0;
 		if ($min < 0) $min = 0;
-		if ($max === NULL) $max = $this->getRangeTimestampMax();
-		if ($max > $this->getRangeTimestampMax()) $max = $this->getRangeTimestampMax();
-		return $this->getRandomIntegerPositive($min,$max);
+		if ($max === NULL) $max = 2147483647;
+		if ($max > 2147483647) $max = 2147483647;
+		return $this->getIntegerPositive($min,$max);
 	}
 
 	/**
-	 * Enter description here ...
-	 * @return unknown_type
+	 * Get maximum integer range
+	 * @return integer
 	 */
-	public function getRangeIntegerMax() {
+	public function getIntegerMax() {
 		return $this->rangeIntegerMax;
 	}
 
 	/**
-	 * Enter description here ...
-	 * @return unknown_type
+	 * Get minimum integer range
+	 * @return integer
 	 */
-	public function getRangeIntegerMin() {
+	public function getIntegerMin() {
 		return $this->rangeIntegerMin;
 	}
 
 	/**
-	 * Enter description here ...
-	 * @return unknown_type
-	 */
-	public function getRangeTimestampMax() {
-		return $this->rangeTimestampMax;
-	}
-
-	/**
-	 * Enter description here ...
-	 * @param unknown_type $loops
+	 * Set max loop runs
+	 * @param integer $loops
 	 * @return boolean
 	 */
 	public function setLoopMaxRuns($loops) {
@@ -363,92 +466,83 @@ class LIB211Random extends LIB211Base {
 	}
 
 	/**
-	 * Enter description here ...
+	 * Set integer range to 16 bit
 	 * @return boolean
 	 */
-	public function setRangeInteger16Bit() {
+	public function setInteger16Bit() {
 		if ($this->getArchitecture() >= 16) {
-			$this->setRangeIntegerMax((integer)(+32767));
-			$this->setRangeIntegerMin((integer)(-32767));
+			$this->setIntegerMax((integer)(+32767));
+			$this->setIntegerMin((integer)(-32767));
 			return TRUE;
 		}
 		else return FALSE;
 	}
 
 	/**
-	 * Enter description here ...
+	 * Set integer range to 32 bit
 	 * @return boolean
 	 */
-	public function setRangeInteger32Bit() {
+	public function setInteger32Bit() {
 		if ($this->getArchitecture() >= 32) {
-			$this->setRangeIntegerMax((integer)(+2147483647));
-			$this->setRangeIntegerMin((integer)(-2147483647));
+			$this->setIntegerMax((integer)(+2147483647));
+			$this->setIntegerMin((integer)(-2147483647));
 			return TRUE;
 		}
 		else return FALSE;
 	}
 	
 	/**
-	 * Enter description here ...
+	 * Set integer range to 64 bit
 	 * @return boolean
 	 */
-	public function setRangeInteger64Bit() {
+	public function setInteger64Bit() {
 		if ($this->getArchitecture() >= 64) {
-			$this->setRangeIntegerMax((integer)(+9223372036854775807));
-			$this->setRangeIntegerMin((integer)(-9223372036854775807));
+			$this->setIntegerMax((integer)(+9223372036854775807));
+			$this->setIntegerMin((integer)(-9223372036854775807));
 			return TRUE;
 		}
 		else return FALSE;
 	}
 
 	/**
-	 * Enter description here ...
+	 * Set integer range to 8 bit
 	 * @return boolean
 	 */
-	public function setRangeInteger8Bit() {
+	public function setInteger8Bit() {
 		if ($this->getArchitecture() >= 8) {
-			$this->setRangeIntegerMax((integer)(+127));
-			$this->setRangeIntegerMin((integer)(-127));
+			$this->setIntegerMax((integer)(+127));
+			$this->setIntegerMin((integer)(-127));
 			return TRUE;
 		}
 		else return FALSE;
 	}
 	
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $value
+	 * Set maximum integer range
+	 * @param integer $value
 	 * @return boolean
 	 */
-	public function setRangeIntegerMax($value) {
+	public function setIntegerMax($value) {
 		$this->rangeIntegerMax = (integer)$value;
 		return TRUE;
 	}
 
 	/**
-	 * Enter description here ...
-	 * @param unknown_type $value
+	 * Set minimum integer range
+	 * @param integer $value
 	 * @return boolean
 	 */
-	public function setRangeIntegerMin($value) {
+	public function setIntegerMin($value) {
 		$this->rangeIntegerMin = (integer)$value;
-		return TRUE;
-	}
-
-	/**
-	 * Enter description here ...
-	 * @param unknown_type $value
-	 * @return boolean
-	 */
-	public function setRangeTimestampMax($value) {
-		$this->rangeTimestampMax = (integer)$value;
 		return TRUE;
 	}
 	
 }
 
 /**
- * Enter description here ...
- * @author ts
+ * LIB211 Random Exception
+ * 
+ * @author C!$C0^211
  *
  */
 class LIB211RandomException extends LIB211BaseException {

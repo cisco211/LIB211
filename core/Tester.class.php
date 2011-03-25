@@ -123,6 +123,8 @@ class LIB211Tester extends LIB211Base {
 		catch (Exception $e) {
 			throw new LIB211TesterException('Could not include test file "'.$test['file'].'" for test "'.$test['name'].'"');
 		}
+		if (!isset($this->results['LIB211TesterStatus']['time'])) $this->results['LIB211TesterStatus']['time'] = 0;
+		$time_start = microtime(TRUE);
 		$this->testObject = new $test['name'];
 		if (!is_object($this->testObject)) throw new LIB211TesterException('No object given');
 		$this->results[$test['name']]['setPrefixAll']['status'] = 'passed';
@@ -177,6 +179,9 @@ class LIB211Tester extends LIB211Base {
 			$this->results[$test['name']]['setSuffixAll']['status'] = 'failed';
 			$this->results[$test['name']]['setSuffixAll']['exception'] = $e;
 		}
+		$time_stop = microtime(TRUE);
+		$time_diff = round($time_stop - $time_start,1);
+		$this->results['LIB211TesterStatus']['time'] += $time_diff;
 	}
 	
 	/**
@@ -266,7 +271,7 @@ class LIB211Tester extends LIB211Base {
 			$this->_setTests(array($name));
 		}
 		if (!empty($this->tests)) {
-			$tests = '';
+			$htmlTests = '';
 			
 			// Testclass
 			foreach ($this->tests as $test) {
@@ -299,7 +304,7 @@ class LIB211Tester extends LIB211Base {
 					$color = '#CCCCCC';
 					$check = 'NOTEST';
 				}
-				$tests .= '<table border="1" style="background-color:#CCCCCC;margin:0px 0px 20px 0px;width:100%;"><tr><td style="background-color:'.$color.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color.';font-weight:bold;">'.$test['name'].'</td></tr>';
+				$htmlTests .= '<table border="1" style="background-color:#CCCCCC;margin:0px 0px 20px 0px;width:100%;"><tr><td style="background-color:'.$color.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color.';font-weight:bold;">'.$test['name'].'</td></tr>';
 				
 				//Methods
 				foreach ($result as $methodName => $methodResult) {
@@ -311,14 +316,14 @@ class LIB211Tester extends LIB211Base {
 						if ($methodResult['status'] == 'failed') {
 							
 							// Set method title
-							$tests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$methodName.'</td></tr>';
+							$htmlTests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$methodName.'</td></tr>';
 							
 							// Set exception message
 							if (isset($methodResult['exception'])) {
-								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->__toDefault().'</td></tr>';
-								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->getTraceAsString().'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->__toDefault().'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.$methodResult['exception']->getTraceAsString().'</code></td></tr>';
 							}
-							$tests .= '</table></td></tr>';
+							$htmlTests .= '</table></td></tr>';
 						}
 					}
 					
@@ -334,49 +339,56 @@ class LIB211Tester extends LIB211Base {
 								$check = ' FAILED';
 							}
 						}
-						$tests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:'.$color2.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color2.';font-weight:bold;">'.$methodName.'</td></tr>';
+						$htmlTests .='<tr><td colspan="2"><table border="1" style="background-color:#AAAAAA;margin:5px;width:99%;"><tr><td style="background-color:'.$color2.';font-weight:bold;width:1px;">'.$check.'</td><td style="background-color:'.$color2.';font-weight:bold;">'.$methodName.'</td></tr>';
 						
 						// Set test method failure message
 						foreach ($methodResult as $stepName => $stepResult) {
 							if (isset($stepResult['exception'])) {
 								if ($stepName == 'test') $name = 'runTestMethod';
 								else $name = $stepName;
-								$tests .= '<tr><td colspan="2"><table border="1" style="background-color:#888888;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$name.'</td></tr>';
-								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->__toDefault().'</td></tr>';
-								$tests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->getTraceAsString().'</td></tr>';
-								$tests .= '</table></td></tr>';
+								$htmlTests .= '<tr><td colspan="2"><table border="1" style="background-color:#888888;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$name.'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->__toDefault().'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.$stepResult['exception']->getTraceAsString().'</code></td></tr>';
+								$htmlTests .= '</table></td></tr>';
 							}
 						}
-						$tests .= '</table></td></tr>';
+						$htmlTests .= '</table></td></tr>';
 					}
 				}
-				$tests .= '</table>'; //testclass table
+				$htmlTests .= '</table>'; //testclass table
 			}
 		} else {
-			$tests = '<p>There are no tests</p>';
+			return '<p>There are no tests</p>';
 		}
-		
-		$text = <<<ENDTEXT
-{$tests}
+		$htmlStatus = <<<ENDHTML
 <table border="1" style="background-color:#CCCCCC;margin-bottom:20px;">
 	<tr>
 		<td colspan="2" style="font-weight:bold;text-align:center;">Status</td>
 	</tr>
 	<tr>
-		<td align="right" style="background-color:#CCFFCC;">Passed tests:</td>
+		<td align="right" style="background-color:#CCCCFF;">Runtime:</td>
+		<td align="right" style="background-color:#CCCCFF;">{$status['time']}s</td>
+	</tr>	
+	<tr>
+		<td align="right" style="background-color:#CCFFCC;">Passed:</td>
 		<td align="right" style="background-color:#CCFFCC;">{$status['passed']}</td>
 	</tr>
 	<tr>
-		<td align="right" style="background-color:#FFCCCC;">Failed tests:</td>
+		<td align="right" style="background-color:#FFCCCC;">Failed:</td>
 		<td align="right" style="background-color:#FFCCCC;">{$status['failed']}</td>
 	</tr>
 	<tr>
-		<td align="right" style="background-color:#CCCCFF;">Tests total:</td>
+		<td align="right" style="background-color:#CCCCFF;">Total:</td>
 		<td align="right" style="background-color:#CCCCFF;">{$status['tests']}</td>
 	</tr>	
-</table>
-ENDTEXT;
-		return $text;		
+	</table>
+ENDHTML;
+		$htmlFinal = <<<ENDHTML
+{$htmlStatus}
+{$htmlTests}
+{$htmlStatus}
+ENDHTML;
+		return $htmlFinal;
 	}
 	
 	/**
@@ -470,9 +482,10 @@ ENDTEXT;
 		
 		$text = <<<ENDTEXT
 {$tests}
-Passed tests: {$status['passed']}
-Failed tests: {$status['failed']}
-Tests total: {$status['tests']}
+Runtime: {$status['time']}s
+Passed: {$status['passed']}
+Failed: {$status['failed']}
+Total: {$status['tests']}
 
 
 ENDTEXT;

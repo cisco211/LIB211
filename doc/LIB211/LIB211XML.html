@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Docs For Class LIB211Random</title>
+<title>Docs For Class LIB211XML</title>
 <link rel="stylesheet" type="text/css" href="../media/style.css">
 </head>
 <body>
@@ -129,8 +129,8 @@
     <td>
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: LIB211Random</h1>
-Source Location: /module/Random/Random.class.php<br /><br />
+<h1>Class: LIB211XML</h1>
+Source Location: /module/XML/XML.class.php<br /><br />
 
 
 <table width="100%" border="0">
@@ -139,8 +139,8 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <h3><a href="#class_details">Class Overview</a></h3>
 <pre><a href="../LIB211/LIB211Base.html">LIB211Base</a>
    |
-   --LIB211Random</pre><br />
-<div class="description">LIB211 Random datatypes generator</div><br /><br />
+   --LIB211XML</pre><br />
+<div class="description">LIB211 XML</div><br /><br />
 <h4>Author(s):</h4>
 <ul>
           <li>C!$C0^211</li>
@@ -157,15 +157,22 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <td valign="top">
 <h3><a href="#class_vars">Variables</a></h3>
 <ul>
-    <li><a href="../LIB211/LIB211Random.html#var$instances">$instances</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$loopMaxRuns">$loopMaxRuns</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$patternIPv4">$patternIPv4</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$patternIPv6">$patternIPv6</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$rangeIntegerMax">$rangeIntegerMax</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$rangeIntegerMin">$rangeIntegerMin</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$time_diff">$time_diff</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$time_start">$time_start</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$time_stop">$time_stop</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$data">$data</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$encoding">$encoding</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$instances">$instances</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$time_diff">$time_diff</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$time_start">$time_start</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$time_stop">$time_stop</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_attribKey">$_attribKey</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_cdataKey">$_cdataKey</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_error">$_error</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_index">$_index</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_isError">$_isError</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_keyArray">$_keyArray</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_parsed">$_parsed</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_rawXML">$_rawXML</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_valueArray">$_valueArray</a></li>
+    <li><a href="../LIB211/LIB211XML.html#var$_valueKey">$_valueKey</a></li>
   </ul>
 </td>
 
@@ -173,29 +180,17 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <td valign="top">
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
-    <li><a href="../LIB211/LIB211Random.html#method__construct">__construct</a></li>
-    <li><a href="../LIB211/LIB211Random.html#method__destruct">__destruct</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetArchitecture">getArchitecture</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetBoolean">getBoolean</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetInteger">getInteger</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIntegerMax">getIntegerMax</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIntegerMin">getIntegerMin</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIntegerNegative">getIntegerNegative</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIntegerPositive">getIntegerPositive</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIPv4">getIPv4</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetIPv6">getIPv6</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetLoopMaxRuns">getLoopMaxRuns</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetNull">getNull</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodgetTimestamp">getTimestamp</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetInteger8Bit">setInteger8Bit</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetInteger16Bit">setInteger16Bit</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetInteger32Bit">setInteger32Bit</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetInteger64Bit">setInteger64Bit</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetIntegerMax">setIntegerMax</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetIntegerMin">setIntegerMin</a></li>
-    <li><a href="../LIB211/LIB211Random.html#methodsetLoopMaxRuns">setLoopMaxRuns</a></li>
-    <li><a href="../LIB211/LIB211Random.html#method__status">__status</a></li>
-    <li><a href="../LIB211/LIB211Random.html#method__strfill">__strfill</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method__construct">__construct</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method__destruct">__destruct</a></li>
+    <li><a href="../LIB211/LIB211XML.html#methodexport">export</a></li>
+    <li><a href="../LIB211/LIB211XML.html#methodimport">import</a></li>
+    <li><a href="../LIB211/LIB211XML.html#methodroot">root</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method_array2xml">_array2xml</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method_indent">_indent</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method_parse">_parse</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method_parse_init">_parse_init</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method_parse_recurse">_parse_recurse</a></li>
+    <li><a href="../LIB211/LIB211XML.html#method__status">__status</a></li>
   </ul>
 </td>
 
@@ -247,8 +242,8 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 17]<br />
-LIB211 Random datatypes generator<br /><br /><br /><br />
+[line 16]<br />
+LIB211 XML<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -267,7 +262,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$instances"></a>
 	<p></p>
 	<h4>static $instances = <span class="value">&nbsp;0</span></h4>
-	<p>[line 23]</p>
+	<p>[line 22]</p>
   Instance counter<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -298,7 +293,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_diff"></a>
 	<p></p>
 	<h4>static $time_diff = <span class="value">&nbsp;0</span></h4>
-	<p>[line 29]</p>
+	<p>[line 28]</p>
   Runtime of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -329,7 +324,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_start"></a>
 	<p></p>
 	<h4>static $time_start = <span class="value">&nbsp;0</span></h4>
-	<p>[line 35]</p>
+	<p>[line 34]</p>
   Start time of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -360,7 +355,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_stop"></a>
 	<p></p>
 	<h4>static $time_stop = <span class="value">&nbsp;0</span></h4>
-	<p>[line 41]</p>
+	<p>[line 40]</p>
   Stop time of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -388,16 +383,16 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$loopMaxRuns"></a>
+	<a name="var$data"></a>
 	<p></p>
-	<h4>$loopMaxRuns = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 71]</p>
-  Loop maximum runs<br /><br /><br /><br />
+	<h4>$data = <span class="value">array()</span></h4>
+	<p>[line 106]</p>
+  Data array<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
   </tr>
 </table>
 </div>
@@ -407,16 +402,40 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>integer</td>
+      <td>array</td>
     </tr>
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$patternIPv4"></a>
+	<a name="var$encoding"></a>
 	<p></p>
-	<h4>$patternIPv4 = <span class="value">&nbsp;'/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/'</span></h4>
-	<p>[line 47]</p>
-  RegEx Pattern to match IPv4 addresses<br /><br /><br /><br />
+	<h4>$encoding = <span class="value">&nbsp;&quot;UTF-8&quot;</span></h4>
+	<p>[line 112]</p>
+  Encoding type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_attribKey"></a>
+	<p></p>
+	<h4>$_attribKey = <span class="value">&nbsp;&quot;@attributes&quot;</span></h4>
+	<p>[line 46]</p>
+  Identifier for attributes<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -436,11 +455,11 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$patternIPv6"></a>
+	<a name="var$_cdataKey"></a>
 	<p></p>
-	<h4>$patternIPv6 = <span class="value">&nbsp;'/^[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}$/'</span></h4>
-	<p>[line 53]</p>
-  RegEx Pattern to match IPv6 addresses<br /><br /><br /><br />
+	<h4>$_cdataKey = <span class="value">&nbsp;&quot;@cdata&quot;</span></h4>
+	<p>[line 52]</p>
+  Identifier for cdata<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -460,11 +479,35 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$rangeIntegerMax"></a>
+	<a name="var$_error"></a>
 	<p></p>
-	<h4>$rangeIntegerMax = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 59]</p>
-  Integer maximum range<br /><br /><br /><br />
+	<h4>$_error = <span class="value">&nbsp;&quot;&quot;</span></h4>
+	<p>[line 58]</p>
+  Last error<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_index"></a>
+	<p></p>
+	<h4>$_index = <span class="value">&nbsp;0</span></h4>
+	<p>[line 64]</p>
+  Index iterator<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -484,11 +527,11 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$rangeIntegerMin"></a>
+	<a name="var$_isError"></a>
 	<p></p>
-	<h4>$rangeIntegerMin = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 65]</p>
-  Integer minimum range<br /><br /><br /><br />
+	<h4>$_isError = <span class="value">&nbsp;FALSE</span></h4>
+	<p>[line 70]</p>
+  Error indicator<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -503,7 +546,127 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>integer</td>
+      <td>boolean</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_keyArray"></a>
+	<p></p>
+	<h4>$_keyArray = <span class="value">array()</span></h4>
+	<p>[line 76]</p>
+  Keys array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_parsed"></a>
+	<p></p>
+	<h4>$_parsed = <span class="value">array()</span></h4>
+	<p>[line 82]</p>
+  Array for parsed data<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_rawXML"></a>
+	<p></p>
+	<h4>$_rawXML = <span class="value">&nbsp;NULL</span></h4>
+	<p>[line 88]</p>
+  Raw xml data<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_valueArray"></a>
+	<p></p>
+	<h4>$_valueArray = <span class="value">array()</span></h4>
+	<p>[line 94]</p>
+  Values array<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$_valueKey"></a>
+	<p></p>
+	<h4>$_valueKey = <span class="value">&nbsp;&quot;@value&quot;</span></h4>
+	<p>[line 100]</p>
+  Identifier vor values<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>string</td>
     </tr>
       </table>
 	</div><br /><br />
@@ -517,11 +680,11 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 89]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 117]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>LIB211Random __construct(
+		<code>LIB211XML __construct(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
@@ -542,7 +705,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="method__destruct"></a>
-	<h3>destructor __destruct <span class="smalllinenumber">[line 118]</span></h3>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 132]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -566,43 +729,18 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodgetArchitecture"></a>
-	<h3>method getArchitecture <span class="smalllinenumber">[line 140]</span></h3>
+	<a name="methodexport"></a>
+	<h3>method export <span class="smalllinenumber">[line 292]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getArchitecture(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get architecture size in bits<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetBoolean"></a>
-	<h3>method getBoolean <span class="smalllinenumber">[line 158]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>array|boolean|number|NULL|StdClass|string getBoolean(
+		<code>string export(
 [string
-$format = NULL])</code>
+$xml = NULL])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Get random boolean<br /><br /><br /><br />
+		Export to xml data<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -619,7 +757,7 @@ $format = NULL])</code>
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
         <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$format</b>&nbsp;&nbsp;</td>
+        <td><b>$xml</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
@@ -627,196 +765,18 @@ $format = NULL])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodgetInteger"></a>
-	<h3>method getInteger <span class="smalllinenumber">[line 225]</span></h3>
+	<a name="methodimport"></a>
+	<h3>method import <span class="smalllinenumber">[line 313]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getInteger(
-[integer
-$min = NULL], [integer
-$max = NULL])</code>
+		<code>array import(
+string
+$xml)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Get random integer<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetIntegerMax"></a>
-	<h3>method getIntegerMax <span class="smalllinenumber">[line 446]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getIntegerMax(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get maximum integer range<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetIntegerMin"></a>
-	<h3>method getIntegerMin <span class="smalllinenumber">[line 454]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getIntegerMin(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get minimum integer range<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetIntegerNegative"></a>
-	<h3>method getIntegerNegative <span class="smalllinenumber">[line 258]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getIntegerNegative(
-[integer
-$min = NULL], [integer
-$max = NULL])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get random negative integer<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetIntegerPositive"></a>
-	<h3>method getIntegerPositive <span class="smalllinenumber">[line 280]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getIntegerPositive(
-[integer
-$min = NULL], [integer
-$max = NULL])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get random positive integer<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetIPv4"></a>
-	<h3>method getIPv4 <span class="smalllinenumber">[line 303]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string getIPv4(
-[string
-$min = NULL], [string
-$max = NULL], boolean
-$upperCase)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get random IPv4 address<br /><br /><br /><br />
+		Import from xml data<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -833,17 +793,7 @@ $upperCase)</code>
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
         <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">boolean&nbsp;&nbsp;</td>
-        <td><b>$upperCase</b>&nbsp;&nbsp;</td>
+        <td><b>$xml</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
@@ -851,65 +801,17 @@ $upperCase)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodgetIPv6"></a>
-	<h3>method getIPv6 <span class="smalllinenumber">[line 336]</span></h3>
+	<a name="methodroot"></a>
+	<h3>method root <span class="smalllinenumber">[line 333]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string getIPv6(
-[string
-$min = NULL], [string
-$max = NULL], [boolean
-$upperCase = FALSE])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get random IPv6 address<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">boolean&nbsp;&nbsp;</td>
-        <td><b>$upperCase</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetLoopMaxRuns"></a>
-	<h3>method getLoopMaxRuns <span class="smalllinenumber">[line 149]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getLoopMaxRuns(
+		<code>string root(
 )</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Get loop maximum runs<br /><br /><br /><br />
+		Detect root element<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -924,23 +826,27 @@ $upperCase = FALSE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodgetNull"></a>
-	<h3>method getNull <span class="smalllinenumber">[line 385]</span></h3>
+	<a name="method_array2xml"></a>
+	<h3>method _array2xml <span class="smalllinenumber">[line 158]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>array|boolean|number|NULL|StdClass|string getNull(
-[string
-$format = NULL])</code>
+		<code>void _array2xml(
+string
+&$o, integer
+&$s, string
+$k, string
+$v, [string
+$n = NULL])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Get random null<br /><br /><br /><br />
+		Convert array to xml<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
   </tr>
 </table>
 </div>
@@ -952,49 +858,27 @@ $format = NULL])</code>
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
         <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$format</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodgetTimestamp"></a>
-	<h3>method getTimestamp <span class="smalllinenumber">[line 434]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>integer getTimestamp(
-[integer
-$min = NULL], [integer
-$max = NULL])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Get random timestamp<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td><b>&$o</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
           <tr>
         <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td><b>&$s</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$k</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$v</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$n</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
@@ -1002,123 +886,23 @@ $max = NULL])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodsetInteger8Bit"></a>
-	<h3>method setInteger8Bit <span class="smalllinenumber">[line 511]</span></h3>
+	<a name="method_indent"></a>
+	<h3>method _indent <span class="smalllinenumber">[line 196]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setInteger8Bit(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Set integer range to 8 bit<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodsetInteger16Bit"></a>
-	<h3>method setInteger16Bit <span class="smalllinenumber">[line 472]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setInteger16Bit(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Set integer range to 16 bit<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodsetInteger32Bit"></a>
-	<h3>method setInteger32Bit <span class="smalllinenumber">[line 485]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setInteger32Bit(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Set integer range to 32 bit<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodsetInteger64Bit"></a>
-	<h3>method setInteger64Bit <span class="smalllinenumber">[line 498]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setInteger64Bit(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Set integer range to 64 bit<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodsetIntegerMax"></a>
-	<h3>method setIntegerMax <span class="smalllinenumber">[line 525]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setIntegerMax(
+		<code>string _indent(
 integer
-$value)</code>
+$x)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Set maximum integer range<br /><br /><br /><br />
+		Return indend<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
   </tr>
 </table>
 </div>
@@ -1130,7 +914,7 @@ $value)</code>
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
         <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td><b>$x</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
@@ -1138,23 +922,24 @@ $value)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodsetIntegerMin"></a>
-	<h3>method setIntegerMin <span class="smalllinenumber">[line 535]</span></h3>
+	<a name="method_parse"></a>
+	<h3>method _parse <span class="smalllinenumber">[line 208]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setIntegerMin(
-integer
-$value)</code>
+		<code>array _parse(
+[string
+$xml = NULL], [string
+$encoding = &quot;UTF-8&quot;])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Set minimum integer range<br /><br /><br /><br />
+		Parse xml<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
   </tr>
 </table>
 </div>
@@ -1165,8 +950,13 @@ $value)</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$xml</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$encoding</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
@@ -1174,23 +964,23 @@ $value)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodsetLoopMaxRuns"></a>
-	<h3>method setLoopMaxRuns <span class="smalllinenumber">[line 463]</span></h3>
+	<a name="method_parse_init"></a>
+	<h3>method _parse_init <span class="smalllinenumber">[line 223]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean setLoopMaxRuns(
-integer
-$loops)</code>
+		<code>boolean _parse_init(
+string
+$encoding)</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Set max loop runs<br /><br /><br /><br />
+		Initialize parser<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
   </tr>
 </table>
 </div>
@@ -1201,17 +991,42 @@ $loops)</code>
     <div class="tags">
     <table border="0" cellspacing="0" cellpadding="0">
           <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$loops</b>&nbsp;&nbsp;</td>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$encoding</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
         </table>
     </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method_parse_recurse"></a>
+	<h3>method _parse_recurse <span class="smalllinenumber">[line 242]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array _parse_recurse(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Parse xml data recursively<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
 	<a name="method__status"></a>
-	<h3>method __status <span class="smalllinenumber">[line 127]</span></h3>
+	<h3>method __status <span class="smalllinenumber">[line 141]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1232,60 +1047,6 @@ $loops)</code>
 <br /><br />
 
 	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (Return object status)<br /><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="method__strfill"></a>
-	<h3>method __strfill <span class="smalllinenumber">[line 81]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string __strfill(
-string
-$string, integer
-$size, [string
-$dir = 'l'], [string
-$chr = '0'])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Fill string to a given size in any direction and any fill characters<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$string</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">integer&nbsp;&nbsp;</td>
-        <td><b>$size</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$dir</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$chr</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
 </div><br />

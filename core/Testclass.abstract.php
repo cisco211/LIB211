@@ -70,7 +70,7 @@ abstract class LIB211Testclass {
 	 * @param integer $line
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertionCallback($file,$line) {
+	final public function assertionCallback($file,$line) {
 		throw new LIB211TestclassException('Failed assertion at '.$file.':'.$line.' and thrown');
 	}
 	
@@ -81,7 +81,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertEquals($left,$right,$checkType=TRUE) {
+	final public function assertEquals($left,$right,$checkType=TRUE) {
 		$message = 'assertEquals failed: "'.$this->_formatType($left).'" not equals "'.$this->_formatType($right).'"';
 		if ($checkType) {
 			if ($left !== $right) {
@@ -101,7 +101,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertFalse($test,$checkType=TRUE) {
+	final public function assertFalse($test,$checkType=TRUE) {
 		$message = 'assertFalse failed: "'.$this->_formatType($test).'" is not "FALSE"';
 		if ($checkType) {
 			if ($test !== FALSE) {
@@ -121,7 +121,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertGreater($left,$right) {
+	final public function assertGreater($left,$right) {
 		$message = 'assertGreater failed: "'.$this->_formatType($left).'" not greater "'.$this->_formatType($right).'"';
 		if (!($left > $right)) { 
 			throw new LIB211TestclassException($message);
@@ -134,7 +134,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertGreaterThan($left,$right) {
+	final public function assertGreaterThan($left,$right) {
 		$message = 'assertGreaterEquals failed: "'.$this->_formatType($left).'" not greater than "'.$this->_formatType($right).'"';
 		if (!($left >= $right)) { 
 			throw new LIB211TestclassException($message);
@@ -147,7 +147,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertLesser($left,$right) {
+	final public function assertLesser($left,$right) {
 		$message = 'assertLesser failed: "'.$this->_formatType($left).'" not lesser "'.$this->_formatType($right).'"';
 		if (!($left < $right)) { 
 			throw new LIB211TestclassException($message);
@@ -160,7 +160,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertLesserThan($left,$right) {
+	final public function assertLesserThan($left,$right) {
 		$message = 'assertLesserThan failed: "'.$this->_formatType($left).'" not lesser than "'.$this->_formatType($right).'"';
 		if (!($left <= $right)) { 
 			throw new LIB211TestclassException($message);
@@ -174,7 +174,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotEquals($left,$right,$checkType=TRUE) {
+	final public function assertNotEquals($left,$right,$checkType=TRUE) {
 		$message = 'assertNotEquals failed: "'.$this->_formatType($left).'" equals "'.$this->_formatType($right).'"';
 		if ($checkType) {
 			if ($left === $right) {
@@ -194,7 +194,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotFalse($test,$checkType=TRUE) {
+	final public function assertNotFalse($test,$checkType=TRUE) {
 		$message = 'assertNotFalse failed: "'.$this->_formatType($test).'" is "FALSE"';
 		if ($checkType) {
 			if ($test === FALSE) {
@@ -214,7 +214,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotGreater($left,$right) {
+	final public function assertNotGreater($left,$right) {
 		$message = 'assertNotGreater failed: "'.$this->_formatType($left).'" greater "'.$this->_formatType($right).'"';
 		if ($left > $right) { 
 			throw new LIB211TestclassException($message);
@@ -227,7 +227,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotGreaterThan($left,$right) {
+	final public function assertNotGreaterThan($left,$right) {
 		$message = 'assertNotGreaterThan failed: "'.$this->_formatType($left).'" greater than "'.$this->_formatType($right).'"';
 		if ($left >= $right) { 
 			throw new LIB211TestclassException($message);
@@ -240,7 +240,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotLesser($left,$right) {
+	final public function assertNotLesser($left,$right) {
 		$message = 'assertNotLesser failed: "'.$this->_formatType($left).'" lesser "'.$this->_formatType($right).'"';
 		if ($left < $right) { 
 			throw new LIB211TestclassException($message);
@@ -253,7 +253,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $right
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotLesserThan($left,$right) {
+	final public function assertNotLesserThan($left,$right) {
 		$message = 'assertNotLesserThan failed: "'.$this->_formatType($left).'" lesser than "'.$this->_formatType($right).'"';
 		if ($left <= $right) { 
 			throw new LIB211TestclassException($message);
@@ -266,7 +266,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotNull($test,$checkType=TRUE) {
+	final public function assertNotNull($test,$checkType=TRUE) {
 		$message = 'assertNotNull failed: "'.$this->_formatType($test).'" is "NULL"';
 		if ($checkType) {
 			if ($test === NULL) {
@@ -286,7 +286,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNotTrue($test,$checkType=TRUE) {
+	final public function assertNotTrue($test,$checkType=TRUE) {
 		$message = 'assertNotTrue failed: "'.$this->_formatType($test).'" is "TRUE"';
 		if ($checkType) {
 			if ($test === TRUE) {
@@ -306,7 +306,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertNull($test,$checkType=TRUE) {
+	final public function assertNull($test,$checkType=TRUE) {
 		$message = 'assertNull failed: "'.$this->_formatType($test).'" is not "NULL"';
 		if ($checkType) {
 			if ($test !== NULL) {
@@ -326,7 +326,7 @@ abstract class LIB211Testclass {
 	 * @param boolean $checkType
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertTrue($test,$checkType=TRUE) {
+	final public function assertTrue($test,$checkType=TRUE) {
 		$message = 'assertTrue failed: "'.$this->_formatType($test).'" is not "TRUE"';
 		if ($checkType) {
 			if ($test !== TRUE) {
@@ -345,7 +345,7 @@ abstract class LIB211Testclass {
 	 * @param mixed $test
 	 * @throws LIB211TestclassException
 	 */
-	protected function assertThat($test) {
+	final public function assertThat($test) {
 		$message = 'assertThat failed: "'.$this->_formatType($test).'"';
 		if (
 				$test === FALSE OR 
