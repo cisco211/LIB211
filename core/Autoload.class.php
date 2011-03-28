@@ -26,6 +26,9 @@ class LIB211Autoload extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Autoload')) {
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Autoload',time());
+		}
 		spl_autoload_register(array($this,'module'));
 	}
 

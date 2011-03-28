@@ -202,14 +202,14 @@ class LIB211Tester extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
-			$this->__check('c','LIB211Exception');
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Tester')) {
+			$this->__check('c','LIB211TesterException');
 			$this->__check('f','getenv');
 			$this->__check('f','filemtime');
 			$this->__check('f','microtime');
 			$this->__check('f','round');
 			$this->__check('v','_SERVER');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Tester',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);

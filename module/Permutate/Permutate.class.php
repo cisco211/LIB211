@@ -84,12 +84,12 @@ class LIB211Permutate extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Permutate')) {
 			$this->__check('c','ErrorException');
 			$this->__check('c','Exception');
 			$this->__check('c','LIB211PermutateException');
 			$this->__check('f','is_array');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Permutate',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);

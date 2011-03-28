@@ -123,12 +123,12 @@ class LIB211Mail extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Mail')) {
 			$this->__check('d','PHP_OS');
 			$this->__check('c','ErrorException');
 			$this->__check('c','Exception');
 			$this->__check('c','LIB211MailException');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Mail',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);

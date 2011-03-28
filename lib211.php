@@ -18,7 +18,12 @@ if (!defined('EOL')) define('EOL',chr(13).chr(10));
 
 if (LIB211_OBCLEAN === TRUE) @ob_clean();
 
-if (LIB211_OBCLEAN === TRUE) @ini_set("allow_call_time_pass_reference",0);
+if (LIB211_DISALLOWCTPR === TRUE) @ini_set("allow_call_time_pass_reference",0);
+
+if (!file_exists(LIB211_ROOT.'/tmp')) {
+	if (!mkdir(LIB211_ROOT.'/tmp')) throw new Exception('Could not create '.LIB211_ROOT.'/tmp');
+	if (!file_exists(LIB211_ROOT.'/tmp/.lock') AND !mkdir(LIB211_ROOT.'/tmp/.lock')) throw new Exception('Could not create '.LIB211_ROOT.'/tmp/.lock');
+}
 
 require_once(LIB211_ROOT.'/core/Base.class.php');
 

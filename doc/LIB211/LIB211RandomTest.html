@@ -70,7 +70,9 @@
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
 		</a><br>
-			<a href="../LIB211/_function---strfill.function.php.html">		strfill.function.php
+			<a href="../LIB211/_module---String---String.class.php.html">		String.class.php
+		</a><br>
+			<a href="../LIB211/_module---String---String.test.php.html">		String.test.php
 		</a><br>
 			<a href="../LIB211/_test.php.html">		test.php
 		</a><br>
@@ -117,6 +119,9 @@
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
+	    		<a href="../LIB211/LIB211String.html">LIB211String</a><br />
+	    		<a href="../LIB211/LIB211StringException.html">LIB211StringException</a><br />
+	    		<a href="../LIB211/LIB211StringTest.html">LIB211StringTest</a><br />
 	    		<a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a><br />
 	    		<a href="../LIB211/LIB211TestclassException.html">LIB211TestclassException</a><br />
 	    		<a href="../LIB211/LIB211Tester.html">LIB211Tester</a><br />
@@ -172,6 +177,10 @@ Source Location: /module/Random/Random.test.php<br /><br />
     <li><a href="../LIB211/LIB211RandomTest.html#methodsetSuffixAll">setSuffixAll</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetArchitecture">testGetArchitecture</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetBoolean">testGetBoolean</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetFloat">testGetFloat</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetFloatNegative">testGetFloatNegative</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetFloatPositive">testGetFloatPositive</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetGeohash">testGetGeohash</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetInteger">testGetInteger</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetIntegerMax">testGetIntegerMax</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetIntegerMin">testGetIntegerMin</a></li>
@@ -179,8 +188,14 @@ Source Location: /module/Random/Random.test.php<br /><br />
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetIntegerPositive">testGetIntegerPositive</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetIPv4">testGetIPv4</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetIPv6">testGetIPv6</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetLatitude">testGetLatitude</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetLongitude">testGetLongitude</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetLoopMaxRuns">testGetLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetMd5">testGetMd5</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetNull">testGetNull</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetString">testGetString</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetStringList">testGetStringList</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetStringSequence">testGetStringSequence</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestGetTimestamp">testGetTimestamp</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetInteger8Bit">testSetInteger8Bit</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetInteger16Bit">testSetInteger16Bit</a></li>
@@ -189,6 +204,7 @@ Source Location: /module/Random/Random.test.php<br /><br />
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetIntegerMax">testSetIntegerMax</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetIntegerMin">testSetIntegerMin</a></li>
     <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetLoopMaxRuns">testSetLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211RandomTest.html#methodtestSetStringList">testSetStringList</a></li>
   </ul>
 </td>
 
@@ -379,7 +395,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
 <div class="tags">
 	<a name="var$loops"></a>
 	<p></p>
-	<h4>$loops = <span class="value">&nbsp;10</span></h4>
+	<h4>$loops = <span class="value">&nbsp;100</span></h4>
 	<p>[line 23]</p>
   How many loops for random in range tests<br /><br /><br /><br />
 <h4>Tags:</h4>
@@ -560,7 +576,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetBoolean"></a>
-	<h3>method testGetBoolean <span class="smalllinenumber">[line 75]</span></h3>
+	<h3>method testGetBoolean <span class="smalllinenumber">[line 68]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -584,8 +600,108 @@ LIB211 Random Testclass<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetFloat"></a>
+	<h3>method testGetFloat <span class="smalllinenumber">[line 78]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetFloat(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getFloat() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetFloatNegative"></a>
+	<h3>method testGetFloatNegative <span class="smalllinenumber">[line 111]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetFloatNegative(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getFloatNegative() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetFloatPositive"></a>
+	<h3>method testGetFloatPositive <span class="smalllinenumber">[line 159]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetFloatPositive(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getFloatPositive() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetGeohash"></a>
+	<h3>method testGetGeohash <span class="smalllinenumber">[line 144]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetGeohash(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getGeohash() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetInteger"></a>
-	<h3>method testGetInteger <span class="smalllinenumber">[line 85]</span></h3>
+	<h3>method testGetInteger <span class="smalllinenumber">[line 192]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -610,7 +726,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIntegerMax"></a>
-	<h3>method testGetIntegerMax <span class="smalllinenumber">[line 268]</span></h3>
+	<h3>method testGetIntegerMax <span class="smalllinenumber">[line 457]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -635,7 +751,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIntegerMin"></a>
-	<h3>method testGetIntegerMin <span class="smalllinenumber">[line 288]</span></h3>
+	<h3>method testGetIntegerMin <span class="smalllinenumber">[line 477]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -660,7 +776,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIntegerNegative"></a>
-	<h3>method testGetIntegerNegative <span class="smalllinenumber">[line 110]</span></h3>
+	<h3>method testGetIntegerNegative <span class="smalllinenumber">[line 217]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -685,7 +801,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIntegerPositive"></a>
-	<h3>method testGetIntegerPositive <span class="smalllinenumber">[line 134]</span></h3>
+	<h3>method testGetIntegerPositive <span class="smalllinenumber">[line 241]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -710,7 +826,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIPv4"></a>
-	<h3>method testGetIPv4 <span class="smalllinenumber">[line 159]</span></h3>
+	<h3>method testGetIPv4 <span class="smalllinenumber">[line 266]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -735,7 +851,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestGetIPv6"></a>
-	<h3>method testGetIPv6 <span class="smalllinenumber">[line 191]</span></h3>
+	<h3>method testGetIPv6 <span class="smalllinenumber">[line 298]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -759,8 +875,58 @@ LIB211 Random Testclass<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetLatitude"></a>
+	<h3>method testGetLatitude <span class="smalllinenumber">[line 336]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetLatitude(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetLongitude"></a>
+	<h3>method testGetLongitude <span class="smalllinenumber">[line 366]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetLongitude(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetLoopMaxRuns"></a>
-	<h3>method testGetLoopMaxRuns <span class="smalllinenumber">[line 68]</span></h3>
+	<h3>method testGetLoopMaxRuns <span class="smalllinenumber">[line 399]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -784,8 +950,33 @@ LIB211 Random Testclass<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetMd5"></a>
+	<h3>method testGetMd5 <span class="smalllinenumber">[line 417]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetMd5(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getMD5() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetNull"></a>
-	<h3>method testGetNull <span class="smalllinenumber">[line 232]</span></h3>
+	<h3>method testGetNull <span class="smalllinenumber">[line 406]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -809,8 +1000,83 @@ LIB211 Random Testclass<br /><br /><br /><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodtestGetString"></a>
+	<h3>method testGetString <span class="smalllinenumber">[line 494]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetString(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetStringList"></a>
+	<h3>method testGetStringList <span class="smalllinenumber">[line 523]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetStringList(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getStringList() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtestGetStringSequence"></a>
+	<h3>method testGetStringSequence <span class="smalllinenumber">[line 543]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testGetStringSequence(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test getStringSequence() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodtestGetTimestamp"></a>
-	<h3>method testGetTimestamp <span class="smalllinenumber">[line 243]</span></h3>
+	<h3>method testGetTimestamp <span class="smalllinenumber">[line 432]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -835,7 +1101,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetInteger8Bit"></a>
-	<h3>method testSetInteger8Bit <span class="smalllinenumber">[line 350]</span></h3>
+	<h3>method testSetInteger8Bit <span class="smalllinenumber">[line 617]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -860,7 +1126,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetInteger16Bit"></a>
-	<h3>method testSetInteger16Bit <span class="smalllinenumber">[line 317]</span></h3>
+	<h3>method testSetInteger16Bit <span class="smalllinenumber">[line 584]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -885,7 +1151,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetInteger32Bit"></a>
-	<h3>method testSetInteger32Bit <span class="smalllinenumber">[line 328]</span></h3>
+	<h3>method testSetInteger32Bit <span class="smalllinenumber">[line 595]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -910,7 +1176,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetInteger64Bit"></a>
-	<h3>method testSetInteger64Bit <span class="smalllinenumber">[line 339]</span></h3>
+	<h3>method testSetInteger64Bit <span class="smalllinenumber">[line 606]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -935,7 +1201,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetIntegerMax"></a>
-	<h3>method testSetIntegerMax <span class="smalllinenumber">[line 361]</span></h3>
+	<h3>method testSetIntegerMax <span class="smalllinenumber">[line 628]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -960,7 +1226,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetIntegerMin"></a>
-	<h3>method testSetIntegerMin <span class="smalllinenumber">[line 369]</span></h3>
+	<h3>method testSetIntegerMin <span class="smalllinenumber">[line 636]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -985,7 +1251,7 @@ LIB211 Random Testclass<br /><br /><br /><br />
   </div>
   <hr />
 	<a name="methodtestSetLoopMaxRuns"></a>
-	<h3>method testSetLoopMaxRuns <span class="smalllinenumber">[line 308]</span></h3>
+	<h3>method testSetLoopMaxRuns <span class="smalllinenumber">[line 575]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1008,12 +1274,37 @@ LIB211 Random Testclass<br /><br /><br /><br />
 	
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
+  <hr />
+	<a name="methodtestSetStringList"></a>
+	<h3>method testSetStringList <span class="smalllinenumber">[line 644]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void testSetStringList(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Test setStringList() method<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
 </div><br />
 
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Fri, 25 Mar 2011 23:35:26 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 28 Mar 2011 18:38:56 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

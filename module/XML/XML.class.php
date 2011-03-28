@@ -5,6 +5,7 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
 // Include required files
 if (LIB211_AUTOLOAD === FALSE) {
+	require_once (LIB211_ROOT.'/module/String/String.class.php');
 }
 
 /**
@@ -116,11 +117,11 @@ class LIB211XML extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211XML')) {
 			$this->__check('c','ErrorException');
 			$this->__check('c','Exception');
 			$this->__check('c','LIB211XMLException');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211XML',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);
@@ -193,10 +194,11 @@ class LIB211XML extends LIB211Base {
 	 * @param integer $x
 	 * @return string
 	 */
-	private function _indent($x) {
-		$s = "";
-		for ($i = 0; $i < $x; $i++) $s .= "\t";
-		return $s;
+	private function _indent($x,$chr = "\t") {
+		$stringObj = new LIB211String();
+		$result = $stringObj->indent($x,$chr);
+		unset($stringObj);
+		return $result;
 	}
 	
 	/**

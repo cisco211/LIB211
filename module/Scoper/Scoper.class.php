@@ -41,7 +41,7 @@ class LIB211Scoper extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Scoper')) {
 			$this->__check('c','ErrorException');
 			$this->__check('c','Exception');
 			$this->__check('c','LIB211ScoperException');
@@ -54,7 +54,7 @@ class LIB211Scoper extends LIB211Base {
 			$this->__check('f','ob_get_contents');
 			$this->__check('f','ob_start');
 			$this->__check('v','GLOBALS');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Scoper',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);

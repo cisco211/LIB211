@@ -70,7 +70,9 @@
 		</a><br>
 			<a href="../LIB211/_module---Scoper---Scoper.test.php.html">		Scoper.test.php
 		</a><br>
-			<a href="../LIB211/_function---strfill.function.php.html">		strfill.function.php
+			<a href="../LIB211/_module---String---String.class.php.html">		String.class.php
+		</a><br>
+			<a href="../LIB211/_module---String---String.test.php.html">		String.test.php
 		</a><br>
 			<a href="../LIB211/_test.php.html">		test.php
 		</a><br>
@@ -117,6 +119,9 @@
 	    		<a href="../LIB211/LIB211Scoper.html">LIB211Scoper</a><br />
 	    		<a href="../LIB211/LIB211ScoperException.html">LIB211ScoperException</a><br />
 	    		<a href="../LIB211/LIB211ScoperTest.html">LIB211ScoperTest</a><br />
+	    		<a href="../LIB211/LIB211String.html">LIB211String</a><br />
+	    		<a href="../LIB211/LIB211StringException.html">LIB211StringException</a><br />
+	    		<a href="../LIB211/LIB211StringTest.html">LIB211StringTest</a><br />
 	    		<a href="../LIB211/LIB211Testclass.html">LIB211Testclass</a><br />
 	    		<a href="../LIB211/LIB211TestclassException.html">LIB211TestclassException</a><br />
 	    		<a href="../LIB211/LIB211Tester.html">LIB211Tester</a><br />
@@ -159,10 +164,9 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <ul>
     <li><a href="../LIB211/LIB211Random.html#var$instances">$instances</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$loopMaxRuns">$loopMaxRuns</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$patternIPv4">$patternIPv4</a></li>
-    <li><a href="../LIB211/LIB211Random.html#var$patternIPv6">$patternIPv6</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$rangeIntegerMax">$rangeIntegerMax</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$rangeIntegerMin">$rangeIntegerMin</a></li>
+    <li><a href="../LIB211/LIB211Random.html#var$stringList">$stringList</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$time_diff">$time_diff</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$time_start">$time_start</a></li>
     <li><a href="../LIB211/LIB211Random.html#var$time_stop">$time_stop</a></li>
@@ -177,6 +181,10 @@ Source Location: /module/Random/Random.class.php<br /><br />
     <li><a href="../LIB211/LIB211Random.html#method__destruct">__destruct</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetArchitecture">getArchitecture</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetBoolean">getBoolean</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetFloat">getFloat</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetFloatNegative">getFloatNegative</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetFloatPositive">getFloatPositive</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetGeohash">getGeohash</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetInteger">getInteger</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetIntegerMax">getIntegerMax</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetIntegerMin">getIntegerMin</a></li>
@@ -184,8 +192,14 @@ Source Location: /module/Random/Random.class.php<br /><br />
     <li><a href="../LIB211/LIB211Random.html#methodgetIntegerPositive">getIntegerPositive</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetIPv4">getIPv4</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetIPv6">getIPv6</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetLatitude">getLatitude</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetLongitude">getLongitude</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetLoopMaxRuns">getLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetMd5">getMd5</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetNull">getNull</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetString">getString</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetStringList">getStringList</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodgetStringSequence">getStringSequence</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodgetTimestamp">getTimestamp</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodsetInteger8Bit">setInteger8Bit</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodsetInteger16Bit">setInteger16Bit</a></li>
@@ -194,8 +208,9 @@ Source Location: /module/Random/Random.class.php<br /><br />
     <li><a href="../LIB211/LIB211Random.html#methodsetIntegerMax">setIntegerMax</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodsetIntegerMin">setIntegerMin</a></li>
     <li><a href="../LIB211/LIB211Random.html#methodsetLoopMaxRuns">setLoopMaxRuns</a></li>
+    <li><a href="../LIB211/LIB211Random.html#methodsetStringList">setStringList</a></li>
+    <li><a href="../LIB211/LIB211Random.html#method_strfill">_strfill</a></li>
     <li><a href="../LIB211/LIB211Random.html#method__status">__status</a></li>
-    <li><a href="../LIB211/LIB211Random.html#method__strfill">__strfill</a></li>
   </ul>
 </td>
 
@@ -247,7 +262,7 @@ Source Location: /module/Random/Random.class.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 17]<br />
+[line 18]<br />
 LIB211 Random datatypes generator<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -267,7 +282,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$instances"></a>
 	<p></p>
 	<h4>static $instances = <span class="value">&nbsp;0</span></h4>
-	<p>[line 23]</p>
+	<p>[line 24]</p>
   Instance counter<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -298,7 +313,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_diff"></a>
 	<p></p>
 	<h4>static $time_diff = <span class="value">&nbsp;0</span></h4>
-	<p>[line 29]</p>
+	<p>[line 30]</p>
   Runtime of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -329,7 +344,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_start"></a>
 	<p></p>
 	<h4>static $time_start = <span class="value">&nbsp;0</span></h4>
-	<p>[line 35]</p>
+	<p>[line 36]</p>
   Start time of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -360,7 +375,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$time_stop"></a>
 	<p></p>
 	<h4>static $time_stop = <span class="value">&nbsp;0</span></h4>
-	<p>[line 41]</p>
+	<p>[line 42]</p>
   Stop time of object<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -391,7 +406,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$loopMaxRuns"></a>
 	<p></p>
 	<h4>$loopMaxRuns = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 71]</p>
+	<p>[line 60]</p>
   Loop maximum runs<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -412,58 +427,10 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$patternIPv4"></a>
-	<p></p>
-	<h4>$patternIPv4 = <span class="value">&nbsp;'/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/'</span></h4>
-	<p>[line 47]</p>
-  RegEx Pattern to match IPv4 addresses<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$patternIPv6"></a>
-	<p></p>
-	<h4>$patternIPv6 = <span class="value">&nbsp;'/^[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}$/'</span></h4>
-	<p>[line 53]</p>
-  RegEx Pattern to match IPv6 addresses<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
-  </tr>
-</table>
-</div>
-
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>string</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 	<a name="var$rangeIntegerMax"></a>
 	<p></p>
 	<h4>$rangeIntegerMax = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 59]</p>
+	<p>[line 48]</p>
   Integer maximum range<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -487,7 +454,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 	<a name="var$rangeIntegerMin"></a>
 	<p></p>
 	<h4>$rangeIntegerMin = <span class="value">&nbsp;NULL</span></h4>
-	<p>[line 65]</p>
+	<p>[line 54]</p>
   Integer minimum range<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -508,6 +475,30 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
       </table>
 	</div><br /><br />
 	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$stringList"></a>
+	<p></p>
+	<h4>$stringList = <span class="value">array()</span></h4>
+	<p>[line 66]</p>
+  List of strings<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>private</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>array</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
 </div><br />
 
 <hr />
@@ -517,7 +508,7 @@ LIB211 Random datatypes generator<br /><br /><br /><br />
 
   <hr />
 	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 89]</span></h3>
+	<h3>constructor __construct <span class="smalllinenumber">[line 86]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -627,8 +618,177 @@ $format = NULL])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetFloat"></a>
+	<h3>method getFloat <span class="smalllinenumber">[line 200]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>float getFloat(
+[integer
+$min = NULL], [integer
+$max = NULL], [integer
+$precision = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random float<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$precision</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetFloatNegative"></a>
+	<h3>method getFloatNegative <span class="smalllinenumber">[line 219]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>float getFloatNegative(
+[integer
+$min = NULL], [integer
+$max = NULL], [integer
+$precision = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random negative float<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$precision</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetFloatPositive"></a>
+	<h3>method getFloatPositive <span class="smalllinenumber">[line 238]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>float getFloatPositive(
+[integer
+$min = NULL], [integer
+$max = NULL], [integer
+$precision = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random positive float<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$precision</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetGeohash"></a>
+	<h3>method getGeohash <span class="smalllinenumber">[line 255]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getGeohash(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random geohash<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetInteger"></a>
-	<h3>method getInteger <span class="smalllinenumber">[line 225]</span></h3>
+	<h3>method getInteger <span class="smalllinenumber">[line 271]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -670,7 +830,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodgetIntegerMax"></a>
-	<h3>method getIntegerMax <span class="smalllinenumber">[line 446]</span></h3>
+	<h3>method getIntegerMax <span class="smalllinenumber">[line 326]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -695,7 +855,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodgetIntegerMin"></a>
-	<h3>method getIntegerMin <span class="smalllinenumber">[line 454]</span></h3>
+	<h3>method getIntegerMin <span class="smalllinenumber">[line 334]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -720,7 +880,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodgetIntegerNegative"></a>
-	<h3>method getIntegerNegative <span class="smalllinenumber">[line 258]</span></h3>
+	<h3>method getIntegerNegative <span class="smalllinenumber">[line 305]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -762,7 +922,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodgetIntegerPositive"></a>
-	<h3>method getIntegerPositive <span class="smalllinenumber">[line 280]</span></h3>
+	<h3>method getIntegerPositive <span class="smalllinenumber">[line 344]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -804,7 +964,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodgetIPv4"></a>
-	<h3>method getIPv4 <span class="smalllinenumber">[line 303]</span></h3>
+	<h3>method getIPv4 <span class="smalllinenumber">[line 367]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -852,7 +1012,7 @@ $upperCase)</code>
   </div>
   <hr />
 	<a name="methodgetIPv6"></a>
-	<h3>method getIPv6 <span class="smalllinenumber">[line 336]</span></h3>
+	<h3>method getIPv6 <span class="smalllinenumber">[line 400]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -899,6 +1059,102 @@ $upperCase = FALSE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetLatitude"></a>
+	<h3>method getLatitude <span class="smalllinenumber">[line 434]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>float getLatitude(
+[integer
+$min = NULL], [integer
+$max = NULL], [integer
+$precision = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random Latitude<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$precision</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetLongitude"></a>
+	<h3>method getLongitude <span class="smalllinenumber">[line 449]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>float getLongitude(
+[integer
+$min = NULL], [integer
+$max = NULL], [integer
+$precision = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random Longitude<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$min</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$max</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$precision</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetLoopMaxRuns"></a>
 	<h3>method getLoopMaxRuns <span class="smalllinenumber">[line 149]</span></h3>
 	<div class="function">
@@ -924,8 +1180,33 @@ $upperCase = FALSE])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetMd5"></a>
+	<h3>method getMd5 <span class="smalllinenumber">[line 461]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getMd5(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Get random MD5<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetNull"></a>
-	<h3>method getNull <span class="smalllinenumber">[line 385]</span></h3>
+	<h3>method getNull <span class="smalllinenumber">[line 471]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -960,8 +1241,128 @@ $format = NULL])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodgetString"></a>
+	<h3>method getString <span class="smalllinenumber">[line 526]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void getString(
+[
+$options = array()], [
+$wordList = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$options</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">&nbsp;&nbsp;</td>
+        <td><b>$wordList</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetStringList"></a>
+	<h3>method getStringList <span class="smalllinenumber">[line 570]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array|string getStringList(
+[integer
+$index = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return string list or an entry for a given index<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetStringSequence"></a>
+	<h3>method getStringSequence <span class="smalllinenumber">[line 581]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getStringSequence(
+integer
+$length, [characters
+$chars = NULL])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Generates a random string by given size and charlist<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$length</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">characters&nbsp;&nbsp;</td>
+        <td><b>$chars</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodgetTimestamp"></a>
-	<h3>method getTimestamp <span class="smalllinenumber">[line 434]</span></h3>
+	<h3>method getTimestamp <span class="smalllinenumber">[line 518]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1003,7 +1404,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetInteger8Bit"></a>
-	<h3>method setInteger8Bit <span class="smalllinenumber">[line 511]</span></h3>
+	<h3>method setInteger8Bit <span class="smalllinenumber">[line 642]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1028,7 +1429,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetInteger16Bit"></a>
-	<h3>method setInteger16Bit <span class="smalllinenumber">[line 472]</span></h3>
+	<h3>method setInteger16Bit <span class="smalllinenumber">[line 603]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1053,7 +1454,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetInteger32Bit"></a>
-	<h3>method setInteger32Bit <span class="smalllinenumber">[line 485]</span></h3>
+	<h3>method setInteger32Bit <span class="smalllinenumber">[line 616]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1078,7 +1479,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetInteger64Bit"></a>
-	<h3>method setInteger64Bit <span class="smalllinenumber">[line 498]</span></h3>
+	<h3>method setInteger64Bit <span class="smalllinenumber">[line 629]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1103,7 +1504,7 @@ $max = NULL])</code>
   </div>
   <hr />
 	<a name="methodsetIntegerMax"></a>
-	<h3>method setIntegerMax <span class="smalllinenumber">[line 525]</span></h3>
+	<h3>method setIntegerMax <span class="smalllinenumber">[line 656]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1139,7 +1540,7 @@ $value)</code>
   </div>
   <hr />
 	<a name="methodsetIntegerMin"></a>
-	<h3>method setIntegerMin <span class="smalllinenumber">[line 535]</span></h3>
+	<h3>method setIntegerMin <span class="smalllinenumber">[line 666]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1175,7 +1576,7 @@ $value)</code>
   </div>
   <hr />
 	<a name="methodsetLoopMaxRuns"></a>
-	<h3>method setLoopMaxRuns <span class="smalllinenumber">[line 463]</span></h3>
+	<h3>method setLoopMaxRuns <span class="smalllinenumber">[line 594]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -1210,17 +1611,18 @@ $loops)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__status"></a>
-	<h3>method __status <span class="smalllinenumber">[line 127]</span></h3>
+	<a name="methodsetStringList"></a>
+	<h3>method setStringList <span class="smalllinenumber">[line 676]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>array __status(
-)</code>
+		<code>boolean setStringList(
+[mixed
+$data = FALSE])</code>
     </td></tr></table>
     </td></tr></table><br />
 	
-		Return object status<br /><br /><br /><br />
+		Add string(s) to string list<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
 <table border="0" cellspacing="0" cellpadding="0">
@@ -1231,16 +1633,26 @@ $loops)</code>
 </div>
 <br /><br />
 
-	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (Return object status)<br /><br />
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">mixed&nbsp;&nbsp;</td>
+        <td><b>$data</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="method__strfill"></a>
-	<h3>method __strfill <span class="smalllinenumber">[line 81]</span></h3>
+	<a name="method_strfill"></a>
+	<h3>method _strfill <span class="smalllinenumber">[line 76]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string __strfill(
+		<code>string _strfill(
 string
 $string, integer
 $size, [string
@@ -1288,12 +1700,37 @@ $chr = '0'])</code>
     </div><br />
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
+  <hr />
+	<a name="method__status"></a>
+	<h3>method __status <span class="smalllinenumber">[line 127]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array __status(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Return object status<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	Overrides <a href="../LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a> (Return object status)<br /><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
 </div><br />
 
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Fri, 25 Mar 2011 23:35:26 +0100 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Mon, 28 Mar 2011 18:38:56 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

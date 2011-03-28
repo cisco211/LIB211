@@ -5,7 +5,8 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
 // Include required files
 if (LIB211_AUTOLOAD === FALSE) {
-	require_once (LIB211_ROOT.'/function/strfill.function.php');
+	require_once (LIB211_ROOT.'/module/Geohash/Geohash.class.php');
+	require_once (LIB211_ROOT.'/module/String/String.class.php');
 }
 
 /**
@@ -39,18 +40,6 @@ class LIB211Random extends LIB211Base {
 	 * @staticvar float
 	 */
 	private static $time_stop = 0;
-
-	/**
-	 * RegEx Pattern to match IPv4 addresses
-	 * @var string
-	 */
-	private $patternIPv4 = '/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/'; 
-	
-	/**
-	 * RegEx Pattern to match IPv6 addresses
-	 * @var string
-	 */
-	private $patternIPv6 = '/^[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}:[0-9a-fA-F]{1,4}$/';
 	
 	/**
 	 * Integer maximum range
@@ -71,6 +60,12 @@ class LIB211Random extends LIB211Base {
 	private $loopMaxRuns = NULL;
 	
 	/**
+	 * List of strings
+	 * @var array
+	 */
+	private $stringList = array();
+	
+	/**
 	 * Fill string to a given size in any direction and any fill characters
 	 * @param string $string
 	 * @param integer $size
@@ -78,9 +73,11 @@ class LIB211Random extends LIB211Base {
 	 * @param string $chr
 	 * @return string
 	 */
-	private function __strfill($string,$size,$dir='l',$chr='0') {
-		if (LIB211_AUTOLOAD === TRUE) return lib211('strfill',$string,$size,$dir='l',$chr='0');
-		else return strfill($string,$size,$dir='l',$chr='0');
+	private function _strfill($string,$size,$dir='l',$chr='0') {
+		$stringObj = new LIB211String();
+		$result = $stringObj->fill($string,$size,$dir,$chr);
+		unset($stringObj);
+		return $result;
 	}
 	
 	/**
@@ -88,15 +85,16 @@ class LIB211Random extends LIB211Base {
 	 */
 	public function __construct() {
 		parent::__construct(); 
-		if (!file_exists(LIB211_ROOT.'/lib211.lock')) {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Random')) {
 			$this->__check('c','ErrorException');
 			$this->__check('c','Exception');
 			$this->__check('c','LIB211RandomException');
-			touch(LIB211_ROOT.'/lib211.lock',time());
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Random',time());
 		}
 		self::$instances++;
 		self::$time_start = microtime(TRUE);
-
+		
+		// Detect highest integer
 		if (!defined('PHP_INT_MAX')) {
 			$max = 0x7FFF;
 			$probe = 0x7FFFFFFF;
@@ -107,9 +105,11 @@ class LIB211Random extends LIB211Base {
 			$IntegerMax = $max;
 		}
 		else $IntegerMax = PHP_INT_MAX;
+		
 		$this->setIntegerMax($IntegerMax);
 		$this->setIntegerMin('-'.$IntegerMax);
 		$this->setLoopMaxRuns(10);
+		$this->setStringList(array('foo','bar','baz'));
 	}
 	
 	/**
@@ -189,32 +189,78 @@ class LIB211Random extends LIB211Base {
 			break;
 		}
 	}
+		
+	/**
+	 * Get random float
+	 * @param integer $min
+	 * @param integer $max
+	 * @param integer $precision
+	 * @return float
+	 */
+	public function getFloat($min=NULL,$max=NULL,$precision=NULL) {
+		$integer = $this->getInteger($min,$max);
+		$fraction = '';
+		$maxPrecision = 10;
+		if ($precision === NULL OR $precision > $maxPrecision) $precision = $maxPrecision;
+		for ($i = 0; $i < $precision; $i++) {
+			if ($i == $precision-1) $fraction .= mt_rand(1,9);
+			else $fraction .= mt_rand(0,9);
+		}
+		return (float)($integer.'.'.$fraction);
+	}
 
-	/*
-unsigned long
-unix2dostime (time_t *time)
-{
-  struct tm *ltime = localtime (time);
-  int year = ltime->tm_year - 80;
-  if (year < 0)
-    year = 0;
-
-  return (year << 25
-	  | (ltime->tm_mon + 1) << 21
-	  | ltime->tm_mday << 16
-	  | ltime->tm_hour << 11
-	  | ltime->tm_min << 5
-	  | ltime->tm_sec >> 1);
-}
-*/
+	/**
+	 * Get random negative float
+	 * @param integer $min
+	 * @param integer $max
+	 * @param integer $precision
+	 * @return float
+	 */
+	public function getFloatNegative($min=NULL,$max=NULL,$precision=NULL) {
+		$integer = $this->getIntegerNegative($min,$max);
+		$fraction = '';
+		$maxPrecision = 10;
+		if ($precision === NULL OR $precision > $maxPrecision) $precision = $maxPrecision;
+		for ($i = 0; $i < $precision; $i++) {
+			if ($i == $precision-1) $fraction .= mt_rand(1,9);
+			else $fraction .= mt_rand(0,9);
+		}
+		return (float)($integer.'.'.$fraction);
+	}
 	
-	#public function getFloat($min=NULL,$max=NULL) {}
-
-	#public function getFloatNegative($min=NULL,$max=NULL) {}
+	/**
+	 * Get random positive float
+	 * @param integer $min
+	 * @param integer $max
+	 * @param integer $precision
+	 * @return float
+	 */
+	public function getFloatPositive($min=NULL,$max=NULL,$precision=NULL) {
+		// TODO: Check for reversed values
+		$integer = $this->getIntegerPositive($min,$max);
+		$fraction = '';
+		$maxPrecision = 10;
+		if ($precision === NULL OR $precision > $maxPrecision) $precision = $maxPrecision;
+		for ($i = 0; $i < $precision; $i++) {
+			if ($i == $precision-1) $fraction .= mt_rand(1,9);
+			else $fraction .= mt_rand(0,9);
+		}
+		return (float)($integer.'.'.$fraction);
+	}
 	
-	#public function getFloatPositive($min=NULL,$max=NULL) {}
-	
-	#public function getGeohash() {}
+	/**
+	 * Get random geohash
+	 * @return string
+	 */
+	public function getGeohash() {
+		$geohashObj = new LIB211Geohash();
+		while (TRUE) {
+			$result = $geohashObj->encode($this->getLatitude(),$this->getLongitude());
+			if (is_string($result)) break;
+		}
+		unset($geohashObj);
+		return $result;
+	}
 	
 	/**
 	 * Get random integer
@@ -223,6 +269,7 @@ unix2dostime (time_t *time)
 	 * @return integer
 	 */
 	public function getInteger($min=NULL,$max=NULL) {
+		// TODO: Check for reversed values
 		if ($min === NULL) $min = $this->getIntegerMin();
 		if ($max === NULL) $max = $this->getIntegerMax();
 		if ($min === $max) return $max;
@@ -256,6 +303,7 @@ unix2dostime (time_t *time)
 	 * @return integer
 	 */
 	public function getIntegerNegative($min=NULL,$max=NULL) {
+		// TODO: Check for reversed values
 		if ($min === NULL) $min = $this->getIntegerMin();
 		if ($max === NULL) $max = 0;
 		if ($min === $max) return $max;
@@ -269,6 +317,22 @@ unix2dostime (time_t *time)
 			if ($i == $this->getLoopMaxRuns()) break;
 		}
 		return $value;
+	}
+
+	/**
+	 * Get maximum integer range
+	 * @return integer
+	 */
+	public function getIntegerMax() {
+		return $this->rangeIntegerMax;
+	}
+
+	/**
+	 * Get minimum integer range
+	 * @return integer
+	 */
+	public function getIntegerMin() {
+		return $this->rangeIntegerMin;
 	}
 	
 	/**
@@ -355,27 +419,49 @@ unix2dostime (time_t *time)
 			if ($max[$k] >= 0xFFFF) $max[$k] = 0xFFFF;
 		}
 		$output = array();
-		for ($i = 0; $i < 8; $i++) $output[$i] = (string)$this->__strfill(base_convert($this->getIntegerPositive($min[$i],$max[$i]),10,16),4,'0');
+		for ($i = 0; $i < 8; $i++) $output[$i] = (string)$this->_strfill(base_convert($this->getIntegerPositive($min[$i],$max[$i]),10,16),4,'0');
 		if ($upperCase === TRUE) return strtoupper(implode(':',$output));
 		else return implode(':',$output);
 	}
 	
-	/*
-	public function getLatitude($min=NULL,$max=NULL) {
-		if ($min === NULL) $min = -90.0;
-		if ($max === NULL) $max = 90.0;
-		if ($min <= -90.0) $min = -90.0;
-		if ($max >= 90.0) $max = 90.0;
-		
+	/**
+	 * Get random Latitude
+	 * @param integer $min
+	 * @param integer $max
+	 * @param integer $precision
+	 * @return float
+	 */
+	public function getLatitude($min=NULL,$max=NULL,$precision=NULL) {
+		if ($min === NULL) $min = -90;
+		if ($max === NULL) $max = 90;
+		if ($min <= -90.0) $min = -90;
+		if ($max >= 90.0) $max = 90;
+		return $this->getFloat($min,$max,$precision);
 	}
 
-	public function getLongitude($min=NULL,$max=NULL) {
-		if ($min === NULL) $min = -180.0;
-		if ($max === NULL) $max = 180.0;
-		if ($min <= -180.0) $min = -180.0;
-		if ($max >= 180.0) $max = 180.0;
-		
-	}*/
+	/**
+	 * Get random Longitude
+	 * @param integer $min
+	 * @param integer $max
+	 * @param integer $precision
+	 * @return float
+	 */
+	public function getLongitude($min=NULL,$max=NULL,$precision=NULL) {
+		if ($min === NULL) $min = -180;
+		if ($max === NULL) $max = 180;
+		if ($min <= -180.0) $min = -180;
+		if ($max >= 180.0) $max = 180;
+		return $this->getFloat($min,$max,$precision);
+	}
+	
+	/**
+	 * Get random MD5
+	 * @return string
+	 */
+	public function getMd5() {
+		$charlist = '!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~';
+		return md5($this->getStringSequence(128,$charlist));
+	}
 	
 	/**
 	 * Get random null
@@ -423,8 +509,6 @@ unix2dostime (time_t *time)
 		}
 	}
 	
-	#public function getString() {}
-	
 	/**
 	 * Get random timestamp
 	 * @param integer $min
@@ -439,22 +523,69 @@ unix2dostime (time_t *time)
 		return $this->getIntegerPositive($min,$max);
 	}
 
-	/**
-	 * Get maximum integer range
-	 * @return integer
-	 */
-	public function getIntegerMax() {
-		return $this->rangeIntegerMax;
+	public function getString($options = array(),$wordList = NULL) {
+		$rnd = create_function('&$obj','return $obj->getStringList(mt_rand(0,count($obj->getStringList())-1));');
+		if (is_array($wordList)) {
+			$oldList = $this->getStringList();
+			$this->setStringList(NULL);
+			$this->setStringList($wordList);
+		}
+		if (is_array($options) AND !empty($options)) {
+			if (!isset($options['wordcount'])) $options['wordcount'] = 1;
+			else $options['wordcount'] = (integer)$options['wordcount'];
+			if (!isset($options['prefix'])) $options['prefix'] = '';
+			else $options['prefix'] = (string)$options['prefix'];
+			if (!isset($options['startprefix'])) $options['startprefix'] = FALSE;
+			else $options['startprefix'] = (boolean)$options['startprefix'];
+			if (!isset($options['suffix'])) $options['suffix'] = '';
+			else $options['suffix'] = (string)$options['suffix'];
+			if (!isset($options['endsuffix'])) $options['endsuffix'] = FALSE;
+			else $options['endsuffix'] = (boolean)$options['endsuffix'];
+			if (!isset($options['innerprefix'])) $options['innerprefix'] = '';
+			else $options['innerprefix'] = (string)$options['innerprefix'];
+			if (!isset($options['innersuffix'])) $options['innersuffix'] = '';
+			else $options['innersuffix'] = (string)$options['innersuffix'];
+			$string = '';
+			for ($i = 0; $i < $options['wordcount']; $i++) {
+				if ($i == 0 AND $options['startprefix'] === TRUE) $string .= $options['prefix'];
+				elseif ($i != 0) $string .= $options['prefix'];
+				$string .= $options['innerprefix'].$rnd($this).$options['innersuffix'];
+				if ($i == ($options['wordcount']-1) AND $options['endsuffix'] === TRUE) $string .= $options['suffix'];
+				elseif ($i != ($options['wordcount']-1)) $string .= $options['suffix'];
+			}
+		}
+		else $string = $rnd($this);
+		if (isset($oldList) AND is_array($oldList)) {
+			$this->setStringList(NULL);
+			$this->setStringList($oldList);
+		}
+		return $string;
 	}
-
+	
 	/**
-	 * Get minimum integer range
-	 * @return integer
+	 * Return string list or an entry for a given index
+	 * @param integer $index
+	 * @return array|string
 	 */
-	public function getIntegerMin() {
-		return $this->rangeIntegerMin;
+	public function getStringList($index = NULL) {
+		if (is_integer($index) AND isset($this->stringList[$index])) return $this->stringList[$index];
+		else return $this->stringList;
 	}
-
+	
+	/**
+	 * Generates a random string by given size and charlist
+	 * @param integer $length
+	 * @param characters $chars
+	 * @return string
+	 */
+	public function getStringSequence($length,$chars = NULL) {
+		if ($chars === NULL) $chars='abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$string = '';
+		$chars_length = strlen($chars);
+		for($i=0; $i < $length; $i++) $string .= $chars[mt_rand(0,$chars_length-1)];
+		return (string)$string;
+	}
+	
 	/**
 	 * Set max loop runs
 	 * @param integer $loops
@@ -534,6 +665,30 @@ unix2dostime (time_t *time)
 	 */
 	public function setIntegerMin($value) {
 		$this->rangeIntegerMin = (integer)$value;
+		return TRUE;
+	}
+	
+	/**
+	 * Add string(s) to string list
+	 * @param mixed $data
+	 * @return boolean
+	 */
+	public function setStringList($data=FALSE) {
+		switch (gettype($data)) {
+			case 'array':
+				foreach ($data as $string) $this->stringList[] = $string;
+			break;
+			case 'NULL':
+				$this->stringList = array();
+			break;
+			case 'string':
+				$this->stringList[] = $data;
+			break;
+			default:
+			break;
+		}
+		//shuffle($this->stringList);
+		
 		return TRUE;
 	}
 	

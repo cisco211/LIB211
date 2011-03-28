@@ -16,6 +16,9 @@ if (LIB211_AUTOLOAD === FALSE) {
 abstract class LIB211Testclass {
 		
 	public function __construct() {
+		if (!file_exists(LIB211_ROOT.'/tmp/.lock/LIB211Testclass')) {
+			touch(LIB211_ROOT.'/tmp/.lock/LIB211Testclass',time());
+		}
 		assert_options(ASSERT_ACTIVE,1);
 		assert_options(ASSERT_WARNING,0);
 		assert_options(ASSERT_QUIET_EVAL,1);
@@ -30,36 +33,36 @@ abstract class LIB211Testclass {
 	private function _formatType($var) {
 		switch (gettype($var)) {
 			case 'boolean':
-				if ($var === TRUE) return (string)'TRUE';
-				elseif ($var === FALSE) return (string)'FALSE';
+				if ($var === TRUE) return (string)'boolean(TRUE)';
+				elseif ($var === FALSE) return (string)'boolean(FALSE)';
 				else return (string)'A boolean which is not a boolean... FAIL!';
 			break;
 			case 'integer':
-				return (integer)$var;
+				return 'integer('.(integer)$var.')';
 			break;
 			case 'double': case 'float':
-				return (float)$var;
+				return 'float('.(float)$var.')';
 			break;
 			case 'string':
-				return (string)$var;
+				return 'string('.(string)$var.')';
 			break;
 			case 'array':
-				return (string)print_r($var,TRUE);
+				return 'array('.(string)print_r($var,TRUE).')';
 			break;
 			case 'object':
-				return (string)print_r($var,TRUE);
+				return 'object('.(string)print_r($var,TRUE).')';
 			break;
 			case 'resource':
-				return (string)$var;
+				return 'resource('.(string)$var.')';
 			break;
 			case 'NULL':
-				return (string)'NULL';
+				return 'null(NULL)';
 			break;
 			case 'unknown type':
-				return (string)$var;
+				return 'unknown('.(string)$var.')';
 			break;
 			default:
-				return (string)$var;
+				return 'unknown('.(string)$var.')';
 			break;
 		}
 	}

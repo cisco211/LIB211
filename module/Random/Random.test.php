@@ -20,7 +20,7 @@ class LIB211RandomTest extends LIB211Testclass {
 	 * How many loops for random in range tests
 	 * @var integer
 	 */
-	private $loops = 10;
+	private $loops = 100;
 	
 	/**
 	 * Constructor
@@ -61,14 +61,7 @@ class LIB211RandomTest extends LIB211Testclass {
 	public function testGetArchitecture() {
 		$this->assertEquals(PHP_INT_SIZE*8,$this->random->getArchitecture());
 	}
-	
-	/**
-	 * Test getLoopMaxRuns() method
-	 */
-	public function testGetLoopMaxRuns() {
-		$this->assertEquals(10,$this->random->getLoopMaxRuns());
-	}
-	
+		
 	/**
 	 * Test getBoolean() method
 	 */
@@ -77,6 +70,120 @@ class LIB211RandomTest extends LIB211Testclass {
 		$this->assertEquals(gettype($boolean),'boolean');
 		if ($boolean === TRUE) $this->assertTrue($boolean);
 		else $this->assertFalse($boolean);
+	}
+	
+	/**
+	 * Test getFloat() method
+	 */
+	public function testGetFloat() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$int,$precision',
+			'$result = $obj->random->getFloat($int,$int,$precision);'.
+			'if ($precision > 10) $precision = 10;'.
+			'$obj->assertEquals((integer)$int,(integer)$result);'.
+			'preg_match(\'/^([0-9\-]+)\.([0-9\-]+)$/\',$result,$m);'.
+			'$obj->assertEquals($precision,strlen(@$m[2]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,32,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,3235,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-45,8);
+		for($i=0;$i<$this->loops;$i++) $try($this,-2354,10);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,11);
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$min,$max,$precision',
+			'$result = $obj->random->getFloat($min,$max,$precision);'.
+			'$obj->assertLesserThan((integer)$result,$max);'.
+			'$obj->assertGreaterThan((integer)$result,$min);'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,-10,10,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-11,11,5);
+		for($i=0;$i<$this->loops;$i++) $try($this,-127,127,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,235,2);
+		for($i=0;$i<$this->loops;$i++) $try($this,-33,70,10);
+
+	}
+	
+	/**
+	 * Test getFloatNegative() method 
+	 */
+	public function testGetFloatNegative() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$int,$precision',
+			'$result = $obj->random->getFloatNegative($int,$int,$precision);'.
+			'if ($precision > 10) $precision = 10;'.
+			'$obj->assertEquals((integer)$int,(integer)$result);'.
+			'preg_match(\'/^([0-9\-]+)\.([0-9\-]+)$/\',$result,$m);'.
+			'$obj->assertEquals($precision,strlen(@$m[2]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,-32,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-3235,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-45,8);
+		for($i=0;$i<$this->loops;$i++) $try($this,-2354,10);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,11);
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$min,$max,$precision',
+			'$result = $obj->random->getFloatNegative($min,$max,$precision);'.
+			'$obj->assertLesserThan((integer)$result,$min);'.
+			'$obj->assertGreaterThan((integer)$result,$max);'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,-10,-110,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-11,-121,5);
+		for($i=0;$i<$this->loops;$i++) $try($this,-127,-255,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,-235,2);
+		for($i=0;$i<$this->loops;$i++) $try($this,-33,-70,10);
+
+	}
+	
+	/**
+	 * Test getGeohash() method
+	 */
+	public function testGetGeohash() {
+		
+		// Check for string and 11 chars long
+		$try = create_function('&$obj',
+			'$result = $obj->random->getGeohash();'.
+			'$obj->assertEquals(\'string\',gettype($result));'.
+			'$obj->assertEquals(11,strlen($result));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this);
+		
+	}
+	
+	/**
+	 * Test getFloatPositive() method
+	 */
+	public function testGetFloatPositive() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$int,$precision',
+			'$result = $obj->random->getFloatPositive($int,$int,$precision);'.
+			'if ($precision > 10) $precision = 10;'.
+			'$obj->assertEquals((integer)$int,(integer)$result);'.
+			'preg_match(\'/^([0-9\-]+)\.([0-9\-]+)$/\',$result,$m);'.
+			'$obj->assertEquals($precision,strlen(@$m[2]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,32,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,3235,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,45,8);
+		for($i=0;$i<$this->loops;$i++) $try($this,2354,10);
+		for($i=0;$i<$this->loops;$i++) $try($this,1,11);
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$min,$max,$precision',
+			'$result = $obj->random->getFloatPositive($min,$max,$precision);'.
+			'$obj->assertLesserThan((integer)$result,$max);'.
+			'$obj->assertGreaterThan((integer)$result,$min);'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,10,110,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,11,121,5);
+		for($i=0;$i<$this->loops;$i++) $try($this,127,255,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,1,235,2);
+		for($i=0;$i<$this->loops;$i++) $try($this,33,70,10);
+
 	}
 	
 	/**
@@ -226,6 +333,73 @@ class LIB211RandomTest extends LIB211Testclass {
 		for($i=0;$i<$this->loops;$i++) $try($this,'fffe:fffe:fffe:fffe:fffe:fffe:fffe:fffe','ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff');
 	}
 	
+	public function testGetLatitude() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$int,$precision',
+			'$result = $obj->random->getLatitude($int,$int,$precision);'.
+			'if ($precision > 10) $precision = 10;'.
+			'$obj->assertEquals((integer)$int,(integer)$result);'.
+			'preg_match(\'/^([0-9\-]+)\.([0-9\-]+)$/\',$result,$m);'.
+			'$obj->assertEquals($precision,strlen(@$m[2]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,90,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-13,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-45,8);
+		for($i=0;$i<$this->loops;$i++) $try($this,37,10);
+		for($i=0;$i<$this->loops;$i++) $try($this,-90,11);
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$min,$max,$precision',
+			'$result = $obj->random->getLatitude($min,$max,$precision);'.
+			'$obj->assertLesserThan((integer)$result,$max);'.
+			'$obj->assertGreaterThan((integer)$result,$min);'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,-90,90,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-11,11,5);
+		for($i=0;$i<$this->loops;$i++) $try($this,-42,42,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,78,2);
+		for($i=0;$i<$this->loops;$i++) $try($this,-33,70,10);
+		
+	}
+	
+	public function testGetLongitude() {
+
+		// Test conversion between input and output
+		$try = create_function('&$obj,$int,$precision',
+			'$result = $obj->random->getLongitude($int,$int,$precision);'.
+			'if ($precision > 10) $precision = 10;'.
+			'$obj->assertEquals((integer)$int,(integer)$result);'.
+			'preg_match(\'/^([0-9\-]+)\.([0-9\-]+)$/\',$result,$m);'.
+			'$obj->assertEquals($precision,strlen(@$m[2]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,180,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-133,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-45,8);
+		for($i=0;$i<$this->loops;$i++) $try($this,95,10);
+		for($i=0;$i<$this->loops;$i++) $try($this,-180,11);
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$min,$max,$precision',
+			'$result = $obj->random->getLongitude($min,$max,$precision);'.
+			'$obj->assertLesserThan((integer)$result,$max);'.
+			'$obj->assertGreaterThan((integer)$result,$min);'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,-180,180,3);
+		for($i=0;$i<$this->loops;$i++) $try($this,-11,11,5);
+		for($i=0;$i<$this->loops;$i++) $try($this,-42,42,7);
+		for($i=0;$i<$this->loops;$i++) $try($this,-1,235,2);
+		for($i=0;$i<$this->loops;$i++) $try($this,-133,170,10);
+
+	}
+	
+	/**
+	 * Test getLoopMaxRuns() method
+	 */
+	public function testGetLoopMaxRuns() {
+		$this->assertEquals(10,$this->random->getLoopMaxRuns());
+	}
+	
 	/**
 	 * Test getNull() method
 	 */
@@ -235,6 +409,21 @@ class LIB211RandomTest extends LIB211Testclass {
 		$this->assertEquals(0,$this->random->getNull('integer'));
 		$this->assertEquals(0.0,$this->random->getNull('float'));
 		$this->assertEquals(array(),$this->random->getNull('array'));
+	}
+	
+	/**
+	 * Test getMD5() method
+	 */
+	public function testGetMd5() {
+
+		// Check for string and 32 chars long
+		$try = create_function('&$obj',
+			'$result = $obj->random->getMd5();'.
+			'$obj->assertEquals(\'string\',gettype($result));'.
+			'$obj->assertEquals(32,strlen($result));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this);
+
 	}
 	
 	/**
@@ -300,6 +489,84 @@ class LIB211RandomTest extends LIB211Testclass {
 				$this->assertEquals(-9223372036854775807,$this->random->getIntegerMin());
 			break;
 		}
+	}
+	
+	public function testGetString() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$string',
+			'$obj->assertEquals($string,$obj->random->getString(array(),array($string)));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,'foo bar baz');
+		for($i=0;$i<$this->loops;$i++) $try($this,'hello world');
+		for($i=0;$i<$this->loops;$i++) $try($this,'12345678');
+		for($i=0;$i<$this->loops;$i++) $try($this,'blabla');
+		for($i=0;$i<$this->loops;$i++) $try($this,'ZZZZZZZZZZZZZZZZZZZZZ');
+
+		// Test with wordlist
+		$try = create_function('&$obj,$list',
+			'$result = $obj->random->getString(array(),$list);'.
+			'$obj->assertThat(in_array($result,$list));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,array('foo','bar','baz'));
+		for($i=0;$i<$this->loops;$i++) $try($this,array('alpha','beta','gamma'));
+		for($i=0;$i<$this->loops;$i++) $try($this,array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'));
+		for($i=0;$i<$this->loops;$i++) $try($this,array('one','two','three','four','five','six','seven','eight','nine','zero'));
+		for($i=0;$i<$this->loops;$i++) $try($this,array(0,1,2,3,4,5,6,7,8,9,0));
+		
+		// TODO: Create test for all these options :O
+	}
+	
+	/**
+	 * Test getStringList() method
+	 */
+	public function testGetStringList() {
+		
+		// Test for initial value
+		$this->assertEquals(array('foo','bar','baz'),$this->random->getStringList());
+		$this->assertEquals('foo',$this->random->getStringList(0));
+		$this->assertEquals('bar',$this->random->getStringList(1));
+		$this->assertEquals('baz',$this->random->getStringList(2));
+		
+		// Test with a new word list
+		$this->random->setStringList(NULL);
+		$this->random->setStringList(array(1,2,3));
+		$this->assertEquals(1,$this->random->getStringList(0));
+		$this->assertEquals(array(1,2,3),$this->random->getStringList());
+		$this->assertEquals(2,$this->random->getStringList(1));
+		$this->assertEquals(3,$this->random->getStringList(2));
+	}
+	
+	/**
+	 * Test getStringSequence() method
+	 */
+	public function testGetStringSequence() {
+		
+		// Test conversion between input and output
+		$try = create_function('&$obj,$string',
+			'$obj->assertEquals($string,$obj->random->getStringSequence(strlen($string),$string[0]));'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,'0');
+		for($i=0;$i<$this->loops;$i++) $try($this,'00');
+		for($i=0;$i<$this->loops;$i++) $try($this,'1');
+		for($i=0;$i<$this->loops;$i++) $try($this,'11');
+		for($i=0;$i<$this->loops;$i++) $try($this,'ZZZZZZZZZZZZZZZZZZZZZ');
+
+		// Test, that you can really control the range
+		$try = create_function('&$obj,$size,$chrs',
+			'$result = str_split($obj->random->getStringSequence($size,$chrs));'.
+			'if ($chrs === NULL) $chrs = \'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\';'.
+			'$allowed = str_split($chrs);'.
+			'foreach($result as $chr) {'.
+			'	$obj->assertThat(in_array($chr,$allowed));'.
+			'}'
+		);
+		for($i=0;$i<$this->loops;$i++) $try($this,8,NULL);
+		for($i=0;$i<$this->loops;$i++) $try($this,128,'01');
+		for($i=0;$i<$this->loops;$i++) $try($this,256,'a1b2c3d4e5f67890');
+		for($i=0;$i<$this->loops;$i++) $try($this,4096,'1234567890abcdef-');
+		for($i=0;$i<$this->loops;$i++) $try($this,8192,'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ .,-');
+		
 	}
 	
 	/**
@@ -371,4 +638,33 @@ class LIB211RandomTest extends LIB211Testclass {
 		$this->assertEquals(5,$this->random->getIntegerMin());
 	}
 
+	/**
+	 * Test setStringList() method
+	 */
+	public function testSetStringList() {
+		
+		// Test that nothing happened
+		$this->random->setStringList();
+		$this->assertEquals(array('foo','bar','baz'),$this->random->getStringList());
+		
+		// Test adding a value
+		$this->random->setStringList('raz');
+		$this->assertEquals(array('foo','bar','baz','raz'),$this->random->getStringList());
+		$this->assertEquals('foo',$this->random->getStringList(0));
+		$this->assertEquals('bar',$this->random->getStringList(1));
+		$this->assertEquals('baz',$this->random->getStringList(2));
+		$this->assertEquals('raz',$this->random->getStringList(3));
+
+		// Test an empty list
+		$this->random->setStringList(NULL);
+		$this->assertEquals(array(),$this->random->getStringList());
+		
+		// Test creating new word list
+		$this->random->setStringList(array(1,2,3));
+		$this->assertEquals(1,$this->random->getStringList(0));
+		$this->assertEquals(array(1,2,3),$this->random->getStringList());
+		$this->assertEquals(2,$this->random->getStringList(1));
+		$this->assertEquals(3,$this->random->getStringList(2));
+	}
+	
 }

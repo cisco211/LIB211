@@ -23,7 +23,10 @@ $testsAvailable = $tester->getTests();
 				<td class="header_line"><img src="./doc/media/empty.png" width="1" border="0" alt=""  /></td>
 			</tr>
 			<tr>
-				<td class="header_menu">&nbsp;</td>
+				<td class="header_menu">
+					[ <a class="menu" href="https://github.com/tschumacher/LIB211" target="blank">github: LIB211</a> ]
+					[ <a class="menu" href="http://php.net" target="blank">PHP</a> ]
+				</td>
 			</tr>
 			<tr>
 				<td class="header_line"><img src="./doc/media/empty.png" width="1" height="1" border="0" alt=""  /></td>
