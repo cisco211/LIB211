@@ -26,10 +26,10 @@
   <tr valign="top">
     <td width="200" class="menu">
 	<div id="ric">
-					<p><a href="ric_CHANGELOG.html">CHANGELOG</a></p>
-					<p><a href="ric_FAQ.html">FAQ</a></p>
 					<p><a href="ric_INSTALL.html">INSTALL</a></p>
 					<p><a href="ric_README.html">README</a></p>
+					<p><a href="ric_FAQ.html">FAQ</a></p>
+					<p><a href="ric_CHANGELOG.html">CHANGELOG</a></p>
 			</div>
       <b>Packages:</b><br />
               <a href="li_LIB211.html">LIB211</a><br />
@@ -40,6 +40,14 @@
 		</a><br>
 			<a href="LIB211/_core---Base.class.php.html">		Base.class.php
 		</a><br>
+			<a href="LIB211/_module---Counter---Counter.class.php.html">		Counter.class.php
+		</a><br>
+			<a href="LIB211/_module---Counter---Counter.test.php.html">		Counter.test.php
+		</a><br>
+			<a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html">		EVEOnline.class.php
+		</a><br>
+			<a href="LIB211/_module---EVEOnline---EVEOnline.test.php.html">		EVEOnline.test.php
+		</a><br>
 			<a href="LIB211/_module---Example---Example.class.php.html">		Example.class.php
 		</a><br>
 			<a href="LIB211/_module---Example---Example.test.php.html">		Example.test.php
@@ -47,10 +55,6 @@
 			<a href="LIB211/_module---Geohash---Geohash.class.php.html">		Geohash.class.php
 		</a><br>
 			<a href="LIB211/_module---Geohash---Geohash.test.php.html">		Geohash.test.php
-		</a><br>
-			<a href="LIB211/_index.php.html">		index.php
-		</a><br>
-			<a href="LIB211/_lib211.php.html">		lib211.php
 		</a><br>
 			<a href="LIB211/_module---Mail---Mail.class.php.html">		Mail.class.php
 		</a><br>
@@ -74,24 +78,20 @@
 		</a><br>
 			<a href="LIB211/_module---String---String.test.php.html">		String.test.php
 		</a><br>
-			<a href="LIB211/_test.php.html">		test.php
-		</a><br>
 			<a href="LIB211/_core---Testclass.abstract.php.html">		Testclass.abstract.php
 		</a><br>
 			<a href="LIB211/_core---Tester.class.php.html">		Tester.class.php
-		</a><br>
-			<a href="LIB211/_module---Scoper---test---testRun.php.html">		testRun.php
 		</a><br>
 			<a href="LIB211/_module---XML---XML.class.php.html">		XML.class.php
 		</a><br>
 			<a href="LIB211/_module---XML---XML.test.php.html">		XML.test.php
 		</a><br>
-	  </div><br />
+	  </div><br />
       
             <b>Interfaces:</b><br />
         <div class="package">
 		    		<a href="LIB211/LIB211BaseExceptionInterface.html">LIB211BaseExceptionInterface</a><br />
-	  </div>
+	  </div>
       
             <b>Classes:</b><br />
         <div class="package">
@@ -100,6 +100,12 @@
 	    		<a href="LIB211/LIB211AutoloadException.html">LIB211AutoloadException</a><br />
 	    		<a href="LIB211/LIB211Base.html">LIB211Base</a><br />
 	    		<a href="LIB211/LIB211BaseException.html">LIB211BaseException</a><br />
+	    		<a href="LIB211/LIB211Counter.html">LIB211Counter</a><br />
+	    		<a href="LIB211/LIB211CounterException.html">LIB211CounterException</a><br />
+	    		<a href="LIB211/LIB211CounterTest.html">LIB211CounterTest</a><br />
+	    		<a href="LIB211/LIB211EVEOnline.html">LIB211EVEOnline</a><br />
+	    		<a href="LIB211/LIB211EVEOnlineException.html">LIB211EVEOnlineException</a><br />
+	    		<a href="LIB211/LIB211EVEOnlineTest.html">LIB211EVEOnlineTest</a><br />
 	    		<a href="LIB211/LIB211Example.html">LIB211Example</a><br />
 	    		<a href="LIB211/LIB211ExampleException.html">LIB211ExampleException</a><br />
 	    		<a href="LIB211/LIB211ExampleTest.html">LIB211ExampleTest</a><br />
@@ -129,7 +135,7 @@
 	    		<a href="LIB211/LIB211XML.html">LIB211XML</a><br />
 	    		<a href="LIB211/LIB211XMLException.html">LIB211XMLException</a><br />
 	    		<a href="LIB211/LIB211XMLTest.html">LIB211XMLTest</a><br />
-	  </div>
+	  </div>
                 </td>
     <td>
       <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
@@ -145,7 +151,6 @@
 	[ <a href="elementindex_LIB211.html#g">g</a> ]
 	[ <a href="elementindex_LIB211.html#h">h</a> ]
 	[ <a href="elementindex_LIB211.html#i">i</a> ]
-	[ <a href="elementindex_LIB211.html#k">k</a> ]
 	[ <a href="elementindex_LIB211.html#l">l</a> ]
 	[ <a href="elementindex_LIB211.html#m">m</a> ]
 	[ <a href="elementindex_LIB211.html#n">n</a> ]
@@ -163,154 +168,118 @@
 	<div>
 		<h2>_</h2>
 		<dl>
-							<dt><b>$_attribKey</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_attribKey">LIB211XML::$_attribKey</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Identifier for attributes</dd>
-							<dt><b>$_cdataKey</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_cdataKey">LIB211XML::$_cdataKey</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Identifier for cdata</dd>
-							<dt><b>$_error</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_error">LIB211XML::$_error</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Last error</dd>
-							<dt><b>$_index</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_index">LIB211XML::$_index</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Index iterator</dd>
-							<dt><b>$_isError</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_isError">LIB211XML::$_isError</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Error indicator</dd>
-							<dt><b>$_keyArray</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_keyArray">LIB211XML::$_keyArray</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Keys array</dd>
-							<dt><b>$_parsed</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_parsed">LIB211XML::$_parsed</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Array for parsed data</dd>
-							<dt><b>$_rawXML</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_rawXML">LIB211XML::$_rawXML</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Raw xml data</dd>
-							<dt><b>$_valueArray</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_valueArray">LIB211XML::$_valueArray</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Values array</dd>
-							<dt><b>$_valueKey</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$_valueKey">LIB211XML::$_valueKey</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Identifier vor values</dd>
-							<dt><b>_array2xml</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method_array2xml">LIB211XML::_array2xml()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Convert array to xml</dd>
-							<dt><b>_base32ToInt</b></dt>
-				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method_base32ToInt">LIB211Geohash::_base32ToInt()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Calculate the base32 position of a string</dd>
-							<dt><b>_compute</b></dt>
-				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method_compute">LIB211Permutate::_compute()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Permutate the given lists and store result (Thanks to &quot;combie&quot; on phpforum.de)</dd>
-							<dt><b>_dataProvider</b></dt>
-				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#method_dataProvider">LIB211XMLTest::_dataProvider()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Returns sample data $sample as $type</dd>
-							<dt><b>_findTest</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method_findTest">LIB211Tester::_findTest()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Find a test by $name</dd>
-							<dt><b>_formatType</b></dt>
-				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#method_formatType">LIB211Testclass::_formatType()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Format a given variable to be &quot;readable&quot; in exception messages</dd>
-							<dt><b>_getModuleTests</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method_getModuleTests">LIB211Tester::_getModuleTests()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return list of module tests</dd>
-							<dt><b>_getTests</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method_getTests">LIB211Tester::_getTests()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get all tests into internal list</dd>
-							<dt><b>_indent</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method_indent">LIB211XML::_indent()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return indend</dd>
-							<dt><b>_intToBase32</b></dt>
-				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method_intToBase32">LIB211Geohash::_intToBase32()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the string of a base64 position</dd>
-							<dt><b>_parse</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method_parse">LIB211XML::_parse()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Parse xml</dd>
-							<dt><b>_parse_init</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method_parse_init">LIB211XML::_parse_init()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Initialize parser</dd>
-							<dt><b>_parse_recurse</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method_parse_recurse">LIB211XML::_parse_recurse()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Parse xml data recursively</dd>
-							<dt><b>_runTest</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method_runTest">LIB211Tester::_runTest()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runs a test</dd>
-							<dt><b>_setTests</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method_setTests">LIB211Tester::_setTests()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set $tests to run</dd>
-							<dt><b>_strfill</b></dt>
-				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#method_strfill">LIB211Random::_strfill()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Fill string to a given size in any direction and any fill characters</dd>
 							<dt><b>__check</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__check">LIB211Base::__check()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Check for availability of a class/constant/extension/function/path/variable ^^</dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file Autoload.class.php, method <a href="LIB211/LIB211Autoload.html#method__construct">LIB211Autoload::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#method__construct">LIB211RandomTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__construct">LIB211String::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#method__construct">LIB211Testclass::__construct()</a></dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__construct">LIB211Tester::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#method__construct">LIB211StringTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#method__construct">LIB211ScoperTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#method__construct">LIB211Scoper::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method__construct">LIB211Permutate::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#method__construct">LIB211XMLTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#method__construct">LIB211GeohashTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__construct">LIB211Geohash::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#method__construct">LIB211ExampleTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__construct">LIB211Example::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#method__construct">LIB211BaseExceptionInterface::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__construct">LIB211Mail::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseException.html#method__construct">LIB211BaseException::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method__construct">LIB211XML::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__construct</b></dt>
-				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#method__construct">LIB211PermutateTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#method__construct">LIB211MailTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
 							<dt><b>__construct</b></dt>
 				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#method__construct">LIB211::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
 							<dt><b>__construct</b></dt>
-				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#method__construct">LIB211MailTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method__construct">LIB211Permutate::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#method__construct">LIB211PermutateTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Autoload.class.php, method <a href="LIB211/LIB211Autoload.html#method__construct">LIB211Autoload::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#method__construct">LIB211ExampleTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__construct">LIB211Geohash::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#method__construct">LIB211GeohashTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
 							<dt><b>__construct</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#method__construct">LIB211Random::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
-							<dt><b>__destruct</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__destruct">LIB211Tester::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#method__construct">LIB211Scoper::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__construct">LIB211Tester::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method__construct">LIB211XML::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#method__construct">LIB211XMLTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#method__construct">LIB211Testclass::__construct()</a></dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#method__construct">LIB211StringTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__construct">LIB211Example::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#method__construct">LIB211ScoperTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__construct">LIB211String::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#method__construct">LIB211RandomTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__construct">LIB211Mail::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#method__construct">LIB211CounterTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#method__construct">LIB211EVEOnlineTest::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#method__construct">LIB211Counter::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#method__construct">LIB211EVEOnline::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__construct">LIB211Base::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseException.html#method__construct">LIB211BaseException::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
+							<dt><b>__construct</b></dt>
+				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#method__construct">LIB211BaseExceptionInterface::__construct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Constructor</dd>
 							<dt><b>__destruct</b></dt>
 				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method__destruct">LIB211Permutate::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
-				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__destruct">LIB211Geohash::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
-							<dt><b>__destruct</b></dt>
-				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__destruct">LIB211Example::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
-							<dt><b>__destruct</b></dt>
-				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#method__destruct">LIB211Scoper::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
 				<dd>in file Autoload.class.php, method <a href="LIB211/LIB211Autoload.html#method__destruct">LIB211Autoload::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
-				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__destruct">LIB211String::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
-							<dt><b>__destruct</b></dt>
-				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__destruct">LIB211Mail::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#method__destruct">LIB211::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#method__destruct">LIB211Random::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
-				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#method__destruct">LIB211Scoper::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__destruct">LIB211String::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
-				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#method__destruct">LIB211::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#method__destruct">LIB211Counter::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#method__destruct">LIB211EVEOnline::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__destruct">LIB211Tester::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__destruct">LIB211Example::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__destruct">LIB211Geohash::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__destruct">LIB211Mail::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
+							<dt><b>__destruct</b></dt>
+				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__destruct">LIB211Base::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__destruct</b></dt>
 				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method__destruct">LIB211XML::__destruct()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Destructor</dd>
 							<dt><b>__init</b></dt>
 				<dd>in file Autoload.class.php, method <a href="LIB211/LIB211Autoload.html#method__init">LIB211Autoload::__init()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Initializator</dd>
 							<dt><b>__status</b></dt>
+				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__status">LIB211String::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__status">LIB211Tester::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method__status">LIB211Permutate::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__status">LIB211Geohash::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#method__status">LIB211EVEOnline::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__status">LIB211Example::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__status">LIB211Mail::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#method__status">LIB211Counter::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
+							<dt><b>__status</b></dt>
 				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#method__status">LIB211XML::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
 							<dt><b>__status</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#method__status">LIB211Random::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
 							<dt><b>__status</b></dt>
-				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#method__status">LIB211Tester::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#method__status">LIB211Example::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file Base.class.php, method <a href="LIB211/LIB211Base.html#method__status">LIB211Base::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#method__status">LIB211Mail::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#method__status">LIB211Geohash::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#method__status">LIB211String::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
 				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#method__status">LIB211::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
 							<dt><b>__status</b></dt>
 				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#method__status">LIB211Scoper::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
-							<dt><b>__status</b></dt>
-				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#method__status">LIB211Permutate::__status()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return object status</dd>
 							<dt><b>__toDefault</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#method__toDefault">LIB211BaseExceptionInterface::__toDefault()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Convert exception to string</dd>
 							<dt><b>__toDefault</b></dt>
@@ -327,8 +296,6 @@
 	<div>
 		<h2>a</h2>
 		<dl>
-							<dt><b>$addheader</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$addheader">LIB211Mail::$addheader</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Additional header data for mail</dd>
 							<dt><b>addList</b></dt>
 				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#methodaddList">LIB211Permutate::addList()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Add a list</dd>
 							<dt><b>addLists</b></dt>
@@ -381,10 +348,6 @@
 	<div>
 		<h2>b</h2>
 		<dl>
-							<dt><b>$bcc</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$bcc">LIB211Mail::$bcc</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Blind carboncopy header for mail</dd>
-							<dt><b>$build</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$build">LIB211::$build</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 build number</dd>
 							<dt><b>blindcopy</b></dt>
 				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#methodblindcopy">LIB211Mail::blindcopy()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set blind carboncopy address</dd>
 							<dt><b>byte2human</b></dt>
@@ -399,16 +362,14 @@
 	<div>
 		<h2>c</h2>
 		<dl>
-							<dt><b>$cc</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$cc">LIB211Mail::$cc</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Carboncopy header for mail</dd>
 							<dt><b>$code</b></dt>
 				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$code">LIB211BaseException::$code</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception code</dd>
-							<dt><b>$codename</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$codename">LIB211::$codename</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 codename</dd>
-							<dt><b>$created</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$created">LIB211::$created</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Counter for created objects</dd>
 							<dt><b>carboncopy</b></dt>
 				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#methodcarboncopy">LIB211Mail::carboncopy()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set carboncopy address</dd>
+							<dt><b>Counter.class.php</b></dt>
+				<dd>procedural page <a href="LIB211/_module---Counter---Counter.class.php.html">Counter.class.php</a></dd>
+							<dt><b>Counter.test.php</b></dt>
+				<dd>procedural page <a href="LIB211/_module---Counter---Counter.test.php.html">Counter.test.php</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex_LIB211.html#top">top</a><br>
@@ -419,10 +380,8 @@
 		<dl>
 							<dt><b>$data</b></dt>
 				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$data">LIB211XML::$data</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Data array</dd>
-							<dt><b>$date_from</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$date_from">LIB211::$date_from</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 creation date</dd>
-							<dt><b>$date_to</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$date_to">LIB211::$date_to</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 edit date (will be inserted automatically)</dd>
+							<dt><b>data2Type</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methoddata2Type">LIB211Counter::data2Type()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Convert data array to a type</dd>
 							<dt><b>decode</b></dt>
 				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#methoddecode">LIB211Geohash::decode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Decode latitude and longitude of a geohash</dd>
 							<dt><b>decodeInterval</b></dt>
@@ -443,10 +402,26 @@
 				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$encoding">LIB211XML::$encoding</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Encoding type</dd>
 							<dt><b>encode</b></dt>
 				<dd>in file Geohash.class.php, method <a href="LIB211/LIB211Geohash.html#methodencode">LIB211Geohash::encode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Encode latitude and longitude to geohash</dd>
-							<dt><b>EOL</b></dt>
-				<dd>in file lib211.php, constant <a href="LIB211/_lib211.php.html#defineEOL">EOL</a></dd>
+							<dt><b>EVEONLINE_ID_ALLIANCE</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_ALLIANCE">EVEONLINE_ID_ALLIANCE</a></dd>
+							<dt><b>EVEONLINE_ID_CHARACTER</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_CHARACTER">EVEONLINE_ID_CHARACTER</a></dd>
+							<dt><b>EVEONLINE_ID_CONSTELLATION</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_CONSTELLATION">EVEONLINE_ID_CONSTELLATION</a></dd>
+							<dt><b>EVEONLINE_ID_CORPORATION</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_CORPORATION">EVEONLINE_ID_CORPORATION</a></dd>
+							<dt><b>EVEONLINE_ID_REGION</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_REGION">EVEONLINE_ID_REGION</a></dd>
+							<dt><b>EVEONLINE_ID_SOLARSYSTEM</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_SOLARSYSTEM">EVEONLINE_ID_SOLARSYSTEM</a></dd>
+							<dt><b>EVEONLINE_ID_STATION</b></dt>
+				<dd>in file EVEOnline.class.php, constant <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html#defineEVEONLINE_ID_STATION">EVEONLINE_ID_STATION</a></dd>
 							<dt><b>export</b></dt>
 				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#methodexport">LIB211XML::export()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Export to xml data</dd>
+							<dt><b>EVEOnline.class.php</b></dt>
+				<dd>procedural page <a href="LIB211/_module---EVEOnline---EVEOnline.class.php.html">EVEOnline.class.php</a></dd>
+							<dt><b>EVEOnline.test.php</b></dt>
+				<dd>procedural page <a href="LIB211/_module---EVEOnline---EVEOnline.test.php.html">EVEOnline.test.php</a></dd>
 							<dt><b>Example.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_module---Example---Example.class.php.html">Example.class.php</a></dd>
 							<dt><b>Example.test.php</b></dt>
@@ -461,12 +436,6 @@
 		<dl>
 							<dt><b>$file</b></dt>
 				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$file">LIB211BaseException::$file</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception file</dd>
-							<dt><b>$file</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$file">LIB211Mail::$file</a><br>&nbsp;&nbsp;&nbsp;&nbsp;File(s) for mail</dd>
-							<dt><b>$filecount</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$filecount">LIB211Mail::$filecount</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Filecount for mail</dd>
-							<dt><b>$from</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$from">LIB211Mail::$from</a><br>&nbsp;&nbsp;&nbsp;&nbsp;From header for mail</dd>
 							<dt><b>fill</b></dt>
 				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#methodfill">LIB211String::fill()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Fill string to a given size in any direction and any fill characters</dd>
 							<dt><b>find</b></dt>
@@ -485,12 +454,36 @@
 		<dl>
 							<dt><b>get</b></dt>
 				<dd>in file Scoper.class.php, method <a href="LIB211/LIB211Scoper.html#methodget">LIB211Scoper::get()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get an object property</dd>
+							<dt><b>getAllianceID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetAllianceID">LIB211EVEOnline::getAllianceID()</a></dd>
+							<dt><b>getAllianceImage</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetAllianceImage">LIB211EVEOnline::getAllianceImage()</a></dd>
+							<dt><b>getAllianceName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetAllianceName">LIB211EVEOnline::getAllianceName()</a></dd>
 							<dt><b>getArchitecture</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetArchitecture">LIB211Random::getArchitecture()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get architecture size in bits</dd>
 							<dt><b>getBoolean</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetBoolean">LIB211Random::getBoolean()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random boolean</dd>
+							<dt><b>getCharacterID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCharacterID">LIB211EVEOnline::getCharacterID()</a></dd>
+							<dt><b>getCharacterImage</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCharacterImage">LIB211EVEOnline::getCharacterImage()</a></dd>
+							<dt><b>getCharacterName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCharacterName">LIB211EVEOnline::getCharacterName()</a></dd>
 							<dt><b>getCode</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#methodgetCode">LIB211BaseExceptionInterface::getCode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the error code</dd>
+							<dt><b>getConstellationID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetConstellationID">LIB211EVEOnline::getConstellationID()</a></dd>
+							<dt><b>getConstellationName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetConstellationName">LIB211EVEOnline::getConstellationName()</a></dd>
+							<dt><b>getCorporationID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCorporationID">LIB211EVEOnline::getCorporationID()</a></dd>
+							<dt><b>getCorporationImage</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCorporationImage">LIB211EVEOnline::getCorporationImage()</a></dd>
+							<dt><b>getCorporationName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCorporationName">LIB211EVEOnline::getCorporationName()</a></dd>
+							<dt><b>getCorporationRole</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetCorporationRole">LIB211EVEOnline::getCorporationRole()</a></dd>
 							<dt><b>getFile</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#methodgetFile">LIB211BaseExceptionInterface::getFile()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the error file</dd>
 							<dt><b>getFloat</b></dt>
@@ -501,6 +494,8 @@
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetFloatPositive">LIB211Random::getFloatPositive()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random positive float</dd>
 							<dt><b>getGeohash</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetGeohash">LIB211Random::getGeohash()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random geohash</dd>
+							<dt><b>getIDFromName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetIDFromName">LIB211EVEOnline::getIDFromName()</a></dd>
 							<dt><b>getInteger</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetInteger">LIB211Random::getInteger()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random integer</dd>
 							<dt><b>getIntegerMax</b></dt>
@@ -511,6 +506,8 @@
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetIntegerNegative">LIB211Random::getIntegerNegative()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random negative integer</dd>
 							<dt><b>getIntegerPositive</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetIntegerPositive">LIB211Random::getIntegerPositive()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random positive integer</dd>
+							<dt><b>getInventoryImage</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetInventoryImage">LIB211EVEOnline::getInventoryImage()</a></dd>
 							<dt><b>getIPv4</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetIPv4">LIB211Random::getIPv4()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random IPv4 address</dd>
 							<dt><b>getIPv6</b></dt>
@@ -531,8 +528,16 @@
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetMd5">LIB211Random::getMd5()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random MD5</dd>
 							<dt><b>getMessage</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#methodgetMessage">LIB211BaseExceptionInterface::getMessage()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the error message</dd>
+							<dt><b>getNameFromID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetNameFromID">LIB211EVEOnline::getNameFromID()</a></dd>
 							<dt><b>getNull</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetNull">LIB211Random::getNull()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get random null</dd>
+							<dt><b>getRegionID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetRegionID">LIB211EVEOnline::getRegionID()</a></dd>
+							<dt><b>getRegionName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetRegionName">LIB211EVEOnline::getRegionName()</a></dd>
+							<dt><b>getRenderImage</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetRenderImage">LIB211EVEOnline::getRenderImage()</a></dd>
 							<dt><b>getResult</b></dt>
 				<dd>in file Permutate.class.php, method <a href="LIB211/LIB211Permutate.html#methodgetResult">LIB211Permutate::getResult()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Permutate the given lists and return result (Thanks to &quot;combie&quot; on phpforum.de)  In csv/tsv format you can specify a second argument for separator and a third for quote character.</dd>
 							<dt><b>getResult</b></dt>
@@ -543,6 +548,16 @@
 				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#methodgetResultsAsHTML">LIB211Tester::getResultsAsHTML()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get all test results as HTML</dd>
 							<dt><b>getResultsAsText</b></dt>
 				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#methodgetResultsAsText">LIB211Tester::getResultsAsText()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get all test results as text</dd>
+							<dt><b>getServerIP</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetServerIP">LIB211EVEOnline::getServerIP()</a></dd>
+							<dt><b>getSolarsystemID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetSolarsystemID">LIB211EVEOnline::getSolarsystemID()</a></dd>
+							<dt><b>getSolarsystemName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetSolarsystemName">LIB211EVEOnline::getSolarsystemName()</a></dd>
+							<dt><b>getStationID</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetStationID">LIB211EVEOnline::getStationID()</a></dd>
+							<dt><b>getStationName</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodgetStationName">LIB211EVEOnline::getStationName()</a></dd>
 							<dt><b>getString</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodgetString">LIB211Random::getString()</a></dd>
 							<dt><b>getStringList</b></dt>
@@ -557,6 +572,8 @@
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#methodgetTrace">LIB211BaseExceptionInterface::getTrace()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the stacktrace</dd>
 							<dt><b>getTraceAsString</b></dt>
 				<dd>in file Base.class.php, method <a href="LIB211/LIB211BaseExceptionInterface.html#methodgetTraceAsString">LIB211BaseExceptionInterface::getTraceAsString()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Get the stacktrace as string</dd>
+							<dt><b>getValue</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methodgetValue">LIB211Counter::getValue()</a></dd>
 							<dt><b>Geohash.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_module---Geohash---Geohash.class.php.html">Geohash.class.php</a></dd>
 							<dt><b>Geohash.test.php</b></dt>
@@ -569,8 +586,6 @@
 	<div>
 		<h2>h</h2>
 		<dl>
-							<dt><b>$header</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$header">LIB211Mail::$header</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Header data for mail</dd>
 							<dt><b>header</b></dt>
 				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#methodheader">LIB211Mail::header()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set header</dd>
 					</dl>
@@ -581,50 +596,18 @@
 	<div>
 		<h2>i</h2>
 		<dl>
-							<dt><b>$instances</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211Base.html#var$instances">LIB211Base::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$instances">LIB211Permutate::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$instances">LIB211Random::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Scoper.class.php, variable <a href="LIB211/LIB211Scoper.html#var$instances">LIB211Scoper::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$instances">LIB211XML::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$instances">LIB211::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Geohash.class.php, variable <a href="LIB211/LIB211Geohash.html#var$instances">LIB211Geohash::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Example.class.php, variable <a href="LIB211/LIB211Example.html#var$instances">LIB211Example::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$instances">LIB211Tester::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$instances">LIB211Mail::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$instances</b></dt>
-				<dd>in file String.class.php, variable <a href="LIB211/LIB211String.html#var$instances">LIB211String::$instances</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Instance counter</dd>
-							<dt><b>$ip_client</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$ip_client">LIB211::$ip_client</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Client ip</dd>
 							<dt><b>import</b></dt>
 				<dd>in file XML.class.php, method <a href="LIB211/LIB211XML.html#methodimport">LIB211XML::import()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Import from xml data</dd>
 							<dt><b>indent</b></dt>
 				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#methodindent">LIB211String::indent()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Create text indent with a given char</dd>
-							<dt><b>index.php</b></dt>
-				<dd>procedural page <a href="LIB211/_index.php.html">index.php</a></dd>
 							<dt><b>info</b></dt>
 				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#methodinfo">LIB211::info()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Return formatted info about LIB211</dd>
+							<dt><b>isIngame</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodisIngame">LIB211EVEOnline::isIngame()</a></dd>
+							<dt><b>isTrusted</b></dt>
+				<dd>in file EVEOnline.class.php, method <a href="LIB211/LIB211EVEOnline.html#methodisTrusted">LIB211EVEOnline::isTrusted()</a></dd>
 							<dt><b>is_created</b></dt>
 				<dd>in file Operator.class.php, method <a href="LIB211/LIB211.html#methodis_created">LIB211::is_created()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Check for existance of an object</dd>
-					</dl>
-	</div>
-	<a href="elementindex_LIB211.html#top">top</a><br>
-  <hr />
-	<a name="k"></a>
-	<div>
-		<h2>k</h2>
-		<dl>
-							<dt><b>$killed</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$killed">LIB211::$killed</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Counter for killed objects</dd>
 					</dl>
 	</div>
 	<a href="elementindex_LIB211.html#top">top</a><br>
@@ -635,24 +618,12 @@
 		<dl>
 							<dt><b>$line</b></dt>
 				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$line">LIB211BaseException::$line</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception line</dd>
-							<dt><b>$lists</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$lists">LIB211Permutate::$lists</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stores the lists</dd>
-							<dt><b>$loaded</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$loaded">LIB211::$loaded</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Counter for currently loaded objects</dd>
 							<dt><b>$loader</b></dt>
 				<dd>in file Autoload.class.php, variable <a href="LIB211/LIB211Autoload.html#var$loader">LIB211Autoload::$loader</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loader object</dd>
-							<dt><b>$loopMaxRuns</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$loopMaxRuns">LIB211Random::$loopMaxRuns</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Loop maximum runs</dd>
-							<dt><b>$loops</b></dt>
-				<dd>in file Random.test.php, variable <a href="LIB211/LIB211RandomTest.html#var$loops">LIB211RandomTest::$loops</a><br>&nbsp;&nbsp;&nbsp;&nbsp;How many loops for random in range tests</dd>
-							<dt><b>$loops</b></dt>
-				<dd>in file String.test.php, variable <a href="LIB211/LIB211StringTest.html#var$loops">LIB211StringTest::$loops</a><br>&nbsp;&nbsp;&nbsp;&nbsp;How many loops for repeating tests</dd>
 							<dt><b>lib211</b></dt>
 				<dd>in file Autoload.class.php, function <a href="LIB211/_core---Autoload.class.php.html#functionlib211">lib211()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Call a autoloadable function</dd>
 							<dt><b>LIB211</b></dt>
 				<dd>in file Operator.class.php, class <a href="LIB211/LIB211.html">LIB211</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 (C!$C0^211's php library)  Use at your own risk!</dd>
-							<dt><b>lib211.php</b></dt>
-				<dd>procedural page <a href="LIB211/_lib211.php.html">lib211.php</a></dd>
 							<dt><b>LIB211Autoload</b></dt>
 				<dd>in file Autoload.class.php, class <a href="LIB211/LIB211Autoload.html">LIB211Autoload</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Autloader</dd>
 							<dt><b>LIB211AutoloadException</b></dt>
@@ -663,6 +634,18 @@
 				<dd>in file Base.class.php, class <a href="LIB211/LIB211BaseException.html">LIB211BaseException</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Base Exception</dd>
 							<dt><b>LIB211BaseExceptionInterface</b></dt>
 				<dd>in file Base.class.php, class <a href="LIB211/LIB211BaseExceptionInterface.html">LIB211BaseExceptionInterface</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Base Exception Interface</dd>
+							<dt><b>LIB211Counter</b></dt>
+				<dd>in file Counter.class.php, class <a href="LIB211/LIB211Counter.html">LIB211Counter</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Counter</dd>
+							<dt><b>LIB211CounterException</b></dt>
+				<dd>in file Counter.class.php, class <a href="LIB211/LIB211CounterException.html">LIB211CounterException</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Example Exception</dd>
+							<dt><b>LIB211CounterTest</b></dt>
+				<dd>in file Counter.test.php, class <a href="LIB211/LIB211CounterTest.html">LIB211CounterTest</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Example Testclass</dd>
+							<dt><b>LIB211EVEOnline</b></dt>
+				<dd>in file EVEOnline.class.php, class <a href="LIB211/LIB211EVEOnline.html">LIB211EVEOnline</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 EVE Online</dd>
+							<dt><b>LIB211EVEOnlineException</b></dt>
+				<dd>in file EVEOnline.class.php, class <a href="LIB211/LIB211EVEOnlineException.html">LIB211EVEOnlineException</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 EVE Online Exception</dd>
+							<dt><b>LIB211EVEOnlineTest</b></dt>
+				<dd>in file EVEOnline.test.php, class <a href="LIB211/LIB211EVEOnlineTest.html">LIB211EVEOnlineTest</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 EVE Online Testclass</dd>
 							<dt><b>LIB211Example</b></dt>
 				<dd>in file Example.class.php, class <a href="LIB211/LIB211Example.html">LIB211Example</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 Example</dd>
 							<dt><b>LIB211ExampleException</b></dt>
@@ -721,20 +704,6 @@
 				<dd>in file XML.class.php, class <a href="LIB211/LIB211XMLException.html">LIB211XMLException</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 XML Exception</dd>
 							<dt><b>LIB211XMLTest</b></dt>
 				<dd>in file XML.test.php, class <a href="LIB211/LIB211XMLTest.html">LIB211XMLTest</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 XML Testclass</dd>
-							<dt><b>LIB211_AUTOLOAD</b></dt>
-				<dd>in file index.php, constant <a href="LIB211/_index.php.html#defineLIB211_AUTOLOAD">LIB211_AUTOLOAD</a></dd>
-							<dt><b>LIB211_DISALLOWCTPR</b></dt>
-				<dd>in file lib211.php, constant <a href="LIB211/_lib211.php.html#defineLIB211_DISALLOWCTPR">LIB211_DISALLOWCTPR</a></dd>
-							<dt><b>LIB211_EXEC</b></dt>
-				<dd>in file lib211.php, constant <a href="LIB211/_lib211.php.html#defineLIB211_EXEC">LIB211_EXEC</a></dd>
-							<dt><b>LIB211_OBCLEAN</b></dt>
-				<dd>in file lib211.php, constant <a href="LIB211/_lib211.php.html#defineLIB211_OBCLEAN">LIB211_OBCLEAN</a></dd>
-							<dt><b>LIB211_OPERATOR</b></dt>
-				<dd>in file index.php, constant <a href="LIB211/_index.php.html#defineLIB211_OPERATOR">LIB211_OPERATOR</a></dd>
-							<dt><b>LIB211_ROOT</b></dt>
-				<dd>in file index.php, constant <a href="LIB211/_index.php.html#defineLIB211_ROOT">LIB211_ROOT</a></dd>
-							<dt><b>LIB211_TESTER</b></dt>
-				<dd>in file index.php, constant <a href="LIB211/_index.php.html#defineLIB211_TESTER">LIB211_TESTER</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex_LIB211.html#top">top</a><br>
@@ -743,12 +712,10 @@
 	<div>
 		<h2>m</h2>
 		<dl>
-							<dt><b>$maildata</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$maildata">LIB211Mail::$maildata</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Full mail data</dd>
-							<dt><b>$message</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$message">LIB211Mail::$message</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Message for mail</dd>
 							<dt><b>$message</b></dt>
 				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$message">LIB211BaseException::$message</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception message</dd>
+							<dt><b>mathAdd</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methodmathAdd">LIB211Counter::mathAdd()</a></dd>
 							<dt><b>md5apr1</b></dt>
 				<dd>in file String.class.php, method <a href="LIB211/LIB211String.html#methodmd5apr1">LIB211String::md5apr1()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Hash a given string with MD5 Apr 1</dd>
 							<dt><b>md5c211</b></dt>
@@ -779,8 +746,6 @@
 	<div>
 		<h2>o</h2>
 		<dl>
-							<dt><b>$objects</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$objects">LIB211::$objects</a><br>&nbsp;&nbsp;&nbsp;&nbsp;List of object names</dd>
 							<dt><b>Operator.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_core---Operator.class.php.html">Operator.class.php</a></dd>
 					</dl>
@@ -803,16 +768,6 @@
 	<div>
 		<h2>r</h2>
 		<dl>
-							<dt><b>$rangeIntegerMax</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$rangeIntegerMax">LIB211Random::$rangeIntegerMax</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Integer maximum range</dd>
-							<dt><b>$rangeIntegerMin</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$rangeIntegerMin">LIB211Random::$rangeIntegerMin</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Integer minimum range</dd>
-							<dt><b>$reply</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$reply">LIB211Mail::$reply</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Reply to header for mail</dd>
-							<dt><b>$result</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$result">LIB211Permutate::$result</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stores the result</dd>
-							<dt><b>$results</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$results">LIB211Tester::$results</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stores the results</dd>
 							<dt><b>Random.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_module---Random---Random.class.php.html">Random.class.php</a></dd>
 							<dt><b>Random.test.php</b></dt>
@@ -837,12 +792,6 @@
 	<div>
 		<h2>s</h2>
 		<dl>
-							<dt><b>$string</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$string">LIB211BaseException::$string</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception string</dd>
-							<dt><b>$stringList</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$stringList">LIB211Random::$stringList</a><br>&nbsp;&nbsp;&nbsp;&nbsp;List of strings</dd>
-							<dt><b>$subject</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$subject">LIB211Mail::$subject</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Subject header for mail</dd>
 							<dt><b>Scoper.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_module---Scoper---Scoper.class.php.html">Scoper.class.php</a></dd>
 							<dt><b>Scoper.test.php</b></dt>
@@ -870,81 +819,99 @@
 							<dt><b>setLoopMaxRuns</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodsetLoopMaxRuns">LIB211Random::setLoopMaxRuns()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set max loop runs</dd>
 							<dt><b>setPrefix</b></dt>
-				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetPrefix">LIB211RandomTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodsetPrefix">LIB211EVEOnlineTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetPrefix">LIB211ScoperTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodsetPrefix">LIB211CounterTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetPrefix">LIB211XMLTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetPrefix">LIB211StringTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
 							<dt><b>setPrefix</b></dt>
 				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetPrefix">LIB211PermutateTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
 							<dt><b>setPrefix</b></dt>
-				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetPrefix">LIB211StringTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetPrefix">LIB211RandomTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
+							<dt><b>setPrefix</b></dt>
+				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetPrefix">LIB211MailTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
 							<dt><b>setPrefix</b></dt>
 				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetPrefix">LIB211GeohashTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
 							<dt><b>setPrefix</b></dt>
 				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetPrefix">LIB211ExampleTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
-							<dt><b>setPrefix</b></dt>
-				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetPrefix">LIB211MailTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
-							<dt><b>setPrefix</b></dt>
-				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#methodsetPrefix">LIB211Testclass::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
-							<dt><b>setPrefix</b></dt>
-				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetPrefix">LIB211XMLTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
-							<dt><b>setPrefix</b></dt>
-				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetPrefix">LIB211ScoperTest::setPrefix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before each test method</dd>
 							<dt><b>setPrefixAll</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetPrefixAll">LIB211RandomTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
 							<dt><b>setPrefixAll</b></dt>
-				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetPrefixAll">LIB211StringTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
-							<dt><b>setPrefixAll</b></dt>
-				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetPrefixAll">LIB211XMLTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
-							<dt><b>setPrefixAll</b></dt>
-				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetPrefixAll">LIB211ScoperTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
-							<dt><b>setPrefixAll</b></dt>
-				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetPrefixAll">LIB211MailTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
-							<dt><b>setPrefixAll</b></dt>
 				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#methodsetPrefixAll">LIB211Testclass::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all test methods</dd>
 							<dt><b>setPrefixAll</b></dt>
-				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetPrefixAll">LIB211ExampleTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodsetPrefixAll">LIB211CounterTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
+				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetPrefixAll">LIB211StringTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
 							<dt><b>setPrefixAll</b></dt>
 				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetPrefixAll">LIB211GeohashTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
 							<dt><b>setPrefixAll</b></dt>
+				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetPrefixAll">LIB211ScoperTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
+				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetPrefixAll">LIB211ExampleTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
+				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetPrefixAll">LIB211XMLTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
 				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetPrefixAll">LIB211PermutateTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
+				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetPrefixAll">LIB211MailTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
+							<dt><b>setPrefixAll</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodsetPrefixAll">LIB211EVEOnlineTest::setPrefixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute before all methods</dd>
 							<dt><b>setStringList</b></dt>
 				<dd>in file Random.class.php, method <a href="LIB211/LIB211Random.html#methodsetStringList">LIB211Random::setStringList()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Add string(s) to string list</dd>
 							<dt><b>setSuffix</b></dt>
+				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetSuffix">LIB211XMLTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
 				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetSuffix">LIB211StringTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
 							<dt><b>setSuffix</b></dt>
-				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetSuffix">LIB211XMLTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetSuffix">LIB211PermutateTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetSuffix">LIB211GeohashTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetSuffix">LIB211ScoperTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetSuffix">LIB211MailTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodsetSuffix">LIB211EVEOnlineTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodsetSuffix">LIB211CounterTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
+							<dt><b>setSuffix</b></dt>
+				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetSuffix">LIB211RandomTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
 							<dt><b>setSuffix</b></dt>
 				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#methodsetSuffix">LIB211Testclass::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
 							<dt><b>setSuffix</b></dt>
 				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetSuffix">LIB211ExampleTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
-							<dt><b>setSuffix</b></dt>
-				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetSuffix">LIB211MailTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
-							<dt><b>setSuffix</b></dt>
-				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetSuffix">LIB211GeohashTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
-							<dt><b>setSuffix</b></dt>
-				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetSuffix">LIB211PermutateTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
-							<dt><b>setSuffix</b></dt>
-				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetSuffix">LIB211RandomTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
-							<dt><b>setSuffix</b></dt>
-				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetSuffix">LIB211ScoperTest::setSuffix()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after each test method</dd>
 							<dt><b>setSuffixAll</b></dt>
 				<dd>in file Testclass.abstract.php, method <a href="LIB211/LIB211Testclass.html#methodsetSuffixAll">LIB211Testclass::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all test methods</dd>
 							<dt><b>setSuffixAll</b></dt>
-				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetSuffixAll">LIB211MailTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
-							<dt><b>setSuffixAll</b></dt>
-				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetSuffixAll">LIB211PermutateTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
-							<dt><b>setSuffixAll</b></dt>
 				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodsetSuffixAll">LIB211XMLTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
-							<dt><b>setSuffixAll</b></dt>
-				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetSuffixAll">LIB211GeohashTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
-							<dt><b>setSuffixAll</b></dt>
-				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetSuffixAll">LIB211RandomTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
-							<dt><b>setSuffixAll</b></dt>
-				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetSuffixAll">LIB211ExampleTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
 							<dt><b>setSuffixAll</b></dt>
 				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodsetSuffixAll">LIB211StringTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
 							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodsetSuffixAll">LIB211ExampleTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodsetSuffixAll">LIB211CounterTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
 				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodsetSuffixAll">LIB211ScoperTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodsetSuffixAll">LIB211PermutateTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodsetSuffixAll">LIB211MailTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodsetSuffixAll">LIB211RandomTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodsetSuffixAll">LIB211GeohashTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute after all methods</dd>
+							<dt><b>setSuffixAll</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodsetSuffixAll">LIB211EVEOnlineTest::setSuffixAll()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Execute afater all methods</dd>
 							<dt><b>setTests</b></dt>
 				<dd>in file Tester.class.php, method <a href="LIB211/LIB211Tester.html#methodsetTests">LIB211Tester::setTests()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set $tests to run</dd>
+							<dt><b>setValue</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methodsetValue">LIB211Counter::setValue()</a></dd>
 							<dt><b>subject</b></dt>
 				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#methodsubject">LIB211Mail::subject()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set email subject</dd>
 					</dl>
@@ -955,92 +922,12 @@
 	<div>
 		<h2>t</h2>
 		<dl>
-							<dt><b>$testObject</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$testObject">LIB211Tester::$testObject</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Current test object</dd>
-							<dt><b>$tests</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$tests">LIB211Tester::$tests</a><br>&nbsp;&nbsp;&nbsp;&nbsp;List of available tests (classname and path)</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$time_diff">LIB211Random::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Geohash.class.php, variable <a href="LIB211/LIB211Geohash.html#var$time_diff">LIB211Geohash::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$time_diff">LIB211XML::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Scoper.class.php, variable <a href="LIB211/LIB211Scoper.html#var$time_diff">LIB211Scoper::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$time_diff">LIB211Tester::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$time_diff">LIB211Permutate::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211Base.html#var$time_diff">LIB211Base::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$time_diff">LIB211::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Enter description here ...</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$time_diff">LIB211Mail::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file String.class.php, variable <a href="LIB211/LIB211String.html#var$time_diff">LIB211String::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_diff</b></dt>
-				<dd>in file Example.class.php, variable <a href="LIB211/LIB211Example.html#var$time_diff">LIB211Example::$time_diff</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Runtime of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$time_start">LIB211::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Enter description here ...</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$time_start">LIB211Random::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$time_start">LIB211Tester::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Example.class.php, variable <a href="LIB211/LIB211Example.html#var$time_start">LIB211Example::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Scoper.class.php, variable <a href="LIB211/LIB211Scoper.html#var$time_start">LIB211Scoper::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211Base.html#var$time_start">LIB211Base::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file String.class.php, variable <a href="LIB211/LIB211String.html#var$time_start">LIB211String::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$time_start">LIB211Permutate::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$time_start">LIB211XML::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Geohash.class.php, variable <a href="LIB211/LIB211Geohash.html#var$time_start">LIB211Geohash::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_start</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$time_start">LIB211Mail::$time_start</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Start time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Example.class.php, variable <a href="LIB211/LIB211Example.html#var$time_stop">LIB211Example::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$time_stop">LIB211::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Enter description here ...</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Permutate.class.php, variable <a href="LIB211/LIB211Permutate.html#var$time_stop">LIB211Permutate::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Scoper.class.php, variable <a href="LIB211/LIB211Scoper.html#var$time_stop">LIB211Scoper::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211Base.html#var$time_stop">LIB211Base::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Tester.class.php, variable <a href="LIB211/LIB211Tester.html#var$time_stop">LIB211Tester::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Geohash.class.php, variable <a href="LIB211/LIB211Geohash.html#var$time_stop">LIB211Geohash::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Random.class.php, variable <a href="LIB211/LIB211Random.html#var$time_stop">LIB211Random::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file String.class.php, variable <a href="LIB211/LIB211String.html#var$time_stop">LIB211String::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file XML.class.php, variable <a href="LIB211/LIB211XML.html#var$time_stop">LIB211XML::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$time_stop</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$time_stop">LIB211Mail::$time_stop</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Stop time of object</dd>
-							<dt><b>$to</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$to">LIB211Mail::$to</a><br>&nbsp;&nbsp;&nbsp;&nbsp;To header for mail</dd>
-							<dt><b>$trace</b></dt>
-				<dd>in file Base.class.php, variable <a href="LIB211/LIB211BaseException.html#var$trace">LIB211BaseException::$trace</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Exception stacktrace</dd>
-							<dt><b>$type</b></dt>
-				<dd>in file Mail.class.php, variable <a href="LIB211/LIB211Mail.html#var$type">LIB211Mail::$type</a><br>&nbsp;&nbsp;&nbsp;&nbsp;MIME-Type for mail</dd>
 							<dt><b>Testclass.abstract.php</b></dt>
 				<dd>procedural page <a href="LIB211/_core---Testclass.abstract.php.html">Testclass.abstract.php</a></dd>
 							<dt><b>Tester.class.php</b></dt>
 				<dd>procedural page <a href="LIB211/_core---Tester.class.php.html">Tester.class.php</a></dd>
-							<dt><b>testRun.php</b></dt>
-				<dd>procedural page <a href="LIB211/_module---Scoper---test---testRun.php.html">testRun.php</a></dd>
 							<dt><b>test</b></dt>
 				<dd>in file Example.class.php, method <a href="LIB211/LIB211Example.html#methodtest">LIB211Example::test()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test function for test class</dd>
-							<dt><b>test.php</b></dt>
-				<dd>procedural page <a href="LIB211/_test.php.html">test.php</a></dd>
 							<dt><b>testAddList</b></dt>
 				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodtestAddList">LIB211PermutateTest::testAddList()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test addList() method</dd>
 							<dt><b>testAddLists</b></dt>
@@ -1055,6 +942,8 @@
 				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodtestByte2human">LIB211StringTest::testByte2human()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test byte2human() method</dd>
 							<dt><b>testCarboncopy</b></dt>
 				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodtestCarboncopy">LIB211MailTest::testCarboncopy()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test carboncopy() method</dd>
+							<dt><b>testData2Type</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodtestData2Type">LIB211CounterTest::testData2Type()</a></dd>
 							<dt><b>testDecode</b></dt>
 				<dd>in file Geohash.test.php, method <a href="LIB211/LIB211GeohashTest.html#methodtestDecode">LIB211GeohashTest::testDecode()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test decode() method</dd>
 							<dt><b>testDecodeInterval</b></dt>
@@ -1091,10 +980,34 @@
 				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodtestFrom">LIB211MailTest::testFrom()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test from() method</dd>
 							<dt><b>testGet</b></dt>
 				<dd>in file Scoper.test.php, method <a href="LIB211/LIB211ScoperTest.html#methodtestGet">LIB211ScoperTest::testGet()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test get() method</dd>
+							<dt><b>testGetAllianceID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetAllianceID">LIB211EVEOnlineTest::testGetAllianceID()</a></dd>
+							<dt><b>testGetAllianceImage</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetAllianceImage">LIB211EVEOnlineTest::testGetAllianceImage()</a></dd>
+							<dt><b>testGetAllianceName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetAllianceName">LIB211EVEOnlineTest::testGetAllianceName()</a></dd>
 							<dt><b>testGetArchitecture</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetArchitecture">LIB211RandomTest::testGetArchitecture()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getArchitecture() method</dd>
 							<dt><b>testGetBoolean</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetBoolean">LIB211RandomTest::testGetBoolean()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getBoolean() method</dd>
+							<dt><b>testGetCharacterID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCharacterID">LIB211EVEOnlineTest::testGetCharacterID()</a></dd>
+							<dt><b>testGetCharacterImage</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCharacterImage">LIB211EVEOnlineTest::testGetCharacterImage()</a></dd>
+							<dt><b>testGetCharacterName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCharacterName">LIB211EVEOnlineTest::testGetCharacterName()</a></dd>
+							<dt><b>testGetConstellationID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetConstellationID">LIB211EVEOnlineTest::testGetConstellationID()</a></dd>
+							<dt><b>testGetConstellationName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetConstellationName">LIB211EVEOnlineTest::testGetConstellationName()</a></dd>
+							<dt><b>testGetCorporationID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCorporationID">LIB211EVEOnlineTest::testGetCorporationID()</a></dd>
+							<dt><b>testGetCorporationImage</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCorporationImage">LIB211EVEOnlineTest::testGetCorporationImage()</a></dd>
+							<dt><b>testGetCorporationName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCorporationName">LIB211EVEOnlineTest::testGetCorporationName()</a></dd>
+							<dt><b>testGetCorporationRole</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetCorporationRole">LIB211EVEOnlineTest::testGetCorporationRole()</a></dd>
 							<dt><b>testGetFloat</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetFloat">LIB211RandomTest::testGetFloat()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getFloat() method</dd>
 							<dt><b>testGetFloatNegative</b></dt>
@@ -1103,6 +1016,8 @@
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetFloatPositive">LIB211RandomTest::testGetFloatPositive()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getFloatPositive() method</dd>
 							<dt><b>testGetGeohash</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetGeohash">LIB211RandomTest::testGetGeohash()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getGeohash() method</dd>
+							<dt><b>testGetIDFromName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetIDFromName">LIB211EVEOnlineTest::testGetIDFromName()</a></dd>
 							<dt><b>testGetInteger</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetInteger">LIB211RandomTest::testGetInteger()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getInteger() method</dd>
 							<dt><b>testGetIntegerMax</b></dt>
@@ -1113,6 +1028,8 @@
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetIntegerNegative">LIB211RandomTest::testGetIntegerNegative()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getIntegerNegative() method</dd>
 							<dt><b>testGetIntegerPositive</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetIntegerPositive">LIB211RandomTest::testGetIntegerPositive()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getIntegerPositive() method</dd>
+							<dt><b>testGetInventoryImage</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetInventoryImage">LIB211EVEOnlineTest::testGetInventoryImage()</a></dd>
 							<dt><b>testGetIPv4</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetIPv4">LIB211RandomTest::testGetIPv4()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getIPv4() method</dd>
 							<dt><b>testGetIPv6</b></dt>
@@ -1129,10 +1046,28 @@
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetLoopMaxRuns">LIB211RandomTest::testGetLoopMaxRuns()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getLoopMaxRuns() method</dd>
 							<dt><b>testGetMd5</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetMd5">LIB211RandomTest::testGetMd5()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getMD5() method</dd>
+							<dt><b>testGetNameFromID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetNameFromID">LIB211EVEOnlineTest::testGetNameFromID()</a></dd>
 							<dt><b>testGetNull</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetNull">LIB211RandomTest::testGetNull()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getNull() method</dd>
+							<dt><b>testGetRegionID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetRegionID">LIB211EVEOnlineTest::testGetRegionID()</a></dd>
+							<dt><b>testGetRegionName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetRegionName">LIB211EVEOnlineTest::testGetRegionName()</a></dd>
+							<dt><b>testGetRenderImage</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetRenderImage">LIB211EVEOnlineTest::testGetRenderImage()</a></dd>
 							<dt><b>testGetResult</b></dt>
 				<dd>in file Permutate.test.php, method <a href="LIB211/LIB211PermutateTest.html#methodtestGetResult">LIB211PermutateTest::testGetResult()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test getResult() method</dd>
+							<dt><b>testGetServerIP</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetServerIP">LIB211EVEOnlineTest::testGetServerIP()</a></dd>
+							<dt><b>testGetSolarsystemID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetSolarsystemID">LIB211EVEOnlineTest::testGetSolarsystemID()</a></dd>
+							<dt><b>testGetSolarsystemName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetSolarsystemName">LIB211EVEOnlineTest::testGetSolarsystemName()</a></dd>
+							<dt><b>testGetStationID</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetStationID">LIB211EVEOnlineTest::testGetStationID()</a></dd>
+							<dt><b>testGetStationName</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestGetStationName">LIB211EVEOnlineTest::testGetStationName()</a></dd>
 							<dt><b>testGetString</b></dt>
 				<dd>in file Random.test.php, method <a href="LIB211/LIB211RandomTest.html#methodtestGetString">LIB211RandomTest::testGetString()</a></dd>
 							<dt><b>testGetStringList</b></dt>
@@ -1149,6 +1084,12 @@
 				<dd>in file XML.test.php, method <a href="LIB211/LIB211XMLTest.html#methodtestImport">LIB211XMLTest::testImport()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test import() method</dd>
 							<dt><b>testIndent</b></dt>
 				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodtestIndent">LIB211StringTest::testIndent()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test indent() method</dd>
+							<dt><b>testIsIngame</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestIsIngame">LIB211EVEOnlineTest::testIsIngame()</a></dd>
+							<dt><b>testIsTrusted</b></dt>
+				<dd>in file EVEOnline.test.php, method <a href="LIB211/LIB211EVEOnlineTest.html#methodtestIsTrusted">LIB211EVEOnlineTest::testIsTrusted()</a></dd>
+							<dt><b>testMathAdd</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodtestMathAdd">LIB211CounterTest::testMathAdd()</a></dd>
 							<dt><b>testMd5apr1</b></dt>
 				<dd>in file String.test.php, method <a href="LIB211/LIB211StringTest.html#methodtestMd5apr1">LIB211StringTest::testMd5apr1()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test md5apr1() method</dd>
 							<dt><b>testMd5c211</b></dt>
@@ -1195,8 +1136,12 @@
 				<dd>in file Example.test.php, method <a href="LIB211/LIB211ExampleTest.html#methodtestSuccess3">LIB211ExampleTest::testSuccess3()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Successful test #3</dd>
 							<dt><b>testTo</b></dt>
 				<dd>in file Mail.test.php, method <a href="LIB211/LIB211MailTest.html#methodtestTo">LIB211MailTest::testTo()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Test to() method</dd>
+							<dt><b>testType2Data</b></dt>
+				<dd>in file Counter.test.php, method <a href="LIB211/LIB211CounterTest.html#methodtestType2Data">LIB211CounterTest::testType2Data()</a></dd>
 							<dt><b>to</b></dt>
 				<dd>in file Mail.class.php, method <a href="LIB211/LIB211Mail.html#methodto">LIB211Mail::to()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Set receiver address</dd>
+							<dt><b>type2Data</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methodtype2Data">LIB211Counter::type2Data()</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Convert type to an data array</dd>
 					</dl>
 	</div>
 	<a href="elementindex_LIB211.html#top">top</a><br>
@@ -1205,8 +1150,10 @@
 	<div>
 		<h2>v</h2>
 		<dl>
-							<dt><b>$version</b></dt>
-				<dd>in file Operator.class.php, variable <a href="LIB211/LIB211.html#var$version">LIB211::$version</a><br>&nbsp;&nbsp;&nbsp;&nbsp;LIB211 version</dd>
+							<dt><b>$value</b></dt>
+				<dd>in file Counter.class.php, variable <a href="LIB211/LIB211Counter.html#var$value">LIB211Counter::$value</a></dd>
+							<dt><b>validate</b></dt>
+				<dd>in file Counter.class.php, method <a href="LIB211/LIB211Counter.html#methodvalidate">LIB211Counter::validate()</a></dd>
 					</dl>
 	</div>
 	<a href="elementindex_LIB211.html#top">top</a><br>
@@ -1224,7 +1171,7 @@
 	<a href="elementindex_LIB211.html#top">top</a><br>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Mon, 28 Mar 2011 18:38:54 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Wed, 02 May 2012 18:29:36 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
 	      </div>
       </td></tr></table>
     </td>

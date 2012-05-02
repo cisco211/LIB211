@@ -7,3 +7,7 @@
 /.settings
 /tmp
 /lib211.lock
+/.htaccess
+/module/EVEOnline/LIB211EVEOnline.sqlite3.*
+/module/EVEOnline/image
+/phpdoc.sh
