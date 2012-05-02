@@ -228,6 +228,8 @@ class LIB211XML extends LIB211Base {
 		$parser = $this->_parser;
 		xml_parser_set_option($parser,XML_OPTION_CASE_FOLDING,0);
 		xml_parser_set_option($parser,XML_OPTION_SKIP_WHITE,1);
+		#xml_parser_set_option($parser,XML_OPTION_TARGET_ENCODING,$encoding);
+		
 		if (!$res = (bool)xml_parse_into_struct($parser,$this->_rawXML,$this->_valueArray,$this->_keyArray)) {
 			$this->_isError = TRUE;
 			$this->_error = "error: ".xml_error_string(xml_get_error_code($parser))." at line ".xml_get_current_line_number($parser);
@@ -314,7 +316,7 @@ class LIB211XML extends LIB211Base {
 	 */
 	public function import($xml) {
 		$encoding = "UTF-8";
-		$pattern = "/encoding=\"(.*)\"/";
+		$pattern = "/encoding=\"([a-zA-Z0-9\-]+)\"/";
 		if (strpos($xml,"<?xml") !== FALSE) {
 			if (preg_match($pattern,$xml,$m)===1) $this->data =$this->_parse($xml,$m[1]);
 			else $this->data = $this->_parse($xml,$encoding);

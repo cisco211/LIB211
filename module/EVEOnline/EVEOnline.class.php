@@ -153,7 +153,7 @@ ENDSQL
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if (isset($_SERVER['HTTP_EVE_ALLIANCEID'])) {
 			if ($_SERVER['HTTP_EVE_ALLIANCEID'] == 'None') return -1;
-			else return (string)$_SERVER['HTTP_EVE_ALLIANCEID'];
+			else return strip_tags((string)$_SERVER['HTTP_EVE_ALLIANCEID']);
 		} else {
 			return '-1';
 		}
@@ -193,7 +193,7 @@ ENDSQL
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if (isset($_SERVER['HTTP_EVE_ALLIANCENAME'])) {
 			if ($_SERVER['HTTP_EVE_ALLIANCENAME'] == 'None') return '';
-			else return (string)$_SERVER['HTTP_EVE_ALLIANCENAME'];
+			else return strip_tags((string)$_SERVER['HTTP_EVE_ALLIANCENAME']);
 		} else {
 			return '';
 		}
@@ -201,7 +201,7 @@ ENDSQL
 
 	public function getCharacterID() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CHARID'])) return (string)$_SERVER['HTTP_EVE_CHARID'];
+		if (isset($_SERVER['HTTP_EVE_CHARID'])) return strip_tags((string)$_SERVER['HTTP_EVE_CHARID']);
 		else return '-1';
 	}
 
@@ -238,25 +238,25 @@ ENDSQL
 
 	public function getCharacterName() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CHARNAME'])) return (string)$_SERVER['HTTP_EVE_CHARNAME'];
+		if (isset($_SERVER['HTTP_EVE_CHARNAME'])) return strip_tags((string)$_SERVER['HTTP_EVE_CHARNAME']);
 		else return '';
 	}
 
 	public function getConstellationID($name = NULL) {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if ($name === NULL) $name = $this->getConstellationName();
-		return $this->getIDFromName($name);
+		return strip_tags($this->getIDFromName($name));
 	}
 
 	public function getConstellationName() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CONSTELLATIONNAME'])) return (string)$_SERVER['HTTP_EVE_CONSTELLATIONNAME'];
+		if (isset($_SERVER['HTTP_EVE_CONSTELLATIONNAME'])) return strip_tags((string)$_SERVER['HTTP_EVE_CONSTELLATIONNAME']);
 		else return '';
 	}
 
 	public function getCorporationID() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CORPID'])) return (string)$_SERVER['HTTP_EVE_CORPID'];
+		if (isset($_SERVER['HTTP_EVE_CORPID'])) return strip_tags((string)$_SERVER['HTTP_EVE_CORPID']);
 		else return '-1';
 	}
 
@@ -292,13 +292,13 @@ ENDSQL
 
 	public function getCorporationName() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CORPNAME'])) return (string)$_SERVER['HTTP_EVE_CORPNAME'];
+		if (isset($_SERVER['HTTP_EVE_CORPNAME'])) return strip_tags((string)$_SERVER['HTTP_EVE_CORPNAME']);
 		else return '';
 	}
 
 	public function getCorporationRole() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_CORPROLE'])) return (string)$_SERVER['HTTP_EVE_CORPROLE'];
+		if (isset($_SERVER['HTTP_EVE_CORPROLE'])) return strip_tags((string)$_SERVER['HTTP_EVE_CORPROLE']);
 		else return '0';
 	}
 
@@ -345,7 +345,7 @@ ENDSQL
 				$id = $entry['id'];
 			}
 		}
-		return $id;
+		return strip_tags($id);
 	}
 
 	public function getInventoryImage($id,$size) {
@@ -420,18 +420,18 @@ ENDSQL
 				$name = $entry['name'];
 			}
 		}
-		return $name;
+		return strip_tags($name);
 	}
 
 	public function getRegionID($name = NULL) {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if ($name === NULL) $name = $this->getRegionName();
-		return $this->getIDFromName($name);
+		return strip_tags($this->getIDFromName($name));
 	}
 
 	public function getRegionName() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_REGIONNAME'])) return (string)$_SERVER['HTTP_EVE_REGIONNAME'];
+		if (isset($_SERVER['HTTP_EVE_REGIONNAME'])) return strip_tags((string)$_SERVER['HTTP_EVE_REGIONNAME']);
 		else return '';
 	}
 
@@ -467,19 +467,19 @@ ENDSQL
 
 	public function getServerIP() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_SERVERIP'])) return (string)$_SERVER['HTTP_EVE_SERVERIP'];
+		if (isset($_SERVER['HTTP_EVE_SERVERIP'])) return strip_tags((string)$_SERVER['HTTP_EVE_SERVERIP']);
 		else return '';
 	}
 
 	public function getSolarsystemID($name = NULL) {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if ($name === NULL) $name = $this->getSolarsystemName();
-		return $this->getIDFromName($name);
+		return strip_tags($this->getIDFromName($name));
 	}
 
 	public function getSolarsystemName() {
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
-		if (isset($_SERVER['HTTP_EVE_SOLARSYSTEMNAME'])) return (string)$_SERVER['HTTP_EVE_SOLARSYSTEMNAME'];
+		if (isset($_SERVER['HTTP_EVE_SOLARSYSTEMNAME'])) return strip_tags((string)$_SERVER['HTTP_EVE_SOLARSYSTEMNAME']);
 		else return '';
 	}
 
@@ -487,7 +487,7 @@ ENDSQL
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if (isset($_SERVER['HTTP_EVE_STATIONID'])) {
 			if ($_SERVER['HTTP_EVE_STATIONID'] == 'None') return '-1';
-			else return (string)$_SERVER['HTTP_EVE_STATIONID'];
+			else return strip_tags((string)$_SERVER['HTTP_EVE_STATIONID']);
 		} else {
 			return '-1';
 		}
@@ -497,7 +497,7 @@ ENDSQL
 		if (!$this->isIngame() OR !$this->isTrusted()) return NULL;
 		if (isset($_SERVER['HTTP_EVE_STATIONNAME'])) {
 			if ($_SERVER['HTTP_EVE_STATIONNAME'] == 'None') return '';
-			else return (string)$_SERVER['HTTP_EVE_STATIONNAME'];
+			else return strip_tags((string)$_SERVER['HTTP_EVE_STATIONNAME']);
 		} else {
 			return '';
 		}
