@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
@@ -11,7 +14,7 @@ if (LIB211_AUTOLOAD === FALSE) {
  * LIB211 Mail
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211Mail extends LIB211Base {
 
@@ -354,7 +357,7 @@ class LIB211Mail extends LIB211Base {
  * LIB211 Mail Exception
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211MailException extends LIB211BaseException {
 }

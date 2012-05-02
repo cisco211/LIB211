@@ -1,9 +1,14 @@
 <?php
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
-// Include required files
+/**
+ * Include required files 
+ */
 if (LIB211_AUTOLOAD === FALSE) {
 	require_once (LIB211_ROOT.'/module/Geohash/Geohash.class.php');
 	require_once (LIB211_ROOT.'/module/String/String.class.php');
@@ -13,7 +18,7 @@ if (LIB211_AUTOLOAD === FALSE) {
  * LIB211 Random datatypes generator
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211Random extends LIB211Base {
 
@@ -698,7 +703,7 @@ class LIB211Random extends LIB211Base {
  * LIB211 Random Exception
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211RandomException extends LIB211BaseException {
 }

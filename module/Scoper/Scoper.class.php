@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
@@ -8,7 +11,7 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
  * This class is experimental. Use at your own risk, because Scoper allows unusual concepts!
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211Scoper extends LIB211Base {
 
@@ -146,7 +149,7 @@ class LIB211Scoper extends LIB211Base {
  * LIB211 Scoper Exception
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211ScoperException extends LIB211BaseException {
 }

@@ -1,4 +1,7 @@
 <?php
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
@@ -8,7 +11,7 @@ if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
  * Transform any count of lists (dimensions) to a new list where all entries are combined with each other (rainbow table)
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211Permutate extends LIB211Base {
 
@@ -252,7 +255,7 @@ class LIB211Permutate extends LIB211Base {
 /**
  * LIB211 Permutate Exception
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211PermutateException extends LIB211BaseException {
 }

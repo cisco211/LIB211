@@ -1,9 +1,14 @@
 <?php
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
 
-// Include required files
+/**
+ * Include required files 
+ */
 if (LIB211_AUTOLOAD === FALSE) {
 	require_once(LIB211_ROOT.'/module/XML/XML.class.php');
 }
@@ -12,7 +17,7 @@ if (LIB211_AUTOLOAD === FALSE) {
  * LIB211 XML Testclass
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211XMLTest extends LIB211Testclass {
 	

@@ -1,4 +1,7 @@
 <?php 
+/**
+ * @package LIB211
+ */
 
 // Security lock
 if (!defined('LIB211_EXEC')) throw new Exception('Invalid access to LIB211.');
@@ -11,7 +14,7 @@ if (LIB211_AUTOLOAD === FALSE) {
  * LIB211 Autloader
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211Autoload extends LIB211Base {
 
@@ -65,7 +68,7 @@ class LIB211Autoload extends LIB211Base {
  * LIB211 Autoload Exception
  * 
  * @author C!$C0^211
- *
+ * @package LIB211
  */
 class LIB211AutoloadException extends LIB211BaseException {
 }
