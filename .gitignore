@@ -10,4 +10,5 @@
 /.htaccess
 /module/EVEOnline/LIB211EVEOnline.sqlite3.*
 /module/EVEOnline/image
+/module/Animation/cache/*
 /phpdoc.sh

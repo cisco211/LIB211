@@ -153,6 +153,7 @@ class LIB211Tester extends LIB211Base {
 					$this->results[$test['name']][$method]['setPrefix']['status'] = 'failed';
 					$this->results[$test['name']][$method]['setPrefix']['exception'] = $e;
 				}
+				ob_start();
 				try {
 					$this->testObject->$method();
 				}
@@ -161,6 +162,7 @@ class LIB211Tester extends LIB211Base {
 					$this->results[$test['name']][$method]['test']['status'] = 'failed';
 					$this->results[$test['name']][$method]['test']['exception'] = $e;
 				}
+				$this->results[$test['name']][$method]['test']['output'] = ob_get_clean();
 				$this->results[$test['name']][$method]['setSuffix']['status'] = 'passed';
 				try {
 					$this->testObject->setSuffix();
@@ -355,6 +357,7 @@ class LIB211Tester extends LIB211Base {
 								$htmlTests .= '</table></td></tr>';
 							}
 						}
+						if (strlen($methodResult['test']['output']) > 0) $htmlTests .= '<tr><td colspan="2">'.$methodResult['test']['output'].'</td></tr>';
 						$htmlTests .= '</table></td></tr>';
 					}
 				}
