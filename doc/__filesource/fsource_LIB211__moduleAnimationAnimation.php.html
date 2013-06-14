@@ -2,6 +2,7 @@
 <head>
 <title>File Source for Animation.php</title>
 <link rel="stylesheet" type="text/css" href="../media/style.css">
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
 </head>
 <body>
 
@@ -25,12 +26,6 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr valign="top">
     <td width="200" class="menu">
-	<div id="ric">
-					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
-					<p><a href="../ric_README.html">README</a></p>
-					<p><a href="../ric_FAQ.html">FAQ</a></p>
-					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
-			</div>
       <b>Packages:</b><br />
               <a href="../li_LIB211.html">LIB211</a><br />
             <br /><br />
@@ -66,13 +61,13 @@
 <li><div class="src-line"><a name="a21"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span>isset<span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'ty'</span><span class="src-sym">]</span><span class="src-sym">))&nbsp;</span><span class="src-var">$ty&nbsp;</span>=&nbsp;<a href="http://www.php.net/trim">trim</a><span class="src-sym">(</span><a href="http://www.php.net/htmlentities">htmlentities</a><span class="src-sym">(</span><span class="src-var">$_GET</span><span class="src-sym">[</span><span class="src-str">'ty'</span><span class="src-sym">]</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a22"></a><span class="src-key">else&nbsp;</span><span class="src-var">$ty&nbsp;</span>=&nbsp;<span class="src-str">'none'</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a23"></a><span class="src-var">$animation</span><span class="src-sym">-&gt;</span><span class="src-id">transparency</span><span class="src-sym">(</span><span class="src-var">$ty</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a24"></a><span class="src-var">$cached&nbsp;</span>=&nbsp;<span class="src-id">LIB211_ROOT</span>.<span class="src-str">'/module/Animation/cache/'</span>.<span class="src-var">$in</span>.<span class="src-str">'_'</span>.<span class="src-var">$bg</span>.<span class="src-str">'_'</span>.<span class="src-var">$fg</span>.<span class="src-str">'_'</span>.<span class="src-var">$ty</span>.<span class="src-str">'.gif'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-var">$cached&nbsp;</span>=&nbsp;<span class="src-id"><a href="../LIB211/_lib211.php.html#defineLIB211_ROOT">LIB211_ROOT</a></span>.<span class="src-str">'/module/Animation/cache/'</span>.<span class="src-var">$in</span>.<span class="src-str">'_'</span>.<span class="src-var">$bg</span>.<span class="src-str">'_'</span>.<span class="src-var">$fg</span>.<span class="src-str">'_'</span>.<span class="src-var">$ty</span>.<span class="src-str">'.gif'</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a25"></a><a href="http://www.php.net/header">header</a><span class="src-sym">(</span><span class="src-str">'content-type:&nbsp;image/gif'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a26"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$cached</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a27"></a>&nbsp;print&nbsp;<a href="http://www.php.net/file_get_contents">file_get_contents</a><span class="src-sym">(</span><span class="src-var">$cached</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a28"></a>&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a29"></a><span class="src-key">else&nbsp;</span><span class="src-sym">{</span></div></li>
-<li><div class="src-line"><a name="a30"></a>&nbsp;<span class="src-var">$animation</span><span class="src-sym">-&gt;</span><span class="src-id">load</span><span class="src-sym">(</span><span class="src-id">LIB211_ROOT</span>.<span class="src-str">'/module/Animation/animation/'</span>.<span class="src-var">$in</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;<span class="src-var">$animation</span><span class="src-sym">-&gt;</span><span class="src-id">load</span><span class="src-sym">(</span><span class="src-id"><a href="../LIB211/_lib211.php.html#defineLIB211_ROOT">LIB211_ROOT</a></span>.<span class="src-str">'/module/Animation/animation/'</span>.<span class="src-var">$in</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a31"></a>&nbsp;<span class="src-var">$animation</span><span class="src-sym">-&gt;</span><span class="src-id">write</span><span class="src-sym">(</span><span class="src-var">$cached</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a32"></a>&nbsp;print&nbsp;<a href="http://www.php.net/file_get_contents">file_get_contents</a><span class="src-sym">(</span><span class="src-var">$cached</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a33"></a>&nbsp;<span class="src-sym">}</span></div></li>
@@ -81,7 +76,7 @@
 </div>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 03 May 2012 13:19:19 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Fri, 14 Jun 2013 10:45:39 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.5.0a1</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -2,6 +2,7 @@
 <head>
 <title>File Source for Operator.class.php</title>
 <link rel="stylesheet" type="text/css" href="../media/style.css">
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
 </head>
 <body>
 
@@ -25,12 +26,6 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
   <tr valign="top">
     <td width="200" class="menu">
-	<div id="ric">
-					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
-					<p><a href="../ric_README.html">README</a></p>
-					<p><a href="../ric_FAQ.html">FAQ</a></p>
-					<p><a href="../ric_CHANGELOG.html">CHANGELOG</a></p>
-			</div>
       <b>Packages:</b><br />
               <a href="../li_LIB211.html">LIB211</a><br />
             <br /><br />
@@ -52,7 +47,7 @@
 <li><div class="src-line"><a name="a7"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/defined">defined</a><span class="src-sym">(</span><span class="src-str">'LIB211_EXEC'</span><span class="src-sym">))&nbsp;</span>throw&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id">Exception</span><span class="src-sym">(</span><span class="src-str">'Invalid&nbsp;access&nbsp;to&nbsp;LIB211.'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a8"></a>&nbsp;</div></li>
 <li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;Include&nbsp;required&nbsp;files</span></div></li>
-<li><div class="src-line"><a name="a10"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-id">LIB211_AUTOLOAD&nbsp;</span>===&nbsp;<span class="src-id">FALSE</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-id"><a href="../LIB211/_lib211.php.html#defineLIB211_AUTOLOAD">LIB211_AUTOLOAD</a>&nbsp;</span>===&nbsp;<span class="src-id">FALSE</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a11"></a><span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a12"></a>&nbsp;</div></li>
 <li><div class="src-line"><a name="a13"></a><span class="src-doc">/**</span></div></li>
@@ -154,14 +149,14 @@
 <li><div class="src-line"><a name="a109"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
 <li><div class="src-line"><a name="a110"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../LIB211/LIB211.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../LIB211/LIB211Base.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
-<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id">LIB211_ROOT</span>.<span class="src-str">'/tmp/.lock/LIB211'</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a112"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-id"><a href="../LIB211/_lib211.php.html#defineLIB211_ROOT">LIB211_ROOT</a></span>.<span class="src-str">'/tmp/.lock/LIB211'</span><span class="src-sym">))&nbsp;</span><span class="src-sym">{</span></div></li>
 <li><div class="src-line"><a name="a113"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'c'</span><span class="src-sym">,</span><span class="src-str">'LIB211Exception'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a114"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'f'</span><span class="src-sym">,</span><span class="src-str">'getenv'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'f'</span><span class="src-sym">,</span><span class="src-str">'filemtime'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'f'</span><span class="src-sym">,</span><span class="src-str">'microtime'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'f'</span><span class="src-sym">,</span><span class="src-str">'round'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../LIB211/LIB211Base.html#method__check">__check</a><span class="src-sym">(</span><span class="src-str">'v'</span><span class="src-sym">,</span><span class="src-str">'_SERVER'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
-<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/touch">touch</a><span class="src-sym">(</span><span class="src-id">LIB211_ROOT</span>.<span class="src-str">'/tmp/.lock/LIB211'</span><span class="src-sym">,</span><a href="http://www.php.net/time">time</a><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a119"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/touch">touch</a><span class="src-sym">(</span><span class="src-id"><a href="../LIB211/_lib211.php.html#defineLIB211_ROOT">LIB211_ROOT</a></span>.<span class="src-str">'/tmp/.lock/LIB211'</span><span class="src-sym">,</span><a href="http://www.php.net/time">time</a><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a120"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
 <li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">self</span><span class="src-sym">::</span><span class="src-var">$instances</span>++<span class="src-sym">;</span></div></li>
 <li><div class="src-line"><a name="a122"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">self</span><span class="src-sym">::</span><span class="src-var">$time_start&nbsp;</span>=&nbsp;<span class="src-id">microtime</span><span class="src-sym">(</span><span class="src-id">TRUE</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
@@ -260,7 +255,7 @@
 </div>
         <div class="credit">
 		    <hr />
-		    Documentation generated on Thu, 03 May 2012 13:19:29 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+		    Documentation generated on Fri, 14 Jun 2013 10:45:54 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.5.0a1</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -162,7 +162,7 @@ class LIB211Tester extends LIB211Base {
 					$this->results[$test['name']][$method]['test']['status'] = 'failed';
 					$this->results[$test['name']][$method]['test']['exception'] = $e;
 				}
-				$this->results[$test['name']][$method]['test']['output'] = ob_get_clean();
+				$this->results[$test['name']][$method]['test']['output'] = str_replace(array('<','>',EOL,chr(9)),array('&lt;','&gt;','<br/>','&nbsp;&nbsp;&nbsp;&nbsp;'),ob_get_clean());
 				$this->results[$test['name']][$method]['setSuffix']['status'] = 'passed';
 				try {
 					$this->testObject->setSuffix();
@@ -325,7 +325,7 @@ class LIB211Tester extends LIB211Base {
 							
 							// Set exception message
 							if (isset($methodResult['exception'])) {
-								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$methodResult['exception']->__toDefault().'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.$methodResult['exception']->__toDefault().'</code></td></tr>';
 								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.$methodResult['exception']->getTraceAsString().'</code></td></tr>';
 							}
 							$htmlTests .= '</table></td></tr>';
@@ -352,7 +352,7 @@ class LIB211Tester extends LIB211Base {
 								if ($stepName == 'test') $name = 'runTestMethod';
 								else $name = $stepName;
 								$htmlTests .= '<tr><td colspan="2"><table border="1" style="background-color:#888888;margin:5px;width:99%;"><tr><td style="background-color:#FFCCCC;font-weight:bold;width:1px;">FAILED</td><td style="background-color:#FFCCCC;font-weight:bold;">'.$name.'</td></tr>';
-								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;">'.$stepResult['exception']->__toDefault().'</td></tr>';
+								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.str_replace(array('<','>'),array('&lt;','&gt;'),$stepResult['exception']->__toDefault()).'</code></td></tr>';
 								$htmlTests .= '<tr><td colspan="2" style="background-color:#FFCCCC;font-family:monospace,\'courier new\';overflow:auto;white-space:pre-wrap;width:auto;"><code>'.$stepResult['exception']->getTraceAsString().'</code></td></tr>';
 								$htmlTests .= '</table></td></tr>';
 							}
@@ -472,7 +472,7 @@ ENDHTML;
 								if ($stepName == 'test') $name = 'runTestMethod';
 								else $name = $stepName;
 								$tests .= EOL.'  FAILED '.$name;
-								$tests .= EOL.'   '.$stepResult['exception']->__toDefault();
+								$tests .= EOL.'   '.str_replace(array('<','>'),array('&lt;','&gt;'),$stepResult['exception']->__toDefault());
 								$tests .= EOL.'    '.str_replace(array(EOL,chr(13),chr(10)),EOL.'    ',$stepResult['exception']->getTraceAsString());
 							}
 						}

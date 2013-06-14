@@ -328,12 +328,14 @@ ENDHLP;
 		<table width="100%" border="0" cellpadding="0" cellspacing="0">
 			<tr valign="top">
 				<td width="200" class="menu">
+				<!--
 					<div id="ric">
 						<p><a href="./doc/ric_CHANGELOG.html" target="_blank">CHANGELOG</a></p>
 						<p><a href="./doc/ric_FAQ.html" target="_blank">FAQ</a></p>
 						<p><a href="./doc/ric_INSTALL.html" target="_blank">INSTALL</a></p>
 						<p><a href="./doc/ric_README.html" target="_blank">README</a></p>
 						</div>
+				-->
 					<b><a href='./doc/index.html' target="_blank">Documentation:</a></b><br/>
 					<div class="package">
 						<a href="./doc/LIB211/LIB211.html" target="_blank">LIB211</a><br/>
