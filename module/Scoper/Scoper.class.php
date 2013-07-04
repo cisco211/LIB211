@@ -53,8 +53,7 @@ class LIB211Scoper extends LIB211Base {
 			$this->__check('f','file_exists');
 			$this->__check('f','func_get_arg');
 			$this->__check('f','func_num_args');
-			$this->__check('f','ob_end_clean');
-			$this->__check('f','ob_get_contents');
+			$this->__check('f','ob_get_clean');
 			$this->__check('f','ob_start');
 			$this->__check('v','GLOBALS');
 			touch(LIB211_ROOT.'/tmp/.lock/LIB211Scoper',time());
@@ -114,14 +113,12 @@ class LIB211Scoper extends LIB211Base {
 						$$___x = $___v;
 					}
 				}
-			}
-			elseif (is_array(func_get_arg($___i))) {
+			} elseif (is_array(func_get_arg($___i))) {
 				foreach(func_get_arg($___i) as $___x) {
 					if (!isset($GLOBALS[$___x])) continue;
 					$$___x = $GLOBALS[$___x];
 				}
-			}
-			else {
+			} else {
 				$___x = func_get_arg($___i);
 				if (!isset($GLOBALS[$___x])) continue;
 				$$___x = $GLOBALS[$___x];
@@ -129,9 +126,7 @@ class LIB211Scoper extends LIB211Base {
 		}
 		ob_start();
 		include(func_get_arg(0));
-		$buffer = ob_get_contents();
-		ob_clean();
-		return $buffer;
+		return ob_get_clean();
 	}
 
 	/**
