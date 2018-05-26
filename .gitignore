@@ -12,3 +12,4 @@
 /module/EVEOnline/image
 /module/Animation/cache/*
 /phpdoc.sh
+module/AES/test.dat
