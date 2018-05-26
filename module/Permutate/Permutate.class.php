@@ -163,7 +163,7 @@ class LIB211Permutate extends LIB211Base {
 	 * @param integer $id
 	 * @return boolean
 	 */
-	public function delList(integer $id) {
+	public function delList(int $id) {
 		$status = TRUE;
 		try {
 			unset($this->lists[$id]);
@@ -194,7 +194,7 @@ class LIB211Permutate extends LIB211Base {
 	 * @param integer $id
 	 * @return array
 	 */
-	public function getList(integer $id) {
+	public function getList(int $id) {
 		if (isset($this->lists[$id])) return $this->lists[$id];
 		else return array();		
 	}
